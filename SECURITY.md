@@ -1,36 +1,40 @@
 # Security Policy
 
-WonderNet is intended for learners, including children. Security reports deserve particular care.
+WonderNet is being designed for learners, including children. **No production version is currently supported.** The Alpha 0.1 preview must not host student accounts, run untrusted student code, accept untrusted uploads or be exposed to shared/public networks.
 
-## Supported versions
+## Report vulnerabilities privately
 
-**No supported production release yet.** Alpha 0.1 is a local development prototype and must not be used to store student information or expose services to untrusted networks.
+**Do not create public issues, discussions, pull requests or comments containing vulnerability details.**
 
-## How to report a vulnerability
+Before publicly releasing the repository, the maintainer intends to enable GitHub's **Private Vulnerability Reporting** (Repository → Settings → Code security and analysis → Private vulnerability reporting). When enabled, use **Security → Report a vulnerability** in this repository.
 
-1. **Do not post vulnerability details in a public GitHub issue or discussion.**
-2. When the repository is published, use the repository's **Security → Report a vulnerability** feature, after the maintainer enables GitHub private vulnerability reporting.
-3. Until a private reporting channel is configured, contact the maintainer privately through a channel they designate. **Do not send secrets, student records, or exploit payloads to public threads.**
-4. Provide a concise impact statement, affected version, reproduction steps using only synthetic data, and proposed remediation if known.
+**At present a private vulnerability intake route is not yet verified.** Please wait for that channel rather than publishing sensitive exploit details. We will update this document when available.
 
-If private vulnerability reporting is not enabled, **do not assume a private disclosure channel exists**. Maintainers must set one up before the project invites reports.
+Provide impact, affected version, minimal reproduction using synthetic data, and any suggested fixes. Never send real student data or credentials.
 
-## Authorized testing
+## Responsible testing
 
-- Security testing is welcome in your **own isolated local installation** using dummy data.
-- Do not scan, exploit, or test installations owned by other people without permission.
-- Do not access, alter, or expose other users' information.
-- Do not deploy intentionally vulnerable exercises on the production WonderNet service.
+- Only test an instance you own or are explicitly authorized to test.
+- Use fictional accounts and sample data.
+- Do not target production systems, other users' accounts or third-party deployments.
+- Keep intentionally vulnerable cyber exercises separate from the host and future learner data.
 
-## Nonnegotiable release gates
+## Current security scope
 
-- Threat model and trusted/untrusted boundaries reviewed.
-- No server-side execution of user-submitted code on the Pi host.
-- Authentication, authorization, and session handling validated before user profiles go live.
-- Uploaded files are never made executable by the server; active packages require separate review and sandboxing.
-- Wi-Fi clients cannot reach the home network or administrator services.
-- Local multiplayer room authorization, abuse prevention, and rate limits tested.
-- Child privacy and accessibility tests pass.
-- A documented method exists for installing authenticated offline security updates.
+Current: read-only catalog/health endpoints, a static homepage and some defensive HTTP headers. There is **no authentication, hardened server deployment, uploaded-content processing or code sandbox**. That is by design at this early stage, not an assertion that the prototype is secure for use by children.
 
-See [`security/THREAT_MODEL.md`](security/THREAT_MODEL.md).
+## Release blockers
+
+Before introducing learner-facing data or execution features:
+
+- Threat model and application permissions reviewed, including access to other users' resources.
+- No learner-supplied code executing on the Raspberry Pi host.
+- Browser/cyber labs isolated and bounded; high-risk exercises on separate hardware where appropriate.
+- Uploaded content served inertly, reviewed, and strictly isolated from privileged origins.
+- Wi-Fi/firewall segmentation prevents access to the home network and admin interfaces.
+- Private multiplayer validates room membership server-side; moderation and rate limits.
+- Clear data minimization/deletion and child privacy decisions.
+- Offline updates authenticate packages and include rollback/recovery.
+- Automated and manual accessibility/security reviews.
+
+See [the threat model](security/THREAT_MODEL.md) and [public launch checklist](docs/public-launch-checklist.md).

@@ -1,0 +1,38 @@
+name: Feature idea
+description: Suggest a learning, gaming or platform improvement.
+title: "[Idea]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area?
+      options:
+        - Early Learning
+        - Academy
+        - Special Interests
+        - Arcade
+        - Library
+        - WonderParty / multiplayer
+        - Accessibility
+        - Platform / networking
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Offline, accessibility and safety considerations
+    validations:
+      required: false

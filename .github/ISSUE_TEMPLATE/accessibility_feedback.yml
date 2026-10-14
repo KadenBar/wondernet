@@ -1,0 +1,26 @@
+name: Accessibility feedback
+description: Report a barrier or suggest an accessible alternative.
+title: "[Accessibility]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accessibility is a core requirement. Please share only information you are comfortable posting publicly; medical history is not needed.
+  - type: textarea
+    id: barrier
+    attributes:
+      label: What is inaccessible or difficult?
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: What would help?
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Optional browser or assistive technology context
+    validations:
+      required: false
