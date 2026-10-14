@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 WonderNet contributors
 """WonderNet local development server. No accounts, uploads, or user code execution."""
 from pathlib import Path
 import json

@@ -41,6 +41,12 @@ See [the roadmap](docs/roadmap.md) and [the issues page](https://github.com/Kade
 - `security/` threat models
 - `tests/` automated tests
 
+## Source-code license
+
+WonderNet code contributions accepted into this repository are intended to be licensed under **GNU AGPL-3.0-only** (see [LICENSE](LICENSE)). By submitting a contribution, confirm you have the right to license it under those terms and that any included code or assets have compatible licenses. You retain copyright in your original contributions. If your employer or another party owns your code, get permission before contributing.
+
+Educational media, books, artwork and other content may have different licenses; do not assume they are covered by the software license. See [the licensing policy](docs/license-decision.md).
+
 ## Security & conduct
 
 **Never report a vulnerability in a public issue.** Follow [SECURITY.md](SECURITY.md). Never include tokens, secrets, child data, private correspondence or exploit instructions that endanger real users.

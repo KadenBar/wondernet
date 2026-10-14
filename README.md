@@ -5,7 +5,7 @@
 **An offline-first, accessible learning and gaming platform for all ages, designed to run on affordable hardware like the Raspberry Pi 4B.**
 
 [![Status: Alpha 0.1](https://img.shields.io/badge/status-alpha%200.1-52627c)](docs/roadmap.md)
-[![License: MIT](https://img.shields.io/badge/license-MIT-137c72)](LICENSE)
+[![License: AGPLv3](https://img.shields.io/badge/license-AGPLv3-137c72)](LICENSE)
 [![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
 > [!IMPORTANT]
@@ -116,6 +116,6 @@ Curious? **Star** this project to bookmark it, **Watch** for updates, or look th
 
 For ideas or bugs, use the provided issue templates. For code contributions, see [CONTRIBUTING.md](CONTRIBUTING.md). **Do not publish vulnerability details in issues**; see [SECURITY.md](SECURITY.md).
 
-> **License and content:** Project software currently uses [MIT](LICENSE), subject to a final license decision before public release. Books, game assets, media and user-supplied resources require separate redistribution rights. **WonderNet** is a working name pending trademark clearance. No official affiliation with KidNet or any other product is claimed.
+> **License and content:** WonderNet source code uses the [GNU Affero General Public License v3 (AGPL-3.0-only)](LICENSE). Modified covered versions distributed or operated for users over a network have applicable source-code disclosure obligations; contributors do not have to submit those changes back to this repository. Books, game assets, media and user-supplied resources require separate redistribution rights. **WonderNet** is a working name pending trademark clearance. No official affiliation with KidNet or any other product is claimed.
 
 *Little hardware. Big curiosity. Built openly, carefully, and one step at a time.*
