@@ -1,0 +1,44 @@
+name: Lesson or game proposal
+description: Propose an original activity, course or game.
+title: "[Content]: "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Proposal type
+      options:
+        - Phonics / early education
+        - K–12 / adult curriculum
+        - Programming / cybersecurity
+        - Skilled trades / life skills
+        - Single-player game
+        - Local multiplayer game
+        - Creative activity
+    validations:
+      required: true
+  - type: input
+    id: level
+    attributes:
+      label: Learner level
+      placeholder: Elementary, middle school, high school, adult, or all ages
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Experience or learning objective
+    validations:
+      required: true
+  - type: textarea
+    id: accessible
+    attributes:
+      label: Accessible alternative(s)
+    validations:
+      required: false
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Originality and content licensing
+      description: Confirm that proposed assets and materials are original or redistributable.
+    validations:
+      required: true

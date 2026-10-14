@@ -1,35 +1,75 @@
-# WonderNet 🌐
+# 🌐 WonderNet
 
-**WonderNet** is an offline-first, accessible educational and entertainment platform designed to run on a Raspberry Pi 4B and serve connected phones, tablets, and computers.
+### A little internet. A lot of possibility.
 
-> **Status: early prototype (Alpha 0.1).** This repository is NOT ready for child accounts, public Wi-Fi deployment, arbitrary code execution, or untrusted uploads. The first build provides the foundational app, documentation, and tests only.
+**An offline-first, accessible learning and gaming platform for all ages, designed to run on affordable hardware like the Raspberry Pi 4B.**
 
-## Our vision
+[![Status: Alpha 0.1](https://img.shields.io/badge/status-alpha%200.1-52627c)](docs/roadmap.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-137c72)](LICENSE)
+[![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
-- **Learn:** Early literacy (including systematic phonics), K–12, adult education, programming, cybersecurity, skilled trades, and life skills.
-- **Play:** A standalone arcade of puzzles, simulations, cozy games, mysteries, and party games—not activities gated behind lessons.
-- **Connect locally:** Private, in-person multiplayer games, including an original kid-friendly Jackbox-style experience.
-- **Explore offline:** A searchable library of books, audio, videos, lessons and appropriately licensed resources, with safe, administrator-controlled imports later.
-- **Learn your way:** Accessible navigation and activities, with multiple presentation modes and adjustable accommodations.
+> [!IMPORTANT]
+> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, live section filtering and two read-only API endpoints. The courses, games, uploads, multiplayer, accounts and Wi-Fi hotspot described below are **planned**, not released.
 
-We intentionally use a **traditional website interface** rather than a character-controlled world. Users should return to lessons and games with one click.
+**[Vision](docs/vision.md) · [Roadmap](docs/roadmap.md) · [Run locally](#run-the-prototype) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public launch checklist](docs/public-launch-checklist.md)**
 
-## What works today
+---
 
-- A responsive, keyboard-friendly prototype homepage with live section filtering.
-- A read-only FastAPI backend exposing `/api/health` and `/api/catalog`.
-- Baseline security response headers and loopback-only development instructions.
-- Project structure, architecture documentation, security policy, and automated smoke tests.
+## Why WonderNet?
 
-**Not yet implemented:** authentication, content uploading, learning progression, code execution, multiplayer, Wi-Fi hotspot, server-side games, account data, or cybersecurity labs. The homepage is a preview, not a production service.
+What if a kid could connect a tablet to a tiny offline network and find **phonics games, science experiments, coding lessons, a library and party games with friends**—all without cloud accounts, subscription fees, trackers or public internet?
 
-## Run on your computer (no Raspberry Pi required)
+WonderNet is an attempt to build that. But it's not only for kids: the long-term vision includes career skills, trades, and adult education.
 
-Requirements: Python **3.11+** and Git (for version control). The setup command installs Python dependencies and therefore needs internet on your development computer **once**; after installation, this prototype works without external services.
+We're deliberately building a **fast, accessible website**, not a virtual town that you have to walk through to get to a lesson.
 
-### Windows (PowerShell)
+## Six destinations, one little internet
+
+| Destination | What we're planning |
+|:---|:---|
+| 🔤 **Early Learning** | Evidence-informed phonics, reading and foundational math, with offline audio and accessible alternatives |
+| 📚 **Academy** | Elementary → middle → high school → adult learning pathways, without rigid age locks |
+| 💻 **Special Interests** | Programming, cybersecurity, networking, digital forensics, engineering and skilled trades |
+| 🎮 **Arcade** | *Just-for-fun* puzzles, cozy simulations, creative sandbox games, mysteries and RPGs |
+| 📖 **Library** | Searchable offline books, audio, videos and educational resources; safe admin-approved imports |
+| 🎉 **WonderParty** | Original kid-friendly room-code games: drawing, trivia and cooperative mysteries, entirely on the local network |
+
+**The Arcade is not a reward for finishing lessons.** Learning and entertainment are equally valid reasons to open WonderNet.
+
+## What exists today?
+
+| Ready to explore | Still to be built |
+|:---|:---|
+| Responsive six-section homepage | Full curriculum and phonics games |
+| Search/filter for homepage sections | Searchable library and reviewed uploads |
+| Local-only FastAPI prototype | Student profiles and progress |
+| Read-only health/catalog API | Secure multiplayer rooms and game engines |
+| Security/accessibility planning docs | Pi hotspot, local TLS and segmented networking |
+| Smoke tests and automated CI | Browser code sandbox and isolated cyber labs |
+
+See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe an unreleased feature as working.
+
+## Build principles
+
+- **Offline means offline.** No cloud sign-in, mandatory internet access, advertising, analytics trackers or remote frontend CDNs.
+- **Accessibility is foundational.** Target WCAG 2.2 AA where applicable; design for keyboard and assistive technology use, flexible reading levels, reduced motion, captions, and accessible game controls.
+- **Curiosity deserves a safe sandbox.** Student browsers, uploaded content and programming exercises are untrusted. Do not execute student code on the production Pi.
+- **Minimize children's data.** Future profiles and uploads require an explicit privacy and authorization design before implementation.
+- **Keep learning age-flexible.** Age-appropriate pathways exist, but access to foundational skills should not be embarrassing or blocked for older learners.
+- **Make contribution approachable.** Modular content, simple technology, documented standards and reviewed community contributions.
+
+[Architecture](docs/architecture.md) · [Accessibility](docs/accessibility.md) · [Threat model](security/THREAT_MODEL.md)
+
+## Run the prototype
+
+You **do not need a Raspberry Pi** to run this first build.
+
+Requirements: Python **3.11+** and Git. Install dependencies on an internet-connected development computer; the **running prototype itself** needs no cloud services.
+
+**Windows PowerShell**
 
 ```powershell
+git clone https://github.com/KadenBar/wondernet.git
 cd wondernet
 py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -37,9 +77,10 @@ python -m pip install -e ".[dev]"
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### macOS / Linux
+**macOS / Linux**
 
 ```bash
+git clone https://github.com/KadenBar/wondernet.git
 cd wondernet
 python3 -m venv .venv
 source .venv/bin/activate
@@ -47,47 +88,34 @@ python -m pip install -e '.[dev]'
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-Open **http://127.0.0.1:8000**. Stop with `Ctrl+C`.
-
-To run tests:
+Visit **http://127.0.0.1:8000** to explore. Stop with `Ctrl+C`. Run tests with:
 
 ```bash
 python -m pytest -q
 ```
 
-**Security note:** Keep development bound to `127.0.0.1`. Do **not** use `--host 0.0.0.0`, expose port 8000, or place this prototype on a child-accessible Wi-Fi network. Deployment hardening, TLS, accounts, and upload safety are not yet in place.
+**Security:** Keep the development server on `127.0.0.1`. It has no user authentication or hardened deployment environment. Do **not** expose it to children, a shared Wi-Fi network or the public internet.
 
-## Repository map
+## Inside the repo
 
 ```text
-wondernet/
-├── backend/           # FastAPI service (currently read-only)
-├── frontend/          # Accessible website prototype and local assets
-├── curriculum/        # Versioned lesson/module manifests; no executable imports
-├── games/             # Future first-party games and party-game manifests
-├── security/          # Threat model and security design requirements
-├── docs/              # Architecture, accessibility, roadmap, license decision
-├── tests/             # App smoke tests
-└── .github/           # CI checks and future community issue templates
+backend/          FastAPI service (read-only prototype)
+frontend/         Website and locally served assets
+curriculum/       Course manifest examples and future lesson modules
+games/            Arcade and WonderParty design placeholders
+library/          Offline library design placeholder
+security/         Threat model and security engineering decisions
+docs/             Roadmap, architecture, accessibility, launch checklists
+tests/            Automated smoke tests
+.github/          CI, issue templates, pull-request templates
 ```
 
-## Project guardrails
+## Follow the build / get involved
 
-1. **Safety/security first:** User-submitted code must never run as an OS process on the production Pi. Browser-based editors will use restricted execution contexts; advanced security labs will be separately isolated.
-2. **Offline by default:** No required cloud login, tracking SDKs, ads, or external CDN dependencies.
-3. **Accessibility by design:** Target WCAG 2.2 AA where applicable. Provide keyboard access, readable content, clear focus indicators, captions/transcripts, reduced motion, and alternative ways to use games.
-4. **Age-appropriate without gatekeeping:** Different curricular levels for early learning through adulthood, with flexible progress and age-respectful UI.
-5. **Privacy:** Collect as little learner data as possible, and don't ship real student data or secrets in Git.
-6. **Respect third-party rights:** Educational media, game assets, books, and community contributions must have redistribution-compatible licenses or remain user-supplied.
+Curious? **Star** this project to bookmark it, **Watch** for updates, or look through the [roadmap](docs/roadmap.md) and [issues](https://github.com/KadenBar/wondernet/issues). Educators, accessibility advocates, parents, game creators and security folks are welcome.
 
-## Licensing
+For ideas or bugs, use the provided issue templates. For code contributions, see [CONTRIBUTING.md](CONTRIBUTING.md). **Do not publish vulnerability details in issues**; see [SECURITY.md](SECURITY.md).
 
-The **initial code license is MIT**, documented in [`LICENSE`](LICENSE) and [`docs/license-decision.md`](docs/license-decision.md). This is a *provisional project decision to review before publication*. Third-party educational content and game assets are not automatically covered by this license. The name **WonderNet** is a working name, not a cleared trademark.
+> **License and content:** Project software currently uses [MIT](LICENSE), subject to a final license decision before public release. Books, game assets, media and user-supplied resources require separate redistribution rights. **WonderNet** is a working name pending trademark clearance. No official affiliation with KidNet or any other product is claimed.
 
-## Contributing and security
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution practices and [`SECURITY.md`](SECURITY.md) for private vulnerability reporting. Please do not create public issues containing exploit details or personal information.
-
-## Milestone
-
-Our first milestone is a locally running, tested homepage. Later milestones include Pi networking, the safe library, phonics, an accessible puzzle, and an original private-room WonderParty prototype. See [`docs/roadmap.md`](docs/roadmap.md).
+*Little hardware. Big curiosity. Built openly, carefully, and one step at a time.*

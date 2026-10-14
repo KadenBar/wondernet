@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="WonderNet is an offline-first universe for learning, creating and playing.">
-  <title>WonderNet — Offline learning & play</title>
+  <meta name="description" content="WonderNet is an offline-first learning and play project for curious minds of all ages.">
+  <title>WonderNet | A little internet. A lot of possibility.</title>
   <link rel="stylesheet" href="/assets/styles.css">
   <script defer src="/assets/main.js"></script>
 </head>
@@ -13,34 +13,120 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="WonderNet home"><span class="logo" aria-hidden="true">✳</span> WonderNet <span class="alpha">ALPHA 0.1</span></a>
-      <span class="offline-label"><span aria-hidden="true">●</span> Offline-first prototype</span>
+      <a class="brand" href="/" aria-label="WonderNet home">
+        <span class="brand-mark" aria-hidden="true">✳</span><span>Wonder<span class="brand-emphasis">Net</span></span>
+        <span class="alpha">ALPHA 0.1</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#explore">Explore</a>
+        <a href="#our-approach">Our approach</a>
+        <a href="#next-up">Roadmap</a>
+      </nav>
     </div>
   </header>
   <main id="main-content">
     <section class="hero" aria-labelledby="welcome">
-      <p class="eyebrow">Explore • Learn • Create • Play</p>
-      <h1 id="welcome">A whole world of curiosity.<br><span>Right here, offline.</span></h1>
-      <p class="lead">A future home for learning, games, books, creative tools and friendly multiplayer—built for different ages and abilities.</p>
-      <div class="notice" role="note"><strong>Preview mode.</strong> This is our first working homepage. Lessons, uploads, accounts and games are still in development.</div>
+      <div class="hero-copy">
+        <p class="hero-kicker"><span class="signal" aria-hidden="true"></span> A LOCAL-FIRST OPEN-SOURCE PROJECT</p>
+        <h1 id="welcome">A little internet.<br><em>A lot of possibility.</em></h1>
+        <p class="lead">A future home for phonics, programming, cozy games, offline books and multiplayer adventures—all designed for curiosity, accessibility and low-cost hardware.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#explore">Explore the idea <span aria-hidden="true">↘</span></a>
+          <a class="secondary-link" href="#next-up">See what's next <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="hero-note">No cloud account. No ads. No public internet required for the future platform.</p>
+      </div>
+      <aside class="hero-panel" aria-label="Development status">
+        <div class="status-card">
+          <div class="card-header"><span>DEVELOPMENT SNAPSHOT</span><span class="proto-badge">Prototype</span></div>
+          <div class="panel-symbol" aria-hidden="true">✳</div>
+          <p class="panel-title">WonderNet / alpha 0.1</p>
+          <p class="panel-desc">A small beginning for a much bigger idea.</p>
+          <div class="panel-divider"></div>
+          <p class="panel-mini">WHAT WORKS RIGHT NOW</p>
+          <ul class="panel-list">
+            <li><span aria-hidden="true">✓</span> Homepage preview + search</li>
+            <li><span aria-hidden="true">✓</span> Read-only local API</li>
+            <li><span aria-hidden="true">✓</span> Automated smoke tests</li>
+          </ul>
+          <p class="panel-warning"><strong>Preview only:</strong> no learner accounts, playable games, library uploads or multiplayer yet.</p>
+        </div>
+      </aside>
     </section>
+
+    <section class="intro-strip" aria-label="Project values">
+      <div><span aria-hidden="true">◎</span><strong>Offline-first</strong><small>Local by design</small></div>
+      <div><span aria-hidden="true">♿</span><strong>Accessible</strong><small>Built in from day one</small></div>
+      <div><span aria-hidden="true">⌘</span><strong>Open-source</strong><small>Built to grow together</small></div>
+      <div><span aria-hidden="true">✦</span><strong>Learning + fun</strong><small>Neither is a prerequisite</small></div>
+    </section>
+
     <section class="section" aria-labelledby="explore">
       <div class="section-top">
-        <div><p class="eyebrow">THE PLATFORM</p><h2 id="explore">Find your next adventure</h2></div>
-        <div class="search-wrap"><label for="section-search">Filter sections</label><input type="search" id="section-search" placeholder="Try ‘cyber’, ‘games’, ‘phonics’…" autocomplete="off" aria-describedby="search-count"></div>
+        <div>
+          <p class="eyebrow">SIX DESTINATIONS</p>
+          <h2 id="explore">Pick a curiosity.</h2>
+          <p class="section-description">A glimpse at what WonderNet will eventually offer. These are concepts, not finished experiences.</p>
+        </div>
+        <div class="search-wrap">
+          <label for="section-search">Filter sections</label>
+          <input type="search" id="section-search" placeholder="Try ‘cyber’, ‘games’, ‘phonics’…" autocomplete="off" aria-describedby="search-count">
+        </div>
       </div>
       <p id="search-count" class="status" aria-live="polite">Showing 6 sections</p>
       <div class="cards" id="sections">
-        <article class="tile" data-search="early learning phonics reading writing math preschool kindergarten elementary"><span class="tile-icon" aria-hidden="true">🔤</span><p class="tag">FOUNDATIONS</p><h3>Early Learning</h3><p>Phonics, first words, numbers, and foundational skills.</p><span class="planned">Curriculum coming soon</span></article>
-        <article class="tile" data-search="academy science mathematics history homeschool k12 lessons school education"><span class="tile-icon" aria-hidden="true">📚</span><p class="tag">LEARNING</p><h3>Academy</h3><p>K–12 and lifelong learning, organized by topic and level.</p><span class="planned">Courses coming soon</span></article>
-        <article class="tile" data-search="programming python cybersecurity cyber technology networking trades carpentry electrical automotive"><span class="tile-icon" aria-hidden="true">💻</span><p class="tag">DISCOVER</p><h3>Special Interests</h3><p>Coding, cybersecurity, skilled trades, and hands-on discovery.</p><span class="planned">Labs coming soon</span></article>
-        <article class="tile" data-search="arcade games simulation puzzles gaming rpg cozy farming mysteries"><span class="tile-icon" aria-hidden="true">🎮</span><p class="tag">JUST FOR FUN</p><h3>Arcade</h3><p>Puzzles, cozy simulations, mysteries, and more—just for fun.</p><span class="planned">Games coming soon</span></article>
-        <article class="tile" data-search="library books audio educational videos offline collection resources uploads"><span class="tile-icon" aria-hidden="true">📖</span><p class="tag">EXPLORE</p><h3>Library</h3><p>An offline collection of books, media, and learning resources.</p><span class="planned">Library coming soon</span></article>
-        <article class="tile" data-search="wonderparty party jackbox multiplayer friends trivia drawing puzzles local private"><span class="tile-icon" aria-hidden="true">🎉</span><p class="tag">PLAY TOGETHER</p><h3>WonderParty</h3><p>Private, family-friendly party and cooperative games.</p><span class="planned">Multiplayer coming soon</span></article>
+        <article class="tile tile-early" data-search="early learning phonics reading writing math preschool kindergarten elementary">
+          <span class="tile-icon" aria-hidden="true">🔤</span><p class="tag">START SMALL</p><h3>Early Learning</h3>
+          <p>Letter sounds, first words, counting and confident early readers.</p><span class="planned">Planned curriculum</span>
+        </article>
+        <article class="tile tile-academy" data-search="academy science mathematics history homeschool k12 lessons school education">
+          <span class="tile-icon" aria-hidden="true">📚</span><p class="tag">KEEP GROWING</p><h3>Academy</h3>
+          <p>Flexible K–12 and lifelong learning, without rigid age gates.</p><span class="planned">Planned courses</span>
+        </article>
+        <article class="tile tile-interests" data-search="programming python cybersecurity cyber technology networking trades carpentry electrical automotive">
+          <span class="tile-icon" aria-hidden="true">💻</span><p class="tag">GET CURIOUS</p><h3>Special Interests</h3>
+          <p>Programming, cybersecurity, skilled trades and making things.</p><span class="planned">Planned labs</span>
+        </article>
+        <article class="tile tile-arcade" data-search="arcade games simulation puzzles gaming rpg cozy farming mysteries">
+          <span class="tile-icon" aria-hidden="true">🎮</span><p class="tag">JUST FOR FUN</p><h3>Arcade</h3>
+          <p>Cozy sims, puzzles, mysteries and adventures you choose to play.</p><span class="planned">Planned games</span>
+        </article>
+        <article class="tile tile-library" data-search="library books audio educational videos offline collection resources uploads">
+          <span class="tile-icon" aria-hidden="true">📖</span><p class="tag">A WHOLE SHELF</p><h3>Library</h3>
+          <p>Searchable books, audio, video and safe, reviewed content imports.</p><span class="planned">Planned library</span>
+        </article>
+        <article class="tile tile-party" data-search="wonderparty party jackbox multiplayer friends trivia drawing puzzles local private">
+          <span class="tile-icon" aria-hidden="true">🎉</span><p class="tag">BETTER TOGETHER</p><h3>WonderParty</h3>
+          <p>Private local party games, cooperative mysteries and trivia.</p><span class="planned">Planned multiplayer</span>
+        </article>
       </div>
       <p id="no-results" class="empty" hidden>No matching sections. Try a different word.</p>
     </section>
+
+    <section class="section values" id="our-approach" aria-labelledby="approach-heading">
+      <div class="values-intro">
+        <p class="eyebrow">HOW WE BUILD</p><h2 id="approach-heading">Useful first. Delightful always.</h2>
+        <p>WonderNet should feel like a website you can simply use. No virtual town to cross, no homework required before play, and no barriers between someone and the thing they came to do.</p>
+      </div>
+      <div class="values-grid">
+        <div><span aria-hidden="true">01</span><h3>Fast to navigate</h3><p>Clear menus, quick access to favorites and, eventually, one-click return to your last activity.</p></div>
+        <div><span aria-hidden="true">02</span><h3>Safe to experiment</h3><p>Curious coders get intentionally isolated labs, not access to other people's information.</p></div>
+        <div><span aria-hidden="true">03</span><h3>Made for different minds</h3><p>Keyboard access, adjustable experiences, reading support and accessible games are design requirements.</p></div>
+      </div>
+    </section>
+
+    <section class="section next-up" id="next-up" aria-labelledby="next-heading">
+      <div>
+        <p class="eyebrow">THE ROAD AHEAD</p><h2 id="next-heading">Small steps. Big plans.</h2>
+        <p>First we build the platform safely. Then we add the first real learning and play experiences.</p>
+      </div>
+      <ol class="milestones">
+        <li><span class="milestone-state">In progress</span><strong>Foundation</strong><small>Responsive prototype, docs, security and tests</small></li>
+        <li><span class="milestone-state">Next</span><strong>Offline access</strong><small>Pi networking, isolation, local hosting</small></li>
+        <li><span class="milestone-state">Future</span><strong>First real activities</strong><small>Library, phonics, puzzle and WonderParty</small></li>
+      </ol>
+    </section>
   </main>
-  <footer><p>WonderNet • Early development preview • No accounts, tracking, uploads, or external services</p></footer>
+  <footer><p>WonderNet is a working project name. <strong>Early prototype only—not a child-ready product.</strong></p></footer>
 </body>
 </html>

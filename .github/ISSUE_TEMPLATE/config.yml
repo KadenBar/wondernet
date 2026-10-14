@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/KadenBar/wondernet/blob/main/SECURITY.md
+    about: Read the policy. Do not disclose vulnerabilities in public issues.

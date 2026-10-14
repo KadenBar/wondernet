@@ -1,35 +1,52 @@
-# WonderNet Roadmap
+# Roadmap
 
-## Alpha 0.1 — private development scaffold
-- [x] Private GitHub repository and starter documentation
-- [x] Separated backend, frontend, curriculum, games, security and tests
-- [x] Responsive homepage preview and local static assets
-- [x] Read-only catalog/health APIs, security headers and smoke tests
+This is a **living plan**, not a release promise. Each milestone has explicit acceptance criteria and safety gates. Feature descriptions in the [vision](vision.md) do not mean those features are implemented.
 
-## Alpha 0.2 — platform foundations
-- [ ] Confirm open-source license, name and asset provenance approach
-- [ ] Define lessons and game package formats
-- [ ] Accessibility and threat-model review
-- [ ] Repeatable secure development/deployment instructions
+## ✅ Alpha 0.1 — Foundation (prototype)
+- [x] Repository structure for backend, frontend, curriculum, games, library and security
+- [x] Responsive six-section homepage and local section filtering
+- [x] FastAPI read-only `/api/health` and `/api/catalog`
+- [x] Core security headers, local-only development instructions, smoke tests and CI workflow
+- [x] First threat model, accessibility guidelines and contribution documentation
 
-## Alpha 0.3 — Pi offline deployment
-- [ ] Inspect Pi, safely preserve existing installation
-- [ ] Isolated Wi-Fi, firewall, no access to home LAN
-- [ ] Local addressing, TLS and admin separation
-- [ ] Offline client acceptance tests
+## 🔧 Alpha 0.2 — Public project foundation
+- [ ] Review project name and software/content licensing before visibility changes
+- [ ] Review repository contents and full Git history for credentials and personal data
+- [ ] Enable private vulnerability reporting and establish a maintainer contact process
+- [ ] Confirm CI passes; set appropriate branch protections and dependency updates
+- [ ] Run manual keyboard, mobile, high-contrast and screen-reader reviews
+- [ ] Finalize content/game metadata schemas and trust boundaries
+- [ ] Publish accurate screenshots and a release-notes template
 
-## Alpha 0.4 — educational content
-- [ ] Authorized and reviewed library uploads
-- [ ] Search and accessible media viewer
-- [ ] Introductory offline phonics activities
-- [ ] Accounts and progress only after privacy/security controls
+## 🥧 Alpha 0.3 — Offline Pi networking
+- [ ] Preserve existing Pi installation and inspect storage/RAM
+- [ ] Standalone Wi-Fi hotspot + local name resolution
+- [ ] Test client-to-client isolation and home-LAN denial
+- [ ] Protected admin access and local HTTPS trust strategy
+- [ ] Offline functional and recovery tests
 
-## Alpha 0.5 — entertainment
-- [ ] Accessible standalone puzzle game
-- [ ] Private multiplayer WonderParty with controls and authorization tests
+## 📚 Alpha 0.4 — Library + first learning activity
+- [ ] Secure administrator-only media import with size/type and archive checks
+- [ ] Offline search and an accessible reader/media viewer
+- [ ] One evidence-informed early phonics activity and accessible alternatives
+- [ ] Content provenance/licensing metadata and export/import validation
 
-## Later
-- [ ] Browser-isolated programming lessons and synthetic cyber labs
-- [ ] Cybersecurity, programming and trades curricula across grade levels
-- [ ] Cooperative mysteries and simulation games
-- [ ] Reviewed community packages and verified offline updates
+## 🎮 Alpha 0.5 — Arcade + WonderParty
+- [ ] One accessible, offline puzzle game
+- [ ] Private room-code party game with server-authoritative membership
+- [ ] Local multiplayer test across phones/tablets; host controls and abuse cases
+- [ ] Accessibility and load tests for games
+
+## 🌱 Later possibilities
+- [ ] Student profiles, permissions and progress after security/privacy review
+- [ ] Browser-isolated JavaScript/Python exercises with bounded resources
+- [ ] Higher-assurance, separately isolated advanced cybersecurity labs
+- [ ] Age-based programming/cybersecurity and trades learning pathways
+- [ ] Complex simulations, mysteries and cooperative adventures
+- [ ] Curated user-installable content packages with verified offline updates
+
+## How to help
+
+Open an issue using our templates. Small, well-tested contributions are especially welcome. See [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+**The release safety bar is higher than the development demo bar.** An alpha milestone does not imply suitability for production, classroom or unsupervised child use.

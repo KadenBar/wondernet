@@ -31,3 +31,18 @@ def test_assets_served_locally():
     assert response.status_code == 200
     assert "text/css" in response.headers["content-type"]
     assert client.get("/assets/main.js").status_code == 200
+
+
+def test_frontend_uses_only_local_runtime_assets():
+    html = client.get("/").text.lower()
+    css = client.get("/assets/styles.css").text.lower()
+    assert '<script src="http' not in html
+    assert '<link rel="stylesheet" href="http' not in html
+    assert "@import url(" not in css
+    assert "https://" not in css
+
+
+def test_unimplemented_sensitive_endpoints_are_not_exposed():
+    for path in ("/api/upload", "/api/execute", "/api/users", "/admin"):
+        assert client.get(path).status_code == 404
+        assert client.post(path).status_code == 404
