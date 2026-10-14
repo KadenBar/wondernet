@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "status": "planned",
+  "games": [
+    {
+      "id": "wonderparty",
+      "title": "WonderParty",
+      "type": "local-multiplayer",
+      "state": "planned"
+    },
+    {
+      "id": "puzzle-corner",
+      "title": "Puzzle Corner",
+      "type": "single-player",
+      "state": "planned"
+    },
+    {
+      "id": "cozy-sim",
+      "title": "Cozy Simulations",
+      "type": "single-player",
+      "state": "planned"
+    }
+  ]
+}

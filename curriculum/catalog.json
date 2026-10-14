@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "status": "sample-only",
+  "tracks": [
+    {
+      "id": "early-learning",
+      "title": "Early Learning",
+      "audiences": [
+        "pre-k",
+        "elementary"
+      ],
+      "topics": [
+        "Phonics",
+        "Early reading",
+        "Numbers"
+      ]
+    },
+    {
+      "id": "academy",
+      "title": "Academy",
+      "audiences": [
+        "elementary",
+        "middle",
+        "high",
+        "adult"
+      ],
+      "topics": [
+        "Science",
+        "Math",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "special-interests",
+      "title": "Special Interests",
+      "audiences": [
+        "elementary",
+        "middle",
+        "high",
+        "adult"
+      ],
+      "topics": [
+        "Programming",
+        "Cybersecurity",
+        "Trades"
+      ]
+    }
+  ]
+}
