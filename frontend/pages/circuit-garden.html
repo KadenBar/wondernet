@@ -1,0 +1,110 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Circuit Garden is WonderNet's free, offline-friendly circuit puzzle game. Rotate wires, power flowers, and grow ten little gardens.">
+  <title>Circuit Garden | WonderNet Arcade</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/section-pages.css">
+  <link rel="stylesheet" href="/assets/interiors.css">
+  <link rel="stylesheet" href="/assets/circuit-garden.css">
+  <script defer src="/assets/circuit-engine.js"></script>
+  <script defer src="/assets/circuit-garden.js"></script>
+</head>
+<body class="interior-page circuit-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="WonderNet home"><span class="brand-mark" aria-hidden="true">✳</span><span>Wonder<span class="brand-emphasis">Net</span></span><span class="alpha">ALPHA 0.1</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/explore/arcade">Arcade</a><a href="/#explore">All sections</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="detail-main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span>
+      <a href="/explore/arcade">Arcade</a><span aria-hidden="true">/</span>
+      <span aria-current="page">Circuit Garden</span>
+    </nav>
+    <section class="cg-intro">
+      <div>
+        <p class="cg-kicker"><span class="cg-kicker-star" aria-hidden="true">✳</span> A WONDERNET ORIGINAL · PLAYABLE ALPHA</p>
+        <h1>Circuit <em>Garden</em><span class="cg-title-spark" aria-hidden="true">✦</span></h1>
+        <p>Turn the wires. Share the spark. Watch the garden grow.</p>
+        <p class="cg-help-text">This is a real little puzzle game, not a quiz. No timer, no rush, just ten gardens to bring to life.</p>
+      </div>
+      <div class="cg-intro-art" aria-hidden="true">
+        <span>⚡</span><span>╭─╮</span><span>✿</span><span>✷</span>
+      </div>
+    </section>
+
+    <section class="cg-layout" aria-label="Circuit Garden game">
+      <div class="cg-game-area">
+        <div class="cg-toolbar">
+          <div class="cg-stage-text">
+            <span class="cg-small-label" id="cg-counter">GARDEN 01 / 10</span>
+            <h2 id="cg-level-name">First Spark</h2>
+            <p id="cg-level-note">One little bloom. Follow the path!</p>
+          </div>
+          <div class="cg-stats">
+            <div><span class="cg-small-label">TURNS</span><strong id="cg-moves">0</strong></div>
+            <div><span class="cg-small-label">BLOOMS</span><strong id="cg-blooms">0 / 1</strong></div>
+          </div>
+        </div>
+
+        <div class="cg-field">
+          <div class="cg-board-head">
+            <span class="cg-source-key"><span aria-hidden="true">⚡</span> START HERE</span>
+            <span class="cg-flower-key"><span aria-hidden="true">✿</span> POWER EVERY FLOWER</span>
+          </div>
+          <div id="cg-board" class="cg-board cg-size-4" role="group"
+            aria-label="Circuit Garden puzzle board. Use Tab to reach pipes, arrow keys to move, Enter or Space to rotate."></div>
+          <p class="cg-board-foot">Tap or click a piece to turn it clockwise. Match the open ends to carry power from the battery to each flower.</p>
+        </div>
+
+        <div class="cg-control-row">
+          <button id="cg-reset" class="cg-control" type="button">↻ Restart garden</button>
+          <button id="cg-hint" class="cg-control cg-hint" type="button">✦ Nudge a piece</button>
+        </div>
+        <p id="cg-status" class="cg-status" role="status" aria-live="polite" aria-atomic="true">Connect the battery to the flower. You've got this!</p>
+
+        <section id="cg-win" class="cg-win" aria-labelledby="cg-win-title" hidden>
+          <div class="cg-win-art" aria-hidden="true">✿ ✿ ✿</div>
+          <p class="cg-small-label">GARDEN GROWN!</p>
+          <h2 id="cg-win-title">Look what you grew!</h2>
+          <p id="cg-win-message"></p>
+          <div id="cg-win-stars" class="cg-win-stars" role="img" aria-label="Three out of three stars">★★★</div>
+          <button id="cg-continue" class="cg-next" type="button">Next garden →</button>
+        </section>
+      </div>
+
+      <aside class="cg-sidebar" aria-label="Level guide and progress">
+        <section class="cg-sidebar-card">
+          <p class="cg-small-label">YOUR LITTLE FIELD GUIDE</p>
+          <h2>How to grow a circuit</h2>
+          <div class="cg-rule"><span aria-hidden="true">⚡</span><div><strong>Start with the battery</strong><p>It sends power into any wire facing the same way.</p></div></div>
+          <div class="cg-rule"><span aria-hidden="true">↻</span><div><strong>Rotate the pieces</strong><p>Tap or press Enter or Space. Wires must connect end to end.</p></div></div>
+          <div class="cg-rule"><span aria-hidden="true">✿</span><div><strong>Make the flowers bloom</strong><p>Power every flower to finish the garden. The green glow shows what's connected.</p></div></div>
+          <p class="cg-keyboard-tip">Keyboard tip: Use arrow keys to move between pieces. No time limit and no penalties for trying.</p>
+        </section>
+        <section class="cg-sidebar-card cg-level-picker" aria-labelledby="cg-picker-title">
+          <p class="cg-small-label">GARDEN PATCHES</p>
+          <h2 id="cg-picker-title">Choose a garden</h2>
+          <div id="cg-level-list" class="cg-level-list" aria-label="Unlocked gardens"></div>
+          <p>Finish a garden to unlock the next one. Everything resets when you close or refresh the page.</p>
+        </section>
+        <div class="cg-demo-note"><strong>Early game preview</strong><p>All puzzles run in your browser without accounts, tracking, uploads or score storage. WonderNet isn't ready for unsupervised child use yet.</p></div>
+      </aside>
+    </section>
+    <section class="cg-bottom-links">
+      <a href="/explore/arcade">← Back to Arcade</a>
+      <a href="/play/patterns">Try Pattern Playground ↗</a>
+    </section>
+  </main>
+  <footer><p>Circuit Garden is an early standalone prototype. No internet required once served locally. <a href="/">WonderNet home</a>.</p></footer>
+</body>
+</html>
