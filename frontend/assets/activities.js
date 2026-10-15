@@ -29,6 +29,7 @@
   const choices = document.getElementById("activity-choices");
   const feedback = document.getElementById("activity-feedback");
   const next = document.getElementById("activity-next");
+  const meter = document.getElementById("activity-meter");
   let index = 0;
   let correct = false;
   let finished = false;
@@ -38,6 +39,7 @@
     finished = false;
     const question = questions[index];
     progress.textContent = `Round ${index + 1} of ${questions.length}`;
+    if (meter) meter.value = index;
     prompt.textContent = question.prompt;
     hint.textContent = question.hint;
     choices.replaceChildren();
@@ -54,6 +56,7 @@
         if (correct) return;
         if (answer === question.answer) {
           correct = true;
+          if (meter) meter.value = index + 1;
           button.classList.add("answer-correct");
           for (const option of choices.querySelectorAll("button")) option.disabled = true;
           feedback.textContent = "That's it! Great thinking. 🌟";
@@ -84,6 +87,7 @@
     } else {
       finished = true;
       progress.textContent = "All 5 rounds complete";
+      if (meter) meter.value = questions.length;
       prompt.textContent = "You finished! 🎉";
       hint.textContent = "Want to try again?";
       choices.replaceChildren();
