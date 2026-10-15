@@ -1,0 +1,216 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* WonderNet interior design: local-only styles, no fonts, images or external loads. */
+.interior-page{
+  --page-ink:#17353b;--page-accent:#e2b259;--page-soft:#fff0ce;--page-deep:#705020;
+  color:var(--page-ink);background:#fffdf7;
+}
+.section--early-learning{--page-accent:#ffdb85;--page-soft:#fff2ce;--page-deep:#845121}
+.section--academy{--page-accent:#a9d9f5;--page-soft:#e6f4ff;--page-deep:#23517a}
+.section--special-interests{--page-accent:#acdec8;--page-soft:#e5f6e9;--page-deep:#215b4e}
+.section--arcade{--page-accent:#dac1f5;--page-soft:#f1e8ff;--page-deep:#6b4379}
+.section--library{--page-accent:#ffd6bb;--page-soft:#fff0e4;--page-deep:#824d31}
+.section--wonderparty{--page-accent:#dbeaac;--page-soft:#f3f8db;--page-deep:#4d692c}
+.game--letter-match{--page-accent:#ffdb85;--page-soft:#fff2ce;--page-deep:#845121}
+.game--patterns{--page-accent:#dac1f5;--page-soft:#f1e8ff;--page-deep:#6b4379}
+.interior-page .site-header{background:#fffdf7;border-bottom:2px solid var(--page-ink)}
+.interior-page .header-inner{max-width:1200px}
+.interior-page .brand{color:var(--page-ink);font-size:1.46rem;letter-spacing:-.05em}
+.interior-page .brand-emphasis{color:#0a8071}
+.interior-page .brand-mark{background:var(--page-ink);color:#bdf6ce;transform:rotate(-8deg);border-radius:10px}
+.interior-page .alpha{background:#ffe4aa;border:1px solid var(--page-ink);color:var(--page-ink)}
+.interior-page .site-nav a{color:var(--page-ink)}
+.interior-page .detail-main{max-width:1170px;padding-bottom:4.5rem}
+.interior-page .breadcrumbs{font-size:.82rem;font-weight:700;padding-top:1.55rem;color:#54696c}
+.interior-page .breadcrumbs a{color:#0a7169;text-underline-offset:3px}
+.interior-page .detail-hero{gap:clamp(1.1rem,3.5vw,3rem);margin:1.4rem 0 4rem;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}
+.interior-page .detail-hero-copy{padding:1rem 0}
+.interior-page .eyebrow{color:#137b6f;font-size:.71rem;letter-spacing:.13em;font-weight:900}
+.interior-page .detail-status{background:var(--page-soft);color:var(--page-deep);border:1.5px solid var(--page-deep);padding:.35rem .63rem;border-radius:7px;font-size:.72rem}
+.interior-page .detail-hero h1,.interior-page .activity-intro h1{
+  font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;
+  color:var(--page-ink);letter-spacing:-.065em;font-weight:900;line-height:1.08;
+  font-size:clamp(2.5rem,4.7vw,4.4rem);
+  margin:1rem 0 1.1rem;
+}
+.interior-page .detail-lead{color:#455f65;font-size:clamp(1.02rem,1.7vw,1.17rem);line-height:1.66;max-width:650px;margin:0 0 1.35rem}
+.interior-page .detail-cta{gap:.65rem}
+.interior-page .primary-link,.interior-page .secondary-link{
+  border:2px solid var(--page-ink);border-radius:10px;
+  font-weight:850;min-height:48px;box-shadow:3px 3px 0 var(--page-ink);
+}
+.interior-page .primary-link{background:#c4f1cf;color:var(--page-ink)}
+.interior-page .primary-link:hover{background:#ade9c6}
+.interior-page .secondary-link{background:#fffdf7;color:var(--page-ink)}
+.interior-page .secondary-link:hover{background:#f3f4e7}
+.interior-page .detail-hero-art{
+  min-height:345px;box-shadow:9px 9px 0 var(--page-ink);
+  border:3px solid var(--page-ink);background:var(--page-accent);
+  border-radius:19px;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:1.5rem;transform:rotate(1deg);
+}
+.interior-page .detail-orbit{display:none}
+.interior-page .detail-big-icon{display:none}
+.interior-page .detail-art-caption{
+  bottom:.7rem;left:.95rem;color:var(--page-ink);letter-spacing:.08em;font-size:.65rem;
+  background:rgba(255,253,247,.87);border:1px solid var(--page-ink);border-radius:5px;
+  padding:.35rem .55rem;max-width:calc(100% - 2rem);
+}
+.detail-scene{position:relative;display:flex;align-items:center;justify-content:center;width:min(100%,390px);min-height:255px;isolation:isolate}
+.scene-spark{position:absolute;color:var(--page-deep);font-size:2rem;font-weight:900}
+.scene-spark:nth-child(1){top:6%;left:3%;transform:rotate(-12deg)}
+.scene-spark:nth-child(2){bottom:13%;right:0;transform:rotate(11deg)}
+.scene-panel{
+  border:3px solid var(--page-ink);border-radius:14px;background:#fffdf7;
+  box-shadow:7px 8px 0 var(--page-ink);position:relative;padding:1.4rem;
+  display:flex;flex-direction:column;gap:.4rem;align-items:center;text-align:center;
+  justify-content:center;min-height:202px;min-width:min(81%,250px);transform:rotate(-5deg);
+}
+.scene-tag{font-size:.65rem;font-weight:900;letter-spacing:.12em;line-height:1.4;color:var(--page-deep)}
+.scene-title{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(3.6rem,8vw,5.5rem);font-weight:900;letter-spacing:-.11em;line-height:1.05}
+.scene-sub{font-size:.85rem;font-weight:850;color:#3b5657}
+.scene-floating{
+  position:absolute;z-index:2;padding:.65rem .8rem;background:#fffdf7;
+  border:2px solid var(--page-ink);border-radius:10px;box-shadow:3px 3px 0 var(--page-ink);
+  font-size:1.1rem;font-weight:900;line-height:1;transform:rotate(12deg);
+}
+.scene-floating-a{right:2%;top:14%}
+.scene-floating-b{left:1%;bottom:11%;transform:rotate(-13deg);background:var(--page-soft)}
+.section--academy .scene-panel{transform:rotate(4deg)}
+.section--special-interests .scene-panel{transform:rotate(-3deg);background:#183c40;color:#e7ffee}
+.section--special-interests .scene-title{font-family:ui-monospace,monospace;font-size:clamp(2.5rem,6vw,3.55rem);letter-spacing:-.095em}
+.section--special-interests .scene-tag,.section--special-interests .scene-sub{color:#baf2c8}
+.section--arcade .scene-panel{transform:rotate(4deg)}
+.section--arcade .scene-title{font-size:4.5rem;letter-spacing:.02em}
+.section--library .scene-panel{transform:rotate(-5deg)}
+.section--library .scene-title{letter-spacing:-.06em}
+.section--wonderparty .scene-panel{transform:rotate(5deg)}
+.section--wonderparty .scene-title{font-size:4.3rem;letter-spacing:.025em}
+.interior-page .detail-section{margin-bottom:4rem}
+.interior-page .section-top{align-items:end}
+.interior-page .detail-section h2,.interior-page .detail-spotlight h2{
+  font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;letter-spacing:-.055em;
+  color:var(--page-ink);font-size:clamp(1.9rem,3vw,2.55rem);font-weight:900
+}
+.interior-page .section-description{color:#516870}
+.interior-page .feature-list{gap:1.1rem}
+.interior-page .detail-card{
+  background:var(--page-soft);border:2px solid var(--page-ink);border-radius:13px;
+  padding:1.5rem;min-height:225px;box-shadow:4px 4px 0 var(--page-ink);
+  position:relative;
+}
+.interior-page .detail-card:nth-child(2){background:#fffdf7}
+.interior-page .detail-card:nth-child(3){background:#e9f2e9}
+.interior-page .detail-icon{
+  display:grid;place-items:center;width:58px;height:58px;
+  background:white;border:2px solid var(--page-ink);border-radius:13px;
+  margin-bottom:1rem;font-size:1.8rem;transform:rotate(-4deg);
+}
+.interior-page .detail-label{background:#f7eede;color:#684c30;border:1px solid #a38e73;font-size:.65rem}
+.interior-page .detail-label-live{background:#d8f3e1;color:#1a5d43;border-color:#5a9977}
+.interior-page .detail-card h3{font-size:1.26rem;margin:.5rem 0;letter-spacing:-.035em;color:var(--page-ink)}
+.interior-page .detail-card p{color:#485d60;line-height:1.58}
+.interior-page .detail-spotlight{
+  background:var(--page-accent);border:2px solid var(--page-ink);
+  border-radius:16px;box-shadow:6px 6px 0 var(--page-ink);
+  padding:clamp(1.4rem,3vw,2.4rem);gap:2rem;margin-bottom:4rem;
+}
+.interior-page .detail-spotlight p{color:#345459}
+.interior-page .detail-caution{
+  border:2px solid var(--page-ink);border-radius:12px;background:#fffdf7;
+  box-shadow:3px 3px 0 rgba(23,53,59,.3);padding:1.2rem 1.3rem;
+}
+.interior-page .detail-caution strong{color:var(--page-ink)}
+.interior-page .detail-caution p{color:#526467}
+.interior-page .section-pills{gap:.65rem}
+.interior-page .section-pill{
+  background:#fffdf7;border:2px solid #9fb9b0;border-radius:10px;color:var(--page-ink);
+  font-weight:800;min-height:58px;transition:background .12s,border-color .12s;
+}
+.interior-page .section-pill:hover{background:#e5f5e6;border-color:var(--page-ink)}
+.interior-page footer{background:#17353b;color:#dbece5;border-top:0}
+.interior-page footer a{color:#b8eed1}
+.interior-page a:focus-visible,.interior-page button:focus-visible{outline:3px solid #a94f21;outline-offset:4px}
+/* The two playable activities feel like little board games, not forms. */
+.interior-page .activity-intro{max-width:none;padding:2.4rem 0 .9rem}
+.interior-page .activity-intro h1{margin:.65rem 0 1.1rem;max-width:950px}
+.interior-page .activity-intro .detail-lead{max-width:780px}
+.interior-page .activity-privacy{
+  background:#e9f6ee;border:2px solid #94beaa;color:#215249;
+  border-radius:9px;font-size:.82rem;max-width:820px;margin:1.3rem 0 .7rem
+}
+.interior-page .activity-shell{
+  position:relative;max-width:920px;margin:1.25rem 0 1.5rem;
+  background:#fffdf7;border:3px solid var(--page-ink);border-radius:16px;
+  box-shadow:8px 8px 0 var(--page-ink);padding:clamp(1.2rem,4vw,3rem);
+}
+.interior-page .activity-topline{color:var(--page-ink);font-weight:900;font-size:.84rem;letter-spacing:.02em}
+.activity-meter{display:block;width:100%;height:15px;margin:1.1rem 0 1.5rem;accent-color:#0f8071}
+.activity-meter::-webkit-progress-bar{background:#ecf1e9;border-radius:50px;border:1px solid #a6b9ad}
+.activity-meter::-webkit-progress-value{background:#3b9d83;border-radius:50px}
+.activity-meter::-moz-progress-bar{background:#3b9d83;border-radius:50px}
+.interior-page .activity-shell h2{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:1.6rem;letter-spacing:-.035em;margin:1.4rem 0 .3rem}
+.interior-page .activity-prompt{
+  background:var(--page-soft);border:2px dashed #c7a77a;
+  border-radius:12px;padding:1.2rem 1.4rem;
+  font-size:clamp(1.25rem,3.2vw,1.8rem);line-height:1.45;margin:1rem 0 .65rem;
+}
+.game--patterns .activity-prompt{border-color:#b69bc8}
+.interior-page .activity-hint{color:#53676b;font-size:.9rem}
+.interior-page .activity-choices{gap:.9rem;margin:1.25rem 0}
+.interior-page .answer-option{
+  border:2px solid var(--page-ink);border-radius:12px;
+  background:#fff;color:var(--page-ink);min-height:96px;
+  font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:1.6rem;
+  font-weight:900;box-shadow:3px 4px 0 var(--page-ink);transition:transform .1s,background .1s;
+}
+.interior-page .answer-option:hover:not(:disabled){transform:translateY(-2px);background:var(--page-soft);border-color:var(--page-ink)}
+.interior-page .answer-option.answer-correct{background:#b8f0cc;border-color:#195a45;color:#154535;box-shadow:3px 4px 0 #195a45}
+.interior-page .answer-option.answer-try-again{background:#ffedce;border-color:#93672f;color:#704511;box-shadow:3px 4px 0 #93672f}
+.interior-page .answer-option:disabled{cursor:default}
+.interior-page .activity-feedback{min-height:2.3rem}
+.interior-page .activity-next{
+  border:2px solid var(--page-ink);border-radius:9px;background:#b8f0cc;color:var(--page-ink);
+  box-shadow:3px 3px 0 var(--page-ink);font-size:.98rem;
+}
+.interior-page .activity-next:hover:not(:disabled){background:#9ee5be}
+.interior-page .activity-next:disabled{opacity:.45;box-shadow:none}
+.interior-page .activity-actions a{color:#0a7169;font-weight:850}
+.interior-page .activity-disclaimer{
+  max-width:920px;background:#fff2d7;border:1px solid #d8ad5f;
+  border-left:5px solid #ad7840;padding:1.15rem 1.25rem;border-radius:8px;
+  color:#625030;line-height:1.6
+}
+.interior-page .activity-disclaimer strong{color:#5c411d}
+@media(max-width:900px){
+  .interior-page .detail-hero{grid-template-columns:1fr;gap:1rem;margin-bottom:3rem}
+  .interior-page .detail-hero-art{max-width:650px;width:100%;min-height:270px;margin-bottom:1rem}
+  .interior-page .feature-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:610px){
+  .interior-page .detail-main{padding:0 1rem 2.5rem}
+  .interior-page .brand{font-size:1.22rem}
+  .interior-page .detail-hero-copy{padding:.3rem 0}
+  .interior-page .detail-hero h1{font-size:clamp(2.35rem,10vw,3.5rem)}
+  .interior-page .detail-hero-art{min-height:240px}
+  .detail-scene{min-height:215px}
+  .scene-panel{min-height:185px}
+  .interior-page .feature-list,.interior-page .section-pills{grid-template-columns:1fr}
+  .interior-page .detail-card{min-height:0}
+  .interior-page .detail-spotlight{grid-template-columns:1fr;margin-bottom:3rem}
+  .interior-page .activity-intro{padding-top:1.6rem}
+  .interior-page .activity-shell{padding:1.15rem;box-shadow:5px 5px 0 var(--page-ink)}
+  .interior-page .activity-choices{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+  .interior-page .answer-option{min-height:76px;padding:.5rem;font-size:1.25rem}
+  .interior-page .activity-actions{align-items:stretch;flex-direction:column}
+  .interior-page .activity-next{width:100%}
+  .interior-page .activity-prompt{padding:.9rem 1rem}
+}
+@media(max-width:370px){
+  .interior-page .activity-choices{grid-template-columns:1fr}
+  .interior-page .answer-option{min-height:60px}
+  .interior-page .alpha{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .interior-page .answer-option{transition:none}
+  .interior-page .answer-option:hover:not(:disabled){transform:none}
+}
