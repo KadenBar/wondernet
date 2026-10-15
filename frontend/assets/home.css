@@ -167,3 +167,24 @@
 .cg-feature-sticker{position:absolute;right:.9rem;top:1.1rem;font-size:.76rem;font-weight:900;transform:rotate(8deg);border:2px solid #17353b;background:#fce7a3;padding:.6rem .8rem;box-shadow:4px 4px 0 #17353b}
 .cg-practice-label{font-size:.74rem;letter-spacing:.11em;font-weight:900;color:#347461;margin:0 0 1rem}
 @media(max-width:740px){.cg-feature{grid-template-columns:1fr}.cg-feature-art{border-left:0;border-top:2px solid #17353b;min-height:275px}.cg-mini-board{grid-template-columns:repeat(3,57px);grid-template-rows:repeat(3,57px)}.cg-mini-board span{font-size:2rem}}
+
+/* Word Workshop is a distinct hands-on educational game, not another quiz. */
+.ww-home-feature{display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);margin:0 0 2.2rem;background:#f4e4fa;border:3px solid #17353b;border-radius:18px;box-shadow:7px 8px 0 #17353b;overflow:hidden}
+.ww-home-art{min-height:305px;background:radial-gradient(circle at 55% 25%,#f8ddf9,#d1baf2);display:flex;align-items:center;justify-content:center;position:relative;border-right:2px solid #17353b;isolation:isolate}
+.ww-home-art:before{content:"";position:absolute;inset:15%;background:repeating-linear-gradient(45deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 7px,transparent 7px,transparent 14px);border:2px dashed rgba(88,68,114,.3);transform:rotate(8deg);border-radius:25px}
+.ww-home-tiles{display:flex;gap:4px;transform:rotate(-8deg);position:relative}
+.ww-home-tiles span{display:grid;place-items:center;width:clamp(44px,5.5vw,70px);height:clamp(60px,7vw,83px);background:#ffe4b1;border:3px solid #17353b;border-bottom-width:7px;border-radius:12px;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(1.65rem,3vw,2.7rem);font-weight:950;color:#17353b}
+.ww-home-tiles span:nth-child(2){background:#c4f0d7;transform:translateY(-10px) rotate(9deg)}
+.ww-home-tiles span:nth-child(3){background:#f6d0b7;transform:translateY(7px)}
+.ww-home-tiles span:nth-child(4){background:#d6e6fa;transform:translateY(-5px) rotate(-5deg)}
+.ww-home-spark{position:absolute;top:1rem;left:1rem;font-size:2.5rem;color:#a5669f}
+.ww-home-note{position:absolute;right:1.1rem;bottom:1.1rem;padding:.6rem .75rem;background:#ffe8aa;border:2px solid #17353b;border-radius:7px;font-size:.69rem;letter-spacing:.06em;font-weight:950;transform:rotate(8deg);box-shadow:3px 3px 0 #17353b}
+.ww-home-copy{padding:clamp(1.4rem,3vw,2.3rem);display:flex;align-items:flex-start;flex-direction:column;justify-content:center}
+.ww-home-eyebrow{font-size:.71rem;letter-spacing:.09em;font-weight:950;color:#81609e;margin:0 0 .7rem}
+.ww-home-copy h3{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(2.5rem,4.3vw,4.2rem);letter-spacing:-.075em;line-height:1.05;font-weight:950;margin:0 0 .9rem;color:#17353b}
+.ww-home-copy h3 em{font-style:normal;color:#9960a6}
+.ww-home-copy>p:not(.ww-home-eyebrow){color:#4f586a;font-size:1.02rem;line-height:1.65;margin:0 0 1.3rem}
+.ww-home-link{display:inline-flex;align-items:center;justify-content:space-between;gap:2rem;min-height:49px;padding:.78rem 1.15rem;background:#17353b;border:2px solid #17353b;color:#fff;text-decoration:none;font-weight:900;border-radius:10px}
+.ww-home-link:hover{background:#765193}
+.ww-home-copy small{font-size:.76rem;color:#67597d;font-weight:790;margin-top:.85rem}
+@media(max-width:780px){.ww-home-feature{grid-template-columns:1fr}.ww-home-art{min-height:210px;border-right:0;border-bottom:2px solid #17353b}.ww-home-tiles span{height:62px;width:52px;font-size:2rem}}
