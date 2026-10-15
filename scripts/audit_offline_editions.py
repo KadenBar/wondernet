@@ -55,6 +55,8 @@ def audit_page(slug, html):
         advisory.append("chapter navigation or semantic headings missing")
     if "[Illustration" in html:
         advisory.append("source illustration placeholders remain; artwork not reproduced")
+        if slug in {"flopsy-bunnies", "squirrel-nutkin", "timmy-tiptoes", "book-of-dragons"}:
+            advisory.append("illustration-dependent edition: do not treat text-only rendering as a complete illustrated reading experience")
     if re.search(r"(?m)<p>\s*(?:CHAPTER\s+[IVXLCDM0-9]+|ADVENTURE\s+[IVXLCDM0-9]+)", html):
         advisory.append("chapter markers remain plain paragraphs")
     if slug in OLDER_READER:
