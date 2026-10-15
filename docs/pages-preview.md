@@ -15,7 +15,7 @@ GitHub may take a few minutes to complete the deployment.
 
 ## What's in the preview
 
-- Responsive homepage and six interior pages.
+- Responsive homepage and six interior pages. The Library page now includes a local-filterable research-only list of eleven potential titles, **not the books themselves**.
 - Letter Match and Pattern Playground: five browser-only practice questions each.\n- Circuit Garden: ten handcrafted circuit puzzles with session-only level progression; no data stored.\n- Word Workshop: sixteen word-building puzzles, four thematic collections and optional hints, with in-memory progress only.
 - A prominent early-development warning banner on every page.
 - No analytics, logins, ads, user uploads, chat or persistent learner data.
