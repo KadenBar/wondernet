@@ -31,9 +31,11 @@
   const next = document.getElementById("activity-next");
   let index = 0;
   let correct = false;
+  let finished = false;
 
   function showQuestion() {
     correct = false;
+    finished = false;
     const question = questions[index];
     progress.textContent = `Round ${index + 1} of ${questions.length}`;
     prompt.textContent = question.prompt;
@@ -70,11 +72,17 @@
   }
 
   next.addEventListener("click", () => {
+    if (finished) {
+      index = 0;
+      showQuestion();
+      return;
+    }
     if (!correct) return;
     if (index < questions.length - 1) {
       index += 1;
       showQuestion();
     } else {
+      finished = true;
       progress.textContent = "All 5 rounds complete";
       prompt.textContent = "You finished! 🎉";
       hint.textContent = "Want to try again?";
@@ -83,7 +91,7 @@
       feedback.className = "activity-feedback activity-good";
       next.textContent = "Play again ↻";
       next.disabled = false;
-      next.onclick = () => { index = 0; next.onclick = null; showQuestion(); };
+
     }
   });
   showQuestion();

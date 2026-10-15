@@ -18,7 +18,7 @@ WonderNet's early site now has six direct section routes. Navigation is delibera
 
 The two activities are intentionally tiny prototype exercises, not evidence-based literacy curricula or validated child-ready games. We have not yet validated phonics outcomes, accessibility with assistive technologies, or suitability for independent child use. No new server-side state, accounts, analytics, cookies, uploads, multiplayer or code execution are introduced.
 
-Questions and choices are hard-coded in `frontend/assets/activities.js`. The activities keep state only in browser memory until refresh; they make no fetch requests. All CSS/JS remains local. No remote content is embedded; the external GitHub link is merely a navigational destination.
+Questions and choices are hard-coded in `frontend/assets/activities.js`. The activities keep state only in browser memory until refresh; they make no fetch requests. All CSS/JS remains local. No remote content or external hyperlinks are embedded in learner pages; GitHub links remain in repository documentation, not in the browser-facing learning experience.
 
 All `/explore/{section}` and `/play/{activity}` routes are hard-coded allowlists in `backend/app/main.py`. No arbitrary file paths, route names or dynamic user-provided assets are accepted.
 

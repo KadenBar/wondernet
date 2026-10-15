@@ -88,5 +88,5 @@ def test_section_pages_do_not_load_third_party_assets():
     for url in ("/explore/early-learning", "/explore/wonderparty", "/play/letter-match"):
         html = client.get(url).text
         assert 'src="https://' not in html
-        assert 'href="https://' not in html or "github.com/KadenBar/wondernet" in html
+        assert 'href="https://' not in html
         assert "<script " not in html or 'src="/assets/activities.js"' in html
