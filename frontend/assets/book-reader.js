@@ -21,7 +21,13 @@
   let current = 1;
   // The original demo has chapters; complete picture-book stories have short reading pages.
   const unit = document.body.dataset.readerUnit === "Page" ? "Page" : "Chapter";
-  const title = number => chapters[number - 1].querySelector("h2").textContent;
+  const languageSelect = document.getElementById("reader-language");
+  let currentLanguage = "en";
+  const title = number => {
+    const heading = chapters[number - 1].querySelector("h2");
+    const visibleTranslation = heading.querySelector("[data-story-lang]:not([hidden])");
+    return visibleTranslation ? visibleTranslation.textContent : heading.textContent;
+  };
 
   function chapterFromHash() {
     const result = /^#chapter-([1-9][0-9]*)$/.exec(window.location.hash);
@@ -42,10 +48,15 @@
     }
     previous.disabled = number === 1;
     next.disabled = number === chapters.length;
-    next.textContent = number === chapters.length ? "End of story ✓" : "Next " + unit.toLowerCase() + " →";
+    next.textContent = number === chapters.length ?
+      (currentLanguage === "es" ? "Fin del cuento ✓" : "End of story ✓") :
+      (currentLanguage === "es" ? "Página siguiente →" : "Next " + unit.toLowerCase() + " →");
+    previous.textContent = currentLanguage === "es" ? "← Página anterior" : "← Previous " + unit.toLowerCase();
     progress.max = chapters.length;
     progress.value = number;
-    progressCopy.textContent = unit + " " + number + " of " + chapters.length + " · " + title(number);
+    progressCopy.textContent = currentLanguage === "es" ?
+      "Página " + number + " de " + chapters.length + " · " + title(number) :
+      unit + " " + number + " of " + chapters.length + " · " + title(number);
     pageLabel.textContent = number + " / " + chapters.length;
     if (!fromHash && window.history && window.history.replaceState) {
       // The URL itself can identify the chapter. Nothing is saved to a device or server.
@@ -85,6 +96,26 @@
       if (radio.checked && ["paper", "night", "contrast"].includes(radio.value)) {
         document.body.dataset.readerTheme = radio.value;
       }
+    });
+  }
+  // The new original picture book has parallel English/Spanish text and
+  // original local SVGs. Switching never fetches, stores or executes content.
+  // Other older books have no language selector and retain prior behavior.
+  if (languageSelect) {
+    const translations = Array.from(document.querySelectorAll("[data-story-lang]"));
+    const illustrations = Array.from(document.querySelectorAll(".story-illustration img"));
+    languageSelect.addEventListener("change", () => {
+      const lang = languageSelect.value;
+      if (lang !== "en" && lang !== "es") return;
+      currentLanguage = lang;
+      for (const node of translations) {
+        node.hidden = node.dataset.storyLang !== lang;
+      }
+      for (const img of illustrations) {
+        img.alt = lang === "es" ? img.dataset.altEs : img.dataset.altEn;
+      }
+      // Refresh progress and button labels, without changing or scrolling page.
+      renderChapter(current, true, true);
     });
   }
   document.addEventListener("keydown", event => {

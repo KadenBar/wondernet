@@ -1,0 +1,41 @@
+<!-- Original WonderNet illustration for Mara's Moving Garden. Creative content: CC BY 4.0; see library/PICTURE-BOOK-LICENSE.md. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" role="img" aria-labelledby="scene-title scene-desc">
+<title id="scene-title">Mara's Moving Garden - scene 2</title>
+<desc id="scene-desc">Original vector illustration for a WonderNet bilingual picture book.</desc>
+<defs><linearGradient id="sky" x1="0" y1="0" x2=".4" y2="1"><stop stop-color="#dcebf1"/><stop offset="1" stop-color="#fff7e5"/></linearGradient></defs>
+<rect width="900" height="550" fill="url(#sky)"/><path d="M0 427 Q240 392 451 428 Q658 397 900 417V550H0Z" fill="#9bc0a0"/>
+<path d="M0 492Q210 475 420 491T900 481" stroke="#7da98d" stroke-width="10" fill="none"/>
+<g transform="translate(718 -80) scale(0.7)" stroke="#304351" stroke-width="4"><rect width="260" height="340" rx="9" fill="#d9c7b7"/><path d="M0 30 H260" stroke="#fff0cc" stroke-width="8"/>
+ <rect x="43" y="77" width="69" height="74" rx="8" fill="#fff3c7"/><path d="M78 77 v74 M43 114h69" fill="none" stroke="#7ea5ad" stroke-width="4"/><rect x="148" y="77" width="69" height="74" rx="8" fill="#fff3c7"/><path d="M183 77 v74 M148 114h69" fill="none" stroke="#7ea5ad" stroke-width="4"/><rect x="43" y="190" width="69" height="74" rx="8" fill="#fff3c7"/><path d="M78 190 v74 M43 227h69" fill="none" stroke="#7ea5ad" stroke-width="4"/><rect x="148" y="190" width="69" height="74" rx="8" fill="#fff3c7"/><path d="M183 190 v74 M148 227h69" fill="none" stroke="#7ea5ad" stroke-width="4"/>
+ <rect x="109" y="265" width="72" height="75" rx="10" fill="#6b9291"/>
+ </g><g transform="translate(560 47) scale(0.7)" fill="#fffaf0" stroke="#b5bcd1" stroke-width="3"><ellipse cx="30" cy="34" rx="42" ry="25"/><ellipse cx="75" cy="18" rx="48" ry="35"/><ellipse cx="122" cy="34" rx="48" ry="26"/></g><g transform="translate(175 255) scale(0.99)" stroke="#304351" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-16 106 L-23 157 M13 106 L23 157" fill="none" stroke="#486b81" stroke-width="14"/>
+ <path d="M-31 154 l20 4 M12 158 l23 1" stroke="#324a55" stroke-width="11"/>
+ <path d="M-31 47 Q-34 35 -14 34 L19 35 Q38 41 30 94 L-25 94Z" fill="#edaa53"/>
+ <path d="M-21 64 L-39 104 M23 65 M18 64 L62 22" stroke="#b97450" stroke-width="14" fill="none"/>
+ <circle cy="-8" r="31" fill="#b97450"/>
+ <circle cx="-22" cy="-14" r="12" fill="#32374f"/><circle cx="-12" cy="-26" r="12" fill="#32374f"/><circle cx="0" cy="-30" r="12" fill="#32374f"/><circle cx="13" cy="-28" r="12" fill="#32374f"/><circle cx="23" cy="-15" r="12" fill="#32374f"/><circle cx="26" cy="-4" r="12" fill="#32374f"/>
+ <circle cx="-10" cy="-4" r="2.8" fill="#304351" stroke="none"/><circle cx="12" cy="-4" r="2.8" fill="#304351" stroke="none"/>
+ <path d="M-6 10 Q2 17 11 8" fill="none" stroke="#304351" stroke-width="2.8"/>
+ 
+ </g><g transform="translate(688 218) scale(1.11)" stroke="#304351" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-16 106 L-23 157 M13 106 L23 157" fill="none" stroke="#3e6582" stroke-width="14"/>
+ <path d="M-31 154 l20 4 M12 158 l23 1" stroke="#324a55" stroke-width="11"/>
+ <path d="M-31 47 Q-34 35 -14 34 L19 35 Q38 41 30 94 L-25 94Z" fill="#8eaf88"/>
+ <path d="M-21 64 L-39 104 M23 65 M20 69 L34 109" stroke="#9d6948" stroke-width="14" fill="none"/>
+ <circle cy="-8" r="31" fill="#9d6948"/>
+ <path d="M-31 -10 Q-31 -41 0 -44 Q34 -43 29 -10 Q17 -25 8 -23 Q-10 -18 -25 -10Z" fill="#e4e6e0"/>
+ <circle cx="-10" cy="-4" r="2.8" fill="#304351" stroke="none"/><circle cx="12" cy="-4" r="2.8" fill="#304351" stroke="none"/>
+ <path d="M-6 10 Q2 17 11 8" fill="none" stroke="#304351" stroke-width="2.8"/>
+ <path d="M-16 2 Q0 29 18 4 M-22 -10 Q-6 -20 0 -6 Q14 -18 22 -8" fill="none" stroke="#eee8df" stroke-width="5"/>
+ </g><g transform="translate(270 345) scale(1.05)" stroke="#304351" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+
+<path d="M15 35 H315 L290 129 Q165 150 37 127Z" fill="#d96c6f"/>
+<path d="M42 35 H285 L267 74 H57Z" fill="#e7978c"/>
+<path d="M14 45 L-28 11" stroke="#94574d" stroke-width="11" fill="none"/>
+<circle cx="79" cy="151" r="26" fill="#344f5e"/><circle cx="242" cy="151" r="26" fill="#344f5e"/>
+<circle cx="79" cy="151" r="9" fill="#f3d59c" stroke-width="2"/><circle cx="242" cy="151" r="9" fill="#f3d59c" stroke-width="2"/>
+<path d="M35 42 H293" stroke="#ffd7b4" stroke-width="5" fill="none"/>
+</g><path d="M155 451 Q257 493 490 475" stroke="#fff3d0" stroke-width="10" stroke-dasharray="7 25" fill="none"/>
+<circle cx="51" cy="480" r="2" fill="#ebd9a4"/><circle cx="164" cy="493" r="3" fill="#7ba48c"/><circle cx="277" cy="506" r="4" fill="#ebd9a4"/><circle cx="390" cy="519" r="2" fill="#7ba48c"/><circle cx="503" cy="480" r="3" fill="#ebd9a4"/><circle cx="616" cy="493" r="4" fill="#7ba48c"/><circle cx="729" cy="506" r="2" fill="#ebd9a4"/><circle cx="842" cy="519" r="3" fill="#7ba48c"/><circle cx="55" cy="480" r="4" fill="#ebd9a4"/><circle cx="168" cy="493" r="2" fill="#7ba48c"/><circle cx="281" cy="506" r="3" fill="#ebd9a4"/><circle cx="394" cy="519" r="4" fill="#7ba48c"/><circle cx="507" cy="480" r="2" fill="#ebd9a4"/><circle cx="620" cy="493" r="3" fill="#7ba48c"/><circle cx="733" cy="506" r="4" fill="#ebd9a4"/><circle cx="846" cy="519" r="2" fill="#7ba48c"/><circle cx="59" cy="480" r="3" fill="#ebd9a4"/><circle cx="172" cy="493" r="4" fill="#7ba48c"/>
+<path d="M1 1H899V549H1Z" stroke="#304351" stroke-width="2.5" fill="none"/></svg>

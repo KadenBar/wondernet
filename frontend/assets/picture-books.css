@@ -1,0 +1,30 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Story text and 8 first-party illustrated spreads, fully offline.
+   Individual illustrations are local inert SVGs loaded as <img>, not inline scripts. */
+.picture-book .reader-cover{background:#f4ede0;}
+.picture-book .reader-cover-art{background:#f9e5c7;min-height:260px;overflow:hidden}
+.picture-book .reader-cover-art:before{display:none}
+.picture-book .reader-cover-art img{height:100%;width:100%;min-height:260px;object-fit:cover;object-position:center}
+.picture-book .reader-chapter h2{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(1.75rem,3vw,2.35rem);font-weight:900;letter-spacing:-.05em;margin-bottom:1.15rem}
+.picture-book .story-illustration{margin:0 0 1.6rem;background:#e7eedf;border:2px solid #456a61;border-radius:14px;overflow:hidden;box-shadow:5px 7px 0 rgba(30,60,56,.18);}
+.picture-book .story-illustration img{display:block;width:100%;height:auto;aspect-ratio:900/550;object-fit:contain}
+.picture-book .reader-paper{padding:clamp(1rem,3vw,2.5rem) clamp(.9rem,4vw,2.8rem)}
+.picture-book .story-language-group p{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif!important;line-height:1.7!important;font-weight:550!important;letter-spacing:-.012em;max-width:55ch!important}
+.picture-book .reader-chapter p:nth-of-type(2):first-letter{font-size:inherit;color:inherit}
+.picture-book [data-story-lang][hidden],.picture-book .story-language-group[hidden]{display:none!important}
+.picture-book .reader-paper-decoration{margin-bottom:.75rem}
+.story-language-label{display:block;font-size:.86rem;color:#325b51;font-weight:900;margin:0 0 .5rem}
+#reader-language{font:inherit;font-weight:800;display:block;min-height:47px;width:100%;border-radius:9px;background:white;color:#294d46;border:2px solid #448673;padding:.55rem .7rem;cursor:pointer}
+#reader-language:focus-visible{outline:3px solid #b96a36;outline-offset:3px}
+.story-language-note{font-size:.76rem;line-height:1.5;color:#587065;margin:.6rem 0 1.25rem}
+@media(max-width:560px){
+ .picture-book .reader-cover-art{min-height:175px}
+ .picture-book .reader-cover-art img{min-height:175px}
+ .picture-book .reader-paper{padding:1.15rem .9rem}
+ .picture-book .story-illustration{border-radius:9px;box-shadow:3px 4px 0 rgba(30,60,56,.18)}
+ .picture-book .story-language-group p{font-size:var(--reader-text-size);line-height:1.7!important}
+}
+@media print{
+ .picture-book .story-illustration{break-inside:avoid;box-shadow:none;border:1px solid #333}
+ .picture-book .story-language-group[hidden]{display:none!important}
+}

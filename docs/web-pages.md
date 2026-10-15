@@ -1,6 +1,6 @@
 # Website pages and first mini activities
 
-WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. One original five-chapter short story and five complete public-domain US story texts are locally readable through the Library.
+WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. Two original short stories, including one fully illustrated English/Spanish picture book, and five complete US-public-domain texts are readable through the Library.
 
 | URL | State |
 | --- | --- |
@@ -9,18 +9,23 @@ WonderNet's early site has six direct section routes and four playable browser a
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
 | `/explore/arcade` | Links to Circuit Garden plus a small pattern practice activity |
-| `/explore/library` | Six locally readable stories (one original, five complete US public-domain texts) plus a separate 11-title unapproved research queue |
+| `/explore/library` | Seven locally readable stories (two original, including one illustrated bilingual book, plus five complete US-public-domain texts) and a separate 11-title unapproved research queue |
 | `/explore/wonderparty` | Planned private local party games |
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning practice |
 | `/play/circuit-garden` | Ten-level circuit-rotation puzzle game; mouse, touch and keyboard support |
 | `/play/word-workshop` | Sixteen hands-on spelling/letter-building puzzles across four themed worlds |
 | `/read/lantern` | Original five-chapter story with local reading themes, text sizing and chapter navigation |
+| `/read/mara-garden` | Original eight-spread illustrated English/Spanish story with local SVGs, language selector and localized image descriptions (review pending) |
 | `/read/peter-rabbit`, `/read/benjamin-bunny`, `/read/tom-kitten`, `/read/jemima-puddle-duck`, `/read/jeremy-fisher` | Full US public-domain story texts by Beatrix Potter with page navigation; historical illustrations not included |
 
 ## Original offline story reader
 
 **The Lantern That Kept the Stars** is original, embedded in `frontend/pages/book-lantern.html`, and exported to `/read/lantern/`. Its CSS and JavaScript are local, with no external resources, trackers, accounts or persistence. Chapter navigation, text scaling and paper/night/high-contrast reading themes operate in memory; a chapter URL fragment is shareable. `library/reader-demos.json` tracks sample rights and pending review. The sample is not an approved children's book or an arbitrary third-party ebook viewer.
+
+## First original illustrated bilingual picture book
+
+**Mara's Moving Garden / El jardín viajero de Mara** uses eight first-party hand-authored SVG scenes stored in `frontend/assets/books/mara-garden/`, one illustration per screen-reading spread. Every image has descriptive English/Spanish `alt` text, and readers can switch all story paragraphs and page headings between English and Spanish without changing pages. The reader retains text sizing, themes and keyboard navigation, and no network access or localStorage is used. `library/picture-books.json` tracks bilingual source text and art rights separately from AGPL code; `library/PICTURE-BOOK-LICENSE.md` explains open-content attribution. The translated draft still requires fluent-speaker, educational, content and manual accessibility review before child-facing use. Original illustration files are directly viewable as local inert images, not arbitrary external SVG documents or user-uploadable files.
 
 ## Five complete US public-domain stories
 

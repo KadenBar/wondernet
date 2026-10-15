@@ -14,6 +14,7 @@ SECTIONS = frozenset({"early-learning", "academy", "special-interests", "arcade"
 ACTIVITIES = {"letter-match", "patterns", "circuit-garden", "word-workshop"}
 READABLE_BOOKS = {
     "lantern": "book-lantern.html",
+    "mara-garden": "book-mara-garden.html",
     "peter-rabbit": "book-peter-rabbit.html",
     "benjamin-bunny": "book-benjamin-bunny.html",
     "tom-kitten": "book-tom-kitten.html",

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "collection": "original-illustrated-bilingual-picture-books",
+  "updated": "2026-10-14",
+  "status": "developer-preview-only-not-child-approved",
+  "books": [
+    {
+      "id": "mara-garden",
+      "title": "Mara's Moving Garden",
+      "translated_title": "El jardín viajero de Mara",
+      "source": "WonderNet original work created for this repository, not a third-party adaptation",
+      "route": "/read/mara-garden",
+      "content_file": "frontend/pages/book-mara-garden.html",
+      "languages": [
+        {
+          "code": "en",
+          "label": "English",
+          "translation_status": "original-draft"
+        },
+        {
+          "code": "es",
+          "label": "Español",
+          "translation_status": "draft-needs-fluent-speaker-review"
+        }
+      ],
+      "reading_level": "not assessed",
+      "illustration_count": 8,
+      "illustrations": [
+        "frontend/assets/books/mara-garden/page-1.svg",
+        "frontend/assets/books/mara-garden/page-2.svg",
+        "frontend/assets/books/mara-garden/page-3.svg",
+        "frontend/assets/books/mara-garden/page-4.svg",
+        "frontend/assets/books/mara-garden/page-5.svg",
+        "frontend/assets/books/mara-garden/page-6.svg",
+        "frontend/assets/books/mara-garden/page-7.svg",
+        "frontend/assets/books/mara-garden/page-8.svg"
+      ],
+      "original_artwork": "Hand-authored local vector scenes, not scans, decorative cover images or third-party illustrations",
+      "rights": {
+        "content_license": "CC-BY-4.0",
+        "content_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "WonderNet contributors (2026), Mara's Moving Garden / El jardín viajero de Mara",
+        "notice": "Original story text and SVG picture-book art offered under CC BY 4.0 to the extent contributors hold applicable rights; software and reader implementation remain AGPL-3.0-only."
+      },
+      "review": {
+        "rights": "original-work-owner-sign-off-required",
+        "editorial": "pending",
+        "spanish_translation": "pending",
+        "screen_reader": "pending",
+        "visual_accessibility": "pending",
+        "child_use": "not-approved"
+      },
+      "network_required": false,
+      "analytics": false,
+      "files_uploaded": false
+    }
+  ]
+}
