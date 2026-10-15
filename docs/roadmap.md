@@ -32,7 +32,7 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [ ] Content provenance/licensing metadata and export/import validation
 
 ## 🎮 Alpha 0.5 — Arcade + WonderParty
-- [ ] One accessible, offline puzzle game
+- [x] One ten-level, locally hosted Circuit Garden puzzle game (prototype only, awaiting manual accessibility validation)\n- [ ] Verify full keyboard, touch, screen-reader and contrast accessibility of Circuit Garden
 - [ ] Private room-code party game with server-authoritative membership
 - [ ] Local multiplayer test across phones/tablets; host controls and abuse cases
 - [ ] Accessibility and load tests for games
