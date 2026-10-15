@@ -1,0 +1,42 @@
+name: One-time pinned Book Dash import
+
+on:
+  push:
+    branches:
+      - feature/bookdash-five-licensed-picture-books
+    paths:
+      - scripts/import_bookdash.py
+      - library/bookdash-books.json
+      - .github/workflows/import-bookdash-assets.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.ref == 'refs/heads/feature/bookdash-five-licensed-picture-books' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Import exactly pinned original Book Dash JPEGs and source text
+        run: python scripts/import_bookdash.py
+      - name: Confirm all 65 images are verified locally
+        run: python scripts/import_bookdash.py --verify-only
+      - name: Commit original media and complete formatted books to this feature branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add frontend/assets/books/bookdash library/bookdash-assets.sha256.json frontend/pages/book-a-beautiful-day.html frontend/pages/book-a-tiny-seed.html frontend/pages/book-a-house-for-mouse.html frontend/pages/book-come-back-cat.html frontend/pages/book-walking-together.html
+          if git diff --cached --quiet; then
+            echo 'Pinned Book Dash files already complete.'
+          else
+            git commit -m 'Bundle five original Book Dash editions with verified local illustrations'
+            git push origin HEAD:refs/heads/feature/bookdash-five-licensed-picture-books
+          fi
