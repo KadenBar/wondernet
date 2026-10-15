@@ -30,6 +30,7 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [ ] Review and approve a small, varied set of exact licensed editions before distributing any media
 - [ ] Secure administrator-only media import with size/type and archive checks
 - [x] First original five-chapter static reader demo with adjustable type, colors and chapters (manual a11y review pending)
+- [x] Five complete US public-domain story texts packaged as read-only developer previews, with simple new decoration (period illustrations omitted, content/a11y review pending)
 - [ ] Generalized approved-content reader and offline indexed search
 - [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)
 - [ ] One evidence-informed early phonics activity and accessible alternatives
