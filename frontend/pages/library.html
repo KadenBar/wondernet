@@ -1,16 +1,69 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-only -->
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Library at WonderNet: We're planning a searchable local collection of books, audio, videos and learning materials that works without outside accounts."><title>Library | WonderNet</title><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/section-pages.css"><link rel="stylesheet" href="/assets/interiors.css"></head><body class="interior-page section--library">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Library at WonderNet: Our first 11 storybook and classic-book candidates are cataloged with source and license details. Nothing is installed for offline reading yet, and every title awaits human review."><title>Library | WonderNet</title><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/section-pages.css"><link rel="stylesheet" href="/assets/interiors.css"><link rel="stylesheet" href="/assets/library-shelf.css"><script defer src="/assets/library-shelf.js"></script></head><body class="interior-page section--library">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="WonderNet home"><span class="brand-mark" aria-hidden="true">✳</span><span>Wonder<span class="brand-emphasis">Net</span></span><span class="alpha">ALPHA 0.1</span></a><nav class="site-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/#explore">All sections</a><a href="/#next-up">Roadmap</a></nav></div></header>
 <main id="main-content" class="detail-main">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Library</span></nav>
 <section class="detail-hero" aria-labelledby="section-title"><div class="detail-hero-copy">
-<p class="eyebrow">A HOME FOR STORIES</p><span class="detail-status">Section preview</span>
+<p class="eyebrow">A HOME FOR STORIES</p><span class="detail-status">11 titles on the research shelf</span>
 <h1 id="section-title">A bookshelf that can go anywhere.</h1><p class="detail-lead">We're planning a searchable local collection of books, audio, videos and learning materials that works without outside accounts.</p>
-<div class="detail-cta"><a class="primary-link" href="#whats-next">Explore what's planned <span aria-hidden="true">→</span></a><a class="secondary-link" href="/#explore">All sections <span aria-hidden="true">↗</span></a></div>
+<div class="detail-cta"><a class="primary-link" href="#research-shelf">Browse the research shelf <span aria-hidden="true">→</span></a><a class="secondary-link" href="/#explore">All sections <span aria-hidden="true">↗</span></a></div>
 </div><div class="detail-hero-art" aria-hidden="true"><div class="detail-scene"><span class="scene-spark">✧</span><span class="scene-spark">✳</span><div class="scene-panel"><span class="scene-tag">ONE MORE PAGE</span><strong class="scene-title">▤</strong><span class="scene-sub">Stories to take anywhere</span></div><span class="scene-floating scene-floating-a">ABC</span><span class="scene-floating scene-floating-b">✶</span></div><span class="detail-art-caption">CONCEPT ART · EARLY DEVELOPMENT</span></div></section>
+<section class="lb-shelf section" id="research-shelf" aria-labelledby="research-title">
+  <div class="lb-head"><div><p class="eyebrow">THE VERY FIRST SHELF · RESEARCH ONLY</p><h2 id="research-title">11 books we're looking into.</h2><p>Old favorites and new illustrated stories. These are <strong>candidates</strong>, not approved books. Nothing here is downloadable or readable on WonderNet yet.</p></div><span class="lb-count" aria-hidden="true">11<br><small>TO REVIEW</small></span></div>
+  <form class="lb-search" role="search" onsubmit="return false">
+    <label for="lb-query">Find a candidate</label><input id="lb-query" type="search" autocomplete="off" placeholder="Try animals, garden, fantasy..." aria-describedby="lb-results">
+    <label for="lb-kind">Collection</label><select id="lb-kind"><option value="all">All books</option><option value="illustrated">Illustrated stories</option><option value="classics">Classic books</option></select>
+  </form>
+  <p id="lb-results" class="lb-results" role="status" aria-live="polite">Showing 11 research candidates</p>
+  <div class="lb-grid" id="lb-grid"><article class="lb-book" data-book-id="alice-wonderland" data-kind="classics" data-search="alice’s adventures in wonderland lewis carroll fantasy independent standard ebooks">
+  <div class="lb-cover lb-cover-0" aria-hidden="true"><span>✧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>Alice’s Adventures in Wonderland</h3><p class="lb-author">Lewis Carroll</p><p class="lb-book-meta">Independent readers · fantasy</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="wonderful-wizard-oz" data-kind="classics" data-search="the wonderful wizard of oz l. frank baum fantasy independent standard ebooks">
+  <div class="lb-cover lb-cover-1" aria-hidden="true"><span>✧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>The Wonderful Wizard of Oz</h3><p class="lb-author">L. Frank Baum</p><p class="lb-book-meta">Independent readers · fantasy</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="little-princess" data-kind="classics" data-search="a little princess frances hodgson burnett friendship older standard ebooks">
+  <div class="lb-cover lb-cover-2" aria-hidden="true"><span>♡</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>A Little Princess</h3><p class="lb-author">Frances Hodgson Burnett</p><p class="lb-book-meta">Older readers · friendship</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="secret-garden" data-kind="classics" data-search="the secret garden frances hodgson burnett nature older standard ebooks">
+  <div class="lb-cover lb-cover-3" aria-hidden="true"><span>❀</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>The Secret Garden</h3><p class="lb-author">Frances Hodgson Burnett</p><p class="lb-book-meta">Older readers · nature</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="black-beauty" data-kind="classics" data-search="black beauty anna sewell animals older standard ebooks">
+  <div class="lb-cover lb-cover-4" aria-hidden="true"><span>♧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>Black Beauty</h3><p class="lb-author">Anna Sewell</p><p class="lb-book-meta">Older readers · animals</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="wind-in-willows" data-kind="classics" data-search="the wind in the willows kenneth grahame animals independent standard ebooks">
+  <div class="lb-cover lb-cover-0" aria-hidden="true"><span>♧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>The Wind in the Willows</h3><p class="lb-author">Kenneth Grahame</p><p class="lb-book-meta">Independent readers · animals</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="anne-green-gables" data-kind="classics" data-search="anne of green gables l. m. montgomery friendship older standard ebooks">
+  <div class="lb-cover lb-cover-1" aria-hidden="true"><span>♡</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>Anne of Green Gables</h3><p class="lb-author">L. M. Montgomery</p><p class="lb-book-meta">Older readers · friendship</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="jungle-book" data-kind="classics" data-search="the jungle book rudyard kipling animals older standard ebooks">
+  <div class="lb-cover lb-cover-2" aria-hidden="true"><span>♧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>The Jungle Book</h3><p class="lb-author">Rudyard Kipling</p><p class="lb-book-meta">Older readers · animals</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="peter-and-wendy" data-kind="classics" data-search="peter and wendy j. m. barrie fantasy older standard ebooks">
+  <div class="lb-cover lb-cover-3" aria-hidden="true"><span>✧</span><small>CLASSIC</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">US public-domain candidate</p><h3>Peter and Wendy</h3><p class="lb-author">J. M. Barrie</p><p class="lb-book-meta">Older readers · fantasy</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="cloud-of-trash" data-kind="illustrated" data-search="a cloud of trash karanjeet kaur environment read-together storyweaver">
+  <div class="lb-cover lb-cover-4" aria-hidden="true"><span>✦</span><small>PICTURE BOOK</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">Openly licensed illustration</p><h3>A Cloud of Trash</h3><p class="lb-author">Karanjeet Kaur</p><p class="lb-book-meta">Read together · environment</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article>
+<article class="lb-book" data-book-id="ammachis-amazing-machines" data-kind="illustrated" data-search="ammachi’s amazing machines rajiv eipe science read-together storyweaver">
+  <div class="lb-cover lb-cover-0" aria-hidden="true"><span>✦</span><small>PICTURE BOOK</small></div>
+  <div class="lb-book-copy"><p class="lb-book-type">Openly licensed illustration</p><h3>Ammachi’s Amazing Machines</h3><p class="lb-author">Rajiv Eipe</p><p class="lb-book-meta">Read together · science</p><span class="lb-review-tag">Under review · Not available to read</span></div>
+</article></div>
+  <p class="lb-footer-note"><strong>Why aren't there read buttons?</strong> We're tracking licenses and editorial notes before downloading an edition. Books, pictures and audio often have different rights, and older stories may need context. This list is not a child-ready collection.</p>
+</section>
 <section class="section detail-section" id="whats-next" aria-labelledby="inside"><div class="section-top"><div><p class="eyebrow">ON THE WORKBENCH</p><h2 id="inside">Inside Library</h2><p class="section-description">What's available today and what we're working toward.</p></div></div>
 <div class="feature-list"><article class="detail-card"><div class="detail-icon" aria-hidden="true">📚</div><span class="detail-label ">PLANNED</span><h3>Books and reading</h3><p>Offline, rights-cleared reading materials and approachable collections.</p></article><article class="detail-card"><div class="detail-icon" aria-hidden="true">🎧</div><span class="detail-label ">PLANNED</span><h3>Listen and watch</h3><p>Audio and video with accessibility features such as captions.</p></article><article class="detail-card"><div class="detail-icon" aria-hidden="true">🔎</div><span class="detail-label ">PLANNED</span><h3>Find what you need</h3><p>Search, filters and eventually thoughtfully curated shelves.</p></article></div></section>
-<section class="detail-spotlight" aria-labelledby="spotlight-title"><div><p class="eyebrow">BUILT WITH CARE</p><h2 id="spotlight-title">A library you can trust</h2><p>A future administrator-reviewed collection with clear licensing, helpful search and content appropriate to the local group.</p></div><aside class="detail-caution"><strong>Prototype note</strong><p>There is no upload form or collection database here yet. We will design permissions, review and file safety before accepting outside content.</p></aside></section>
+<section class="detail-spotlight" aria-labelledby="spotlight-title"><div><p class="eyebrow">BUILT WITH CARE</p><h2 id="spotlight-title">A library you can trust</h2><p>A future administrator-reviewed collection with clear licensing, helpful search and content appropriate to the local group.</p></div><aside class="detail-caution"><strong>Prototype note</strong><p>We've started the research catalog, but there are still no imported book files, upload forms or reader. Administrator review, permissions and file safety come first.</p></aside></section>
 <section class="section detail-section" aria-labelledby="keep-exploring"><p class="eyebrow">PICK ANOTHER DOOR</p><h2 id="keep-exploring">Keep exploring</h2><nav class="section-pills" aria-label="Other WonderNet sections"><a class="section-pill" href="/explore/early-learning"><span aria-hidden="true">🔤</span>Early Learning<span aria-hidden="true">↗</span></a><a class="section-pill" href="/explore/academy"><span aria-hidden="true">📚</span>Academy<span aria-hidden="true">↗</span></a><a class="section-pill" href="/explore/special-interests"><span aria-hidden="true">💻</span>Special Interests<span aria-hidden="true">↗</span></a><a class="section-pill" href="/explore/arcade"><span aria-hidden="true">🎮</span>Arcade<span aria-hidden="true">↗</span></a><a class="section-pill" href="/explore/wonderparty"><span aria-hidden="true">🎉</span>WonderParty<span aria-hidden="true">↗</span></a></nav></section>
 </main><footer><p><strong>Early prototype:</strong> not yet ready for children, schools or public deployment. <a href="/">Back to WonderNet</a>.</p></footer></body></html>
