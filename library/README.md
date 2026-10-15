@@ -1,6 +1,6 @@
 # WonderNet Library: First Curation Queue
 
-**Status: six locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five complete US-public-domain narrative texts are packaged from specific historical editions, alongside the original WonderNet short story. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+**Status: seven locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five complete US-public-domain narrative texts are packaged from specific historical editions, alongside two original WonderNet stories, one of which is an illustrated bilingual English/Spanish picture book. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
 
 ## Five complete classic story texts in the reader
 
@@ -31,6 +31,14 @@ Project Gutenberg lists each underlying work as public domain in the **United St
 **Security:** five statically generated first-party HTML files are hardcoded into `READABLE_BOOKS` and the Pages exporter. The book source material was flattened to text paragraphs; no untrusted scripts, file embeds, arbitrary links, uploaded HTML, embedded PDFs, external images, or network fetches are allowed. This is not a general-purpose ebook renderer.
 
 The prior eleven-item `catalog.json` research queue remains entirely unchanged and pending. Some candidate titles and editions may represent the same underlying work as future imports, but an approved status must apply to the **exact edition**, not just the author or title.
+
+## First illustrated bilingual picture book
+
+**Mara's Moving Garden / El jardín viajero de Mara** is an original eight-spread story developed for WonderNet, not a Creative Commons import from another publisher. Each spread has a distinct first-party local SVG illustration. Its book page includes both English and draft Spanish text, switched in place by a local language control, including corresponding accessible image descriptions. The reader uses no remote media, online dictionary, fonts, login, telemetry or saved student data.
+
+See `picture-books.json` for provenance, eight artwork file paths, language metadata, and explicit pending reviews. See `PICTURE-BOOK-LICENSE.md` for the **CC BY 4.0** creative-content attribution offer, separate from the **AGPL-3.0-only** application code. The repo owner must agree to the content licensing terms on merge; copyright applicability to AI-assisted material depends on jurisdiction.
+
+**Still required before child use:** a fluent Spanish translation review, age suitability and cultural relevance review, manual screen-reader/keyboard/mobile/contrast checks, and assessment of appropriate reading level. This is an adult developer preview.
 
 ## One original sample story you can actually read
 
@@ -127,7 +135,7 @@ need contextual and age-appropriate editorial screening.
    checksum before display as readable.
 
 No background downloader, arbitrary URL fetcher, third-party ebook renderer
-or unreviewed upload endpoint is included in this phase. The original sample and five US-public-domain full-text demonstrations have not changed the status of any of the eleven other unreviewed candidates.
+or unreviewed upload endpoint is included in this phase. The two original samples and five US-public-domain full-text demonstrations have not changed the status of any of the eleven other unreviewed candidates.
 
 ## Code vs. book rights
 
@@ -138,4 +146,4 @@ in this repository.
 
 ## Next implementation milestone
 
-Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The original short story and five static public-domain narrative editions prove the reading experience, not a secure general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
+Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The two original stories and five static public-domain narrative editions prove the reading experience, not a secure general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
