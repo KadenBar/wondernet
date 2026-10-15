@@ -60,6 +60,12 @@ See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe
 
 [Architecture](docs/architecture.md) · [Accessibility](docs/accessibility.md) · [Threat model](security/THREAT_MODEL.md)
 
+## Public website preview
+
+We are preparing a **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** for adults to explore the homepage, six sections and two local-only mini-activities. The link works only **after a repository owner enables GitHub Pages and the deployment workflow succeeds**. See the [GitHub Pages setup guide](docs/pages-preview.md).
+
+**Important:** This is a public internet-hosted static UI preview, not an offline Raspberry Pi deployment, a complete curriculum, or a child-safe release. The FastAPI backend is deliberately not published to Pages.
+
 ## Run the prototype
 
 You **do not need a Raspberry Pi** to run this first build.

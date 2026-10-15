@@ -1,0 +1,14 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* This banner only appears on the public GitHub Pages developer preview. */
+.public-preview-notice {
+  background: #fff0cf;
+  color: #4e3507;
+  border-bottom: 2px solid #af7624;
+  padding: .72rem max(1rem, calc((100vw - 1150px) / 2));
+  line-height: 1.55;
+  font-size: .86rem;
+}
+.public-preview-notice strong { font-weight: 850; margin-right: .2rem; }
+@media (prefers-contrast: more) {
+  .public-preview-notice { background: #fff; border-color: #533500; color: #352000; }
+}
