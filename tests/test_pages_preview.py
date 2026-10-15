@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_seventeen_live_html_routes(tmp_path):
+def test_export_builds_eighteen_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,7 +18,7 @@ def test_export_builds_seventeen_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 17 public preview pages" in result.stdout
+    assert "Built 18 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -26,7 +26,7 @@ def test_export_builds_seventeen_live_html_routes(tmp_path):
         "explore/wonderparty/index.html",
         "play/letter-match/index.html", "play/patterns/index.html",
         "play/circuit-garden/index.html", "play/word-workshop/index.html",
-        "read/lantern/index.html",
+        "read/lantern/index.html", "read/mara-garden/index.html",
         "read/peter-rabbit/index.html", "read/benjamin-bunny/index.html",
         "read/tom-kitten/index.html", "read/jemima-puddle-duck/index.html",
         "read/jeremy-fisher/index.html",
@@ -78,6 +78,19 @@ def test_export_builds_seventeen_live_html_routes(tmp_path):
     assert 'href="/wondernet/explore/library/"' in reader
     assert 'id="chapter-5"' in reader
     assert 'href="/wondernet/read/lantern/"' in (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
+    picture = (tmp_path / "read/mara-garden/index.html").read_text(encoding="utf-8")
+    assert 'src="/wondernet/assets/book-reader.js?v=bilingual1"' in picture
+    assert 'href="/wondernet/assets/picture-books.css"' in picture
+    assert 'src="/wondernet/assets/books/mara-garden/page-8.svg"' in picture
+    assert 'id="reader-language"' in picture
+    assert 'lang="es"' in picture
+    assert picture.count('class="story-illustration"') == 8
+    assert (tmp_path / "assets/picture-books.css").is_file()
+    for i in range(1, 9):
+        assert (tmp_path / "assets/books/mara-garden" / f"page-{i}.svg").is_file()
+    library = (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
+    assert 'href="/wondernet/read/mara-garden/"' in library
+    assert 'src="/wondernet/assets/books/mara-garden/page-7.svg"' in library
     for name in ("peter-rabbit", "benjamin-bunny", "tom-kitten",
                  "jemima-puddle-duck", "jeremy-fisher"):
         book = (tmp_path / "read" / name / "index.html").read_text(encoding="utf-8")
@@ -115,6 +128,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/play/word-workshop", "/wondernet") == "/wondernet/play/word-workshop/"
     assert rewrite_url("/read/lantern", "/wondernet") == "/wondernet/read/lantern/"
     assert rewrite_url("/read/peter-rabbit", "/wondernet") == "/wondernet/read/peter-rabbit/"
+    assert rewrite_url("/read/mara-garden", "/wondernet") == "/wondernet/read/mara-garden/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")
