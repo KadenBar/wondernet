@@ -15,8 +15,11 @@ GitHub may take a few minutes to complete the deployment.
 
 ## What's in the preview
 
-- Responsive homepage and six interior pages. The Library page now includes a local-filterable research-only list of eleven potential titles, **not the books themselves**.
-- Letter Match and Pattern Playground: five browser-only practice questions each.\n- Circuit Garden: ten handcrafted circuit puzzles with session-only level progression; no data stored.\n- Word Workshop: sixteen word-building puzzles, four thematic collections and optional hints, with in-memory progress only.
+- Responsive homepage and six interior pages. The Library page now includes one original five-chapter story reader and a separately marked research-only list of eleven third-party titles **not yet imported**.
+- Letter Match and Pattern Playground: five browser-only practice questions each.
+- Circuit Garden: ten handcrafted circuit puzzles with session-only level progression; no data stored.
+- Word Workshop: sixteen word-building puzzles, four thematic collections and optional hints, with in-memory progress only.
+- Original five-chapter short-story reader at `/read/lantern/` with locally bundled prose, themes and text sizing, not age-reviewed.
 - A prominent early-development warning banner on every page.
 - No analytics, logins, ads, user uploads, chat or persistent learner data.
 - Static asset links rewritten to work under `/wondernet/`.
@@ -26,7 +29,7 @@ GitHub may take a few minutes to complete the deployment.
 
 - The FastAPI backend, including `/api/health` and `/api/catalog`.
 - Raspberry Pi configuration, private Wi-Fi, TLS and host isolation.
-- Future library content or uploads, code labs, multiplayer, progress, accounts, or production security features.
+- Imported third-party ebooks, generic ebook viewers, uploads, code labs, multiplayer, progress, accounts, or production security features.
 
 GitHub Pages is publicly accessible over the internet. It does **not** demonstrate offline-first networking and is **not approved for children or unsupervised learner use**. Do not use it to gather children's data. Adult contributors can download and run the prototype bound to `127.0.0.1` if they need to test the API.
 
