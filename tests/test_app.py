@@ -109,3 +109,35 @@ def test_learner_homepage_has_no_outbound_links_or_remote_assets():
     assert 'src="https://' not in html
     assert "github.com/KadenBar/wondernet" in html  # text only for local deployments
     assert "Developer preview" not in html  # banner belongs to the public export
+
+
+def test_all_interior_pages_use_the_handmade_design_and_local_assets():
+    from backend.app.main import SECTIONS, ACTIVITIES
+    for section in SECTIONS:
+        html = client.get(f"/explore/{section}").text
+        assert f'class="interior-page section--{section}"' in html
+        assert 'href="/assets/interiors.css"' in html
+        assert 'class="detail-scene"' in html
+        assert "CONCEPT ART" in html
+        assert 'href="https://' not in html
+        assert 'src="https://' not in html
+    for game in ACTIVITIES:
+        html = client.get(f"/play/{game}").text
+        assert f'class="interior-page game--{game}"' in html
+        assert 'href="/assets/interiors.css"' in html
+        assert 'id="activity-meter"' in html
+        assert 'max="5" value="0"' in html
+        assert "No account" in html
+        assert 'href="https://' not in html
+        assert 'src="https://' not in html
+    assert client.get("/assets/interiors.css").status_code == 200
+
+
+def test_game_progress_remains_in_browser_memory_only():
+    script = client.get("/assets/activities.js").text
+    assert 'document.getElementById("activity-meter")' in script
+    assert "meter.value = index + 1" in script
+    assert "meter.value = questions.length" in script
+    assert "localStorage" not in script
+    assert "sessionStorage" not in script
+    assert "fetch(" not in script
