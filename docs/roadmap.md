@@ -28,7 +28,7 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 ## 📚 Alpha 0.4 — Library + first learning activity
 - [ ] Secure administrator-only media import with size/type and archive checks
 - [ ] Offline search and an accessible reader/media viewer
-- [ ] One evidence-informed early phonics activity and accessible alternatives
+- [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)\n- [ ] One evidence-informed early phonics activity and accessible alternatives\n- [ ] Educator review and manual keyboard/touch/screen-reader tests for Word Workshop
 - [ ] Content provenance/licensing metadata and export/import validation
 
 ## 🎮 Alpha 0.5 — Arcade + WonderParty
