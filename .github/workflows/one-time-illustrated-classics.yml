@@ -1,0 +1,39 @@
+name: Temporary pinned original-classics import
+on:
+  push:
+    branches:
+      - feature/pooh-velveteen-classics
+    paths:
+      - .github/workflows/one-time-illustrated-classics.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.ref == 'refs/heads/feature/pooh-velveteen-classics' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install importer-only parser
+        run: pip install beautifulsoup4==4.14.2
+      - name: Import and verify exactly pinned US public-domain illustrated editions
+        run: |
+          python scripts/import_illustrated_classics.py
+          python scripts/import_illustrated_classics.py --verify-only
+      - name: Commit 123 original images and complete book readers to feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add frontend/assets/books/classics/ frontend/pages/book-winnie-the-pooh.html frontend/pages/book-velveteen-rabbit.html library/illustrated-classics-assets.sha256.json library/illustrated-classics-pages.json
+          if git diff --cached --quiet; then
+            echo 'Already imported and verified.'
+          else
+            git commit -m 'Bundle complete Pooh and Velveteen editions with all historical illustrations'
+            git push origin HEAD:refs/heads/feature/pooh-velveteen-classics
+          fi
