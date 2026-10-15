@@ -1,6 +1,6 @@
 # Website pages and first mini activities
 
-WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. Two original short stories, including one fully illustrated English/Spanish picture book, and five complete US-public-domain texts are readable through the Library.
+WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. Two original short stories, five US-public-domain complete texts and five professionally illustrated CC BY Book Dash books are readable through the Library.
 
 | URL | State |
 | --- | --- |
@@ -9,19 +9,24 @@ WonderNet's early site has six direct section routes and four playable browser a
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
 | `/explore/arcade` | Links to Circuit Garden plus a small pattern practice activity |
-| `/explore/library` | Seven locally readable stories (two original, including one illustrated bilingual book, plus five complete US-public-domain texts) and a separate 11-title unapproved research queue |
+| `/explore/library` | Twelve locally readable stories (five original-illustration Book Dash editions, five US-public-domain texts, two prototypes) and a separate 11-title unapproved research queue |
 | `/explore/wonderparty` | Planned private local party games |
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning practice |
 | `/play/circuit-garden` | Ten-level circuit-rotation puzzle game; mouse, touch and keyboard support |
 | `/play/word-workshop` | Sixteen hands-on spelling/letter-building puzzles across four themed worlds |
 | `/read/lantern` | Original five-chapter story with local reading themes, text sizing and chapter navigation |
+| `/read/a-beautiful-day`, `/read/a-tiny-seed`, `/read/a-house-for-mouse`, `/read/come-back-cat`, `/read/walking-together` | Complete CC BY 4.0 Book Dash source-text editions with all 12 original illustrated spreads and covers, locally bundled and credited |
 | `/read/mara-garden` | Original eight-spread illustrated English/Spanish story with local SVGs, language selector and localized image descriptions (review pending) |
 | `/read/peter-rabbit`, `/read/benjamin-bunny`, `/read/tom-kitten`, `/read/jemima-puddle-duck`, `/read/jeremy-fisher` | Full US public-domain story texts by Beatrix Potter with page navigation; historical illustrations not included |
 
 ## Original offline story reader
 
 **The Lantern That Kept the Stars** is original, embedded in `frontend/pages/book-lantern.html`, and exported to `/read/lantern/`. Its CSS and JavaScript are local, with no external resources, trackers, accounts or persistence. Chapter navigation, text scaling and paper/night/high-contrast reading themes operate in memory; a chapter URL fragment is shareable. `library/reader-demos.json` tracks sample rights and pending review. The sample is not an approved children's book or an arbitrary third-party ebook viewer.
+
+## Five genuine Book Dash illustrated editions
+
+Five complete, original English Book Dash books from the CC BY 4.0 [publisher](https://bookdash.org/) are locally bundled: *A Beautiful Day*, *A Tiny Seed*, *A House for Mouse*, *Come Back, Cat!*, and *Walking Together*. Every edition preserves the original cover and 12 picture spreads, plus story text rendered from Book Dash's published markdown source. Original authors, illustrators, designers and any credited editors are attributed. Upstream 2019 source SHA, every media file's size/Git blob SHA and local SHA-256 fingerprints are tracked in `library/bookdash-books.json` and `library/bookdash-assets.sha256.json`; `library/BOOKDASH-CREDITS.md` includes clickable source/license links for adult maintainers. An explicit build-time script imports a **fixed allowlist** of files over HTTPS and verifies pinned hashes; the privileged one-time action was deleted before merge. The runtime reader never fetches from external sources. Manual content, reading level, mobile and accessibility reviews remain necessary before child use. GitHub Pages developer preview is online; these books only become fully offline when WonderNet is served locally. The original Mara experiment is now demoted on the Library page rather than featured.
 
 ## First original illustrated bilingual picture book
 
