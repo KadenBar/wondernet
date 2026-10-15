@@ -28,7 +28,7 @@ STYLE = ["styles.css", "section-pages.css", "interiors.css", "book-reader.css", 
 
 
 def git_blob_sha(payload: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(payload)).encode("ascii") + b"\\0" + payload).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(payload)).encode("ascii") + b"\0" + payload).hexdigest()
 
 
 def read_pinned(ref: str, source_path: str, expected_sha: str, expected_size: int | None = None) -> bytes:
@@ -225,7 +225,7 @@ def main() -> None:
                 blob = read_pinned(ref, source_path, file["git_blob_sha"], file["bytes"])
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(blob)
-            if not (blob.startswith(b"\\xff\\xd8\\xff") and blob.endswith(b"\\xff\\xd9")):
+            if not (blob.startswith(b"\xff\xd8\xff") and blob.endswith(b"\xff\xd9")):
                 raise ValueError(f"File is not a valid JPEG stream: {target}")
             fingerprints[local_path] = hashlib.sha256(blob).hexdigest()
         print(f"Verified {book['title']}: 12 original picture spreads + cover")
