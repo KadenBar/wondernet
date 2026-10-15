@@ -56,7 +56,7 @@ def test_library_preview_is_fully_local_and_unambiguously_research_only():
     assert 'id="research-shelf"' in html
     assert 'id="lb-query"' in html
     assert 'id="lb-kind"' in html
-    assert 'href="/assets/library-shelf.css"' in html
+    assert 'href="/assets/library-shelf.css?v=mobile1"' in html
     assert 'src="/assets/library-shelf.js"' in html
     assert "Nothing here is downloadable or readable on WonderNet yet." in html
     assert "not a child-ready collection" in html
