@@ -1,8 +1,12 @@
 # WonderNet Library: First Curation Queue
 
-**Status: researching candidates, NOT an installed offline library.** This folder
-contains metadata, not books. No media downloads, uploads, content readers,
-approved children's shelves or network-accessible library endpoints exist yet.
+**Status: one original reader demonstration plus eleven research candidates.** The original story is bundled in the static frontend. No third-party ebooks have been imported; there is no book upload endpoint, generalized EPUB/PDF reader, secure import pipeline, or approved children's shelf.
+
+## One original sample story you can actually read
+
+`reader-demos.json` tracks **The Lantern That Kept the Stars**, an original five-chapter story created for WonderNet. Its content is embedded in `frontend/pages/book-lantern.html`, served only through the `/read/lantern` allowlist. It does not require network access, user accounts, databases or external assets once the local page is loaded. Readers can use the table of contents, previous/next chapter buttons, adjustable text size and three color themes. A chapter can be referenced by a URL fragment; no reading history is stored.
+
+This **original demo is not an approved child-facing book**. The story and interface still need editorial, accessibility and rights review. Original sample content is included in the AGPL-3.0-only repository and includes no third-party text, images or imports. Do not use its static format as permission to accept arbitrary user-provided HTML.
 
 ## What we have started
 
@@ -93,7 +97,7 @@ need contextual and age-appropriate editorial screening.
    checksum before display as readable.
 
 No background downloader, arbitrary URL fetcher, third-party ebook renderer
-or unreviewed upload endpoint is included in this phase.
+or unreviewed upload endpoint is included in this phase. The original reader sample has not changed the status of any of the eleven unreviewed third-party candidates.
 
 ## Code vs. book rights
 
@@ -104,7 +108,4 @@ in this repository.
 
 ## Next implementation milestone
 
-Build a **read-only, offline shelf for approved local files** with a
-sandboxed reader, basic search and subject filters. For an initial test use a
-small, separately reviewed sample item rather than downloading thousands of
-books. The Raspberry Pi private Wi-Fi service remains unimplemented.
+Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The original short story is a static proof of the reading experience, not a general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
