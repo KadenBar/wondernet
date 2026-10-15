@@ -108,7 +108,9 @@ def test_existing_review_queue_remains_blocked_and_no_import_api_exists():
     assert 'href="/read/lantern"' in library
     for item in MANIFEST["items"]:
         assert f'href="{item["route"]}"' in library
-    for rejected in ("/read/alice-wonderland", "/read/cloud-of-trash",
-                     "/read/secret-garden", "/api/library/import", "/api/library/books"):
+    for rejected in ("/read/alice-wonderland", "/read/cloud-of-trash", "/read/secret-garden"):
+        assert client.get(rejected).status_code == 404
+        assert client.post(rejected).status_code == 405  # GET-only route, no POST handler.
+    for rejected in ("/api/library/import", "/api/library/books"):
         assert client.get(rejected).status_code == 404
         assert client.post(rejected).status_code == 404
