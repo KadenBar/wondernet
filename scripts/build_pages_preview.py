@@ -19,7 +19,14 @@ SECTIONS = (
     "arcade", "library", "wonderparty",
 )
 ACTIVITIES = ("letter-match", "patterns", "circuit-garden", "word-workshop")
-READERS = {"lantern": "book-lantern.html"}
+READERS = {
+    "lantern": "book-lantern.html",
+    "peter-rabbit": "book-peter-rabbit.html",
+    "benjamin-bunny": "book-benjamin-bunny.html",
+    "tom-kitten": "book-tom-kitten.html",
+    "jemima-puddle-duck": "book-jemima-puddle-duck.html",
+    "jeremy-fisher": "book-jeremy-fisher.html",
+}
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
     **{f"/play/{slug}": f"/play/{slug}/" for slug in ACTIVITIES},
@@ -32,7 +39,7 @@ ATTRIBUTE = re.compile(
 WARNING = (
     '<div class="public-preview-notice" role="note">'
     '<strong>Developer preview · not a child-ready product.</strong> '
-    'This site demonstrates early webpages, two practice activities, Circuit Garden, Word Workshop, and a sample book reader. '
+    'This site demonstrates early webpages, two practice activities, Circuit Garden, Word Workshop, a sample book reader, and five public-domain full-text stories (original historical illustrations not included). '
     'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet. '
     '<a href="https://github.com/KadenBar/wondernet" rel="noopener noreferrer">Source code and feedback</a>.'
     "</div>"

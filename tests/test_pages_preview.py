@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_twelve_live_html_routes(tmp_path):
+def test_export_builds_seventeen_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,7 +18,7 @@ def test_export_builds_twelve_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 12 public preview pages" in result.stdout
+    assert "Built 17 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -27,6 +27,9 @@ def test_export_builds_twelve_live_html_routes(tmp_path):
         "play/letter-match/index.html", "play/patterns/index.html",
         "play/circuit-garden/index.html", "play/word-workshop/index.html",
         "read/lantern/index.html",
+        "read/peter-rabbit/index.html", "read/benjamin-bunny/index.html",
+        "read/tom-kitten/index.html", "read/jemima-puddle-duck/index.html",
+        "read/jeremy-fisher/index.html",
     ]
     for relative in expected:
         html = (tmp_path / relative).read_text(encoding="utf-8")
@@ -75,6 +78,16 @@ def test_export_builds_twelve_live_html_routes(tmp_path):
     assert 'href="/wondernet/explore/library/"' in reader
     assert 'id="chapter-5"' in reader
     assert 'href="/wondernet/read/lantern/"' in (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
+    for name in ("peter-rabbit", "benjamin-bunny", "tom-kitten",
+                 "jemima-puddle-duck", "jeremy-fisher"):
+        book = (tmp_path / "read" / name / "index.html").read_text(encoding="utf-8")
+        assert 'data-reader-unit="Page"' in book
+        assert 'src="/wondernet/assets/book-reader.js?v=editions1"' in book
+        assert 'href="/wondernet/explore/library/"' in book
+        assert "<svg " in book
+        assert "End of Project Gutenberg" not in book
+        assert 'href="https://' not in book.replace('href="https://github.com/KadenBar/wondernet"', '')
+        assert (tmp_path / "read" / name / "index.html").is_file()
     assert (tmp_path / "assets/interiors.css").is_file()
     for relative in expected[1:]:
         html = (tmp_path / relative).read_text(encoding="utf-8")
@@ -101,6 +114,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/play/circuit-garden", "/wondernet") == "/wondernet/play/circuit-garden/"
     assert rewrite_url("/play/word-workshop", "/wondernet") == "/wondernet/play/word-workshop/"
     assert rewrite_url("/read/lantern", "/wondernet") == "/wondernet/read/lantern/"
+    assert rewrite_url("/read/peter-rabbit", "/wondernet") == "/wondernet/read/peter-rabbit/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")

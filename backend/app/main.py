@@ -12,7 +12,14 @@ FRONTEND = ROOT / "frontend"
 CATALOG = ROOT / "curriculum" / "catalog.json"
 SECTIONS = frozenset({"early-learning", "academy", "special-interests", "arcade", "library", "wonderparty"})
 ACTIVITIES = {"letter-match", "patterns", "circuit-garden", "word-workshop"}
-READABLE_BOOKS = {"lantern": "book-lantern.html"}
+READABLE_BOOKS = {
+    "lantern": "book-lantern.html",
+    "peter-rabbit": "book-peter-rabbit.html",
+    "benjamin-bunny": "book-benjamin-bunny.html",
+    "tom-kitten": "book-tom-kitten.html",
+    "jemima-puddle-duck": "book-jemima-puddle-duck.html",
+    "jeremy-fisher": "book-jeremy-fisher.html",
+}
 
 app = FastAPI(title="WonderNet Prototype", version="0.1.0", docs_url=None, redoc_url=None, openapi_url=None)
 

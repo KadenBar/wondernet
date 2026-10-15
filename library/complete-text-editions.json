@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "collection": "complete-public-domain-story-text-demos",
+  "label": "Adults-only developer preview, not approved child library",
+  "updated": "2026-10-14",
+  "notes": "Full story text reproduced in new offline HTML pages. Historical original illustrations NOT included; the pages contain only WonderNet original decorative SVG. US public-domain source texts, check all non-US copyright rules. All editorial, accessibility and child-facing suitability review gates remain pending.",
+  "items": [
+    {
+      "id": "peter-rabbit",
+      "title": "The Tale of Peter Rabbit",
+      "creator": "Beatrix Potter",
+      "first_published": 1902,
+      "route": "/read/peter-rabbit",
+      "local_file": "frontend/pages/book-peter-rabbit.html",
+      "local_text_status": "complete-story-text",
+      "source_provider": "Project Gutenberg public-domain text, obtained via GITenberg mirror",
+      "source_landing": "https://www.gutenberg.org/ebooks/14838",
+      "source_repository": "GITenberg/The-Tale-of-Peter-Rabbit_14838",
+      "source_blob_sha": "029c5049be110966828b2816f44d64b49f96d2c5",
+      "source_ebook_number": 14838,
+      "rough_word_count": 948,
+      "reading_pages": 6,
+      "copyright": {
+        "classification": "public-domain-US",
+        "territory": "United States only, assess local laws elsewhere",
+        "transformation": "Original narrative wording retained, paragraph spacing normalized and source prefaces, trademark/license and illustrations omitted",
+        "source_preamble_and_license_excluded": true,
+        "source_trademark_excluded_from_books": true
+      },
+      "illustrations": {
+        "original_source_illustrations_included": false,
+        "decoration": "Original WonderNet hand-authored SVG, not Potter artwork"
+      },
+      "review": {
+        "source_status": "US public-domain works confirmed by Project Gutenberg catalog",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved",
+        "security": "read-only hardcoded HTML, not a third-party HTML importer"
+      },
+      "review_notes": "Brief reference to a rabbit being made into a pie; tense chases.",
+      "external_links_in_reader": false
+    },
+    {
+      "id": "benjamin-bunny",
+      "title": "The Tale of Benjamin Bunny",
+      "creator": "Beatrix Potter",
+      "first_published": 1904,
+      "route": "/read/benjamin-bunny",
+      "local_file": "frontend/pages/book-benjamin-bunny.html",
+      "local_text_status": "complete-story-text",
+      "source_provider": "Project Gutenberg public-domain text, obtained via GITenberg mirror",
+      "source_landing": "https://www.gutenberg.org/ebooks/14407",
+      "source_repository": "GITenberg/The-Tale-of-Benjamin-Bunny_14407",
+      "source_blob_sha": "cfddab66300b00615d7644c5abadbb172b3cf1c2",
+      "source_ebook_number": 14407,
+      "rough_word_count": 1120,
+      "reading_pages": 6,
+      "copyright": {
+        "classification": "public-domain-US",
+        "territory": "United States only, assess local laws elsewhere",
+        "original_text_unmodified": true,
+        "source_preamble_and_license_excluded": true,
+        "source_trademark_excluded_from_books": true
+      },
+      "illustrations": {
+        "original_source_illustrations_included": false,
+        "decoration": "Original WonderNet hand-authored SVG, not Potter artwork"
+      },
+      "review": {
+        "source_status": "US public-domain works confirmed by Project Gutenberg catalog",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved",
+        "security": "read-only hardcoded HTML, not a third-party HTML importer"
+      },
+      "review_notes": "Danger and historical corporal punishment.",
+      "external_links_in_reader": false
+    },
+    {
+      "id": "tom-kitten",
+      "title": "The Tale of Tom Kitten",
+      "creator": "Beatrix Potter",
+      "first_published": 1907,
+      "route": "/read/tom-kitten",
+      "local_file": "frontend/pages/book-tom-kitten.html",
+      "local_text_status": "complete-story-text",
+      "source_provider": "Project Gutenberg public-domain text, obtained via GITenberg mirror",
+      "source_landing": "https://www.gutenberg.org/ebooks/14837",
+      "source_repository": "GITenberg/The-Tale-of-Tom-Kitten_14837",
+      "source_blob_sha": "739bc5a33819d12fbfa9480bca7a0c4633b1946a",
+      "source_ebook_number": 14837,
+      "rough_word_count": 691,
+      "reading_pages": 4,
+      "copyright": {
+        "classification": "public-domain-US",
+        "territory": "United States only, assess local laws elsewhere",
+        "original_text_unmodified": true,
+        "source_preamble_and_license_excluded": true,
+        "source_trademark_excluded_from_books": true
+      },
+      "illustrations": {
+        "original_source_illustrations_included": false,
+        "decoration": "Original WonderNet hand-authored SVG, not Potter artwork"
+      },
+      "review": {
+        "source_status": "US public-domain works confirmed by Project Gutenberg catalog",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved",
+        "security": "read-only hardcoded HTML, not a third-party HTML importer"
+      },
+      "review_notes": "Historical discipline and animal misbehavior.",
+      "external_links_in_reader": false
+    },
+    {
+      "id": "jemima-puddle-duck",
+      "title": "The Tale of Jemima Puddle-Duck",
+      "creator": "Beatrix Potter",
+      "first_published": 1908,
+      "route": "/read/jemima-puddle-duck",
+      "local_file": "frontend/pages/book-jemima-puddle-duck.html",
+      "local_text_status": "complete-story-text",
+      "source_provider": "Project Gutenberg public-domain text, obtained via GITenberg mirror",
+      "source_landing": "https://www.gutenberg.org/ebooks/14814",
+      "source_repository": "GITenberg/The-Tale-of-Jemima-Puddle-Duck_14814",
+      "source_blob_sha": "bacf9af6d6ff60f22f8b60867547b8f3c660c07c",
+      "source_ebook_number": 14814,
+      "rough_word_count": 1245,
+      "reading_pages": 7,
+      "copyright": {
+        "classification": "public-domain-US",
+        "territory": "United States only, assess local laws elsewhere",
+        "original_text_unmodified": true,
+        "source_preamble_and_license_excluded": true,
+        "source_trademark_excluded_from_books": true
+      },
+      "illustrations": {
+        "original_source_illustrations_included": false,
+        "decoration": "Original WonderNet hand-authored SVG, not Potter artwork"
+      },
+      "review": {
+        "source_status": "US public-domain works confirmed by Project Gutenberg catalog",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved",
+        "security": "read-only hardcoded HTML, not a third-party HTML importer"
+      },
+      "review_notes": "A fox attempts to prey on Jemima, with loss of eggs.",
+      "external_links_in_reader": false
+    },
+    {
+      "id": "jeremy-fisher",
+      "title": "The Tale of Mr. Jeremy Fisher",
+      "creator": "Beatrix Potter",
+      "first_published": 1906,
+      "route": "/read/jeremy-fisher",
+      "local_file": "frontend/pages/book-jeremy-fisher.html",
+      "local_text_status": "complete-story-text",
+      "source_provider": "Project Gutenberg public-domain text, obtained via GITenberg mirror",
+      "source_landing": "https://www.gutenberg.org/ebooks/15077",
+      "source_repository": "GITenberg/The-Tale-of-Mr.-Jeremy-Fisher_15077",
+      "source_blob_sha": "c5326be2c1f1be1543616732d2da30a806d607a5",
+      "source_ebook_number": 15077,
+      "rough_word_count": 794,
+      "reading_pages": 5,
+      "copyright": {
+        "classification": "public-domain-US",
+        "territory": "United States only, assess local laws elsewhere",
+        "original_text_unmodified": true,
+        "source_preamble_and_license_excluded": true,
+        "source_trademark_excluded_from_books": true
+      },
+      "illustrations": {
+        "original_source_illustrations_included": false,
+        "decoration": "Original WonderNet hand-authored SVG, not Potter artwork"
+      },
+      "review": {
+        "source_status": "US public-domain works confirmed by Project Gutenberg catalog",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved",
+        "security": "read-only hardcoded HTML, not a third-party HTML importer"
+      },
+      "review_notes": "Fish attacks and eating insects.",
+      "external_links_in_reader": false
+    }
+  ]
+}

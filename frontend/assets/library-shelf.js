@@ -26,4 +26,28 @@
   input.addEventListener("input", filter);
   kind.addEventListener("change", filter);
   filter();
+
+  // Complete, readable books are an independent shelf. Filtering the pending
+  // curation queue must never mark an unreviewed candidate as readable.
+  const readableSearch = document.getElementById("lb-ready-query");
+  const readableGrid = document.getElementById("lb-complete-grid");
+  const readableResults = document.getElementById("lb-ready-results");
+  if (readableSearch && readableGrid && readableResults) {
+    const readableBooks = Array.from(readableGrid.querySelectorAll(".lb-full-book"));
+    const updateReadable = () => {
+      const term = readableSearch.value.trim().toLocaleLowerCase();
+      let showing = 0;
+      for (const book of readableBooks) {
+        const matches = !term || (book.dataset.search || "").includes(term);
+        book.hidden = !matches;
+        if (matches) showing += 1;
+      }
+      readableResults.textContent = showing ?
+        "Showing " + showing + " complete " +
+        (showing === 1 ? "story" : "stories") :
+        "No matching complete stories. Try another title or animal.";
+    };
+    readableSearch.addEventListener("input", updateReadable);
+    updateReadable();
+  }
 })();

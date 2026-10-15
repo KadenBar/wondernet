@@ -76,3 +76,13 @@
 @media(max-width:560px){.reader-main{padding-left:1rem;padding-right:1rem}.reader-cover{grid-template-columns:1fr}.reader-cover-art{min-height:160px}.reader-cover-lamp{transform:scale(.6)}.reader-cover-moon{font-size:4rem}.reader-sidebar{grid-template-columns:1fr}.reader-layout{gap:1.2rem}.reader-paper{min-height:340px;padding:1.4rem 1.1rem}.reader-chapter p:not(.reader-chapter-number):not(.reader-the-end){line-height:1.7}.reader-pager button{padding:.5rem;font-size:.78rem}.reader-book-top progress{width:110px}}
 @media(prefers-reduced-motion:reduce){.reader-paper{transition:none}}
 @media print{.site-header,.breadcrumbs,.reader-cover,.reader-sidebar,.reader-book-top,.reader-pager,.reader-keyboard-tip,.reader-note,.reader-bottom-nav,.skip-link,footer{display:none!important}.reader-layout{display:block}.reader-paper{border:0;padding:0;background:white!important;color:black!important}.reader-chapter{display:block!important;break-after:page}.reader-chapter p{font-size:12pt!important;line-height:1.45!important}}
+
+/* Complete public-domain text demo editions. The drawings below are new
+   decorative WonderNet art, not historical scanned book illustrations. */
+.book-edition-page .reader-cover-art{background:radial-gradient(circle at 55% 18%,#4b7187,#273851 65%);}
+.book-cover-emoji{font:normal clamp(5.5rem,12vw,9rem)/1 system-ui,sans-serif;transform:rotate(-8deg);filter:drop-shadow(8px 12px 0 rgba(0,0,0,.16));z-index:2}
+.book-edition-page .reader-sample{line-height:1.5;max-width:40rem}
+.book-edition-page .reader-chapter h2{font-size:clamp(1.55rem,2.6vw,2.15rem)}
+.book-edition-page .book-art{display:block;max-width:min(100%,360px);height:auto;margin:0 auto 1.8rem;border:2px solid #385b4b;border-radius:14px;box-shadow:5px 6px 0 rgba(39,71,67,.17)}
+.book-edition-page .reader-note p+p{margin-top:.8rem}
+@media print{.book-edition-page .book-art{max-width:240px}}

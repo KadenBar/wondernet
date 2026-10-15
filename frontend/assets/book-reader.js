@@ -19,6 +19,8 @@
   const sizeOptions = [80, 90, 100, 110, 120, 130, 140, 150, 160];
   let sizeIndex = 2;
   let current = 1;
+  // The original demo has chapters; complete picture-book stories have short reading pages.
+  const unit = document.body.dataset.readerUnit === "Page" ? "Page" : "Chapter";
   const title = number => chapters[number - 1].querySelector("h2").textContent;
 
   function chapterFromHash() {
@@ -40,10 +42,10 @@
     }
     previous.disabled = number === 1;
     next.disabled = number === chapters.length;
-    next.textContent = number === chapters.length ? "End of story ✓" : "Next chapter →";
+    next.textContent = number === chapters.length ? "End of story ✓" : "Next " + unit.toLowerCase() + " →";
     progress.max = chapters.length;
     progress.value = number;
-    progressCopy.textContent = "Chapter " + number + " of " + chapters.length + " · " + title(number);
+    progressCopy.textContent = unit + " " + number + " of " + chapters.length + " · " + title(number);
     pageLabel.textContent = number + " / " + chapters.length;
     if (!fromHash && window.history && window.history.replaceState) {
       // The URL itself can identify the chapter. Nothing is saved to a device or server.
