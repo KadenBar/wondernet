@@ -12,6 +12,7 @@ FRONTEND = ROOT / "frontend"
 CATALOG = ROOT / "curriculum" / "catalog.json"
 SECTIONS = frozenset({"early-learning", "academy", "special-interests", "arcade", "library", "wonderparty"})
 ACTIVITIES = {"letter-match", "patterns", "circuit-garden", "word-workshop"}
+READABLE_BOOKS = {"lantern": "book-lantern.html"}
 
 app = FastAPI(title="WonderNet Prototype", version="0.1.0", docs_url=None, redoc_url=None, openapi_url=None)
 
@@ -50,6 +51,12 @@ def section_page(section: str):
     if section not in SECTIONS:
         raise HTTPException(status_code=404)
     return FileResponse(FRONTEND / "pages" / f"{section}.html", media_type="text/html")
+
+@app.get("/read/{book}", include_in_schema=False)
+def read_book(book: str):
+    if book not in READABLE_BOOKS:
+        raise HTTPException(status_code=404)
+    return FileResponse(FRONTEND / "pages" / READABLE_BOOKS[book], media_type="text/html")
 
 @app.get("/play/{activity}", include_in_schema=False)
 def activity_page(activity: str):
