@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* WonderNet's first library shelf is research metadata, not installed books. */
+.section--library .lb-shelf{background:#fffaf1;border:2px solid #244b49;border-radius:18px;box-shadow:7px 8px 0 #244b49;margin:2rem 0 3rem;padding:clamp(1rem,3vw,2rem);color:#234744}
+.lb-head{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin:0 0 1.5rem}
+.section--library .lb-head h2{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(1.7rem,3.5vw,2.55rem);letter-spacing:-.055em;line-height:1.1;margin:.3rem 0 .55rem;color:#264a45}
+.lb-head p:not(.eyebrow){max-width:720px;color:#4f6766;line-height:1.6;margin:0}
+.lb-count{display:grid;place-items:center;flex-shrink:0;width:100px;height:100px;line-height:1;color:#264e4b;border:2px solid #244b49;border-radius:50%;background:#e2f0cf;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:2.65rem;font-weight:900;transform:rotate(8deg)}
+.lb-count small{font-size:.58rem;font-weight:950;letter-spacing:.12em;margin-top:-24px}
+.lb-search{display:grid;grid-template-columns:auto minmax(120px,1fr) auto minmax(145px,200px);gap:.5rem .7rem;align-items:center;background:#d8e9e2;border:1px solid #aec8b8;border-radius:11px;padding:.85rem 1rem}
+.lb-search label{color:#22594f;font-size:.82rem;font-weight:900}
+.lb-search input,.lb-search select{font:inherit;font-size:.9rem;min-height:42px;min-width:0;background:#fffef8;border:2px solid #587c70;border-radius:8px;padding:.4rem .7rem;color:#234744}
+.lb-search input:focus-visible,.lb-search select:focus-visible{outline:3px solid #b76538;outline-offset:3px}
+.lb-results{font-size:.8rem;font-weight:850;color:#59796e;margin:1rem 0}
+.lb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+.lb-book{display:flex;gap:1rem;padding:.85rem;border:2px solid #a6c0ae;background:#fffef9;border-radius:12px;align-items:center;min-width:0}
+.lb-book[hidden]{display:none}
+.lb-cover{width:93px;height:133px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;border:2px solid #305e56;border-left:8px solid #305e56;border-radius:5px 10px 10px 5px;box-shadow:3px 4px 0 rgba(26,66,52,.2);background:#f8debb;color:#36554c}
+.lb-cover span{font-family:Georgia,serif;font-size:3rem;line-height:1}
+.lb-cover small{max-width:74px;text-align:center;font-size:.56rem;letter-spacing:.12em;font-weight:950;line-height:1.2}
+.lb-cover-1{background:#e0def8}.lb-cover-2{background:#e5efc6}.lb-cover-3{background:#eed1cb}.lb-cover-4{background:#bce4dc}
+.lb-book-copy{min-width:0}
+.lb-book-copy h3{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(1rem,1.6vw,1.3rem);line-height:1.2;letter-spacing:-.035em;margin:.25rem 0;color:#254f47}
+.lb-book-type{font-size:.65rem;color:#27745e;font-weight:950;letter-spacing:.07em;margin:0}
+.lb-author{font-size:.83rem;color:#526969;font-weight:750;margin:0 0 .6rem}
+.lb-book-meta{font-size:.75rem;color:#607676;margin:.2rem 0 .7rem}
+.lb-review-tag{display:inline-block;font-size:.69rem;background:#fff0c8;border:1px solid #ae8d4b;border-radius:6px;padding:.35rem .5rem;color:#775d25;font-weight:850;line-height:1.35}
+.lb-footer-note{border-left:5px solid #be9762;border-radius:6px;background:#fff1d2;margin:1.5rem 0 0;padding:1rem;font-size:.83rem;line-height:1.6;color:#695630}
+@media(max-width:800px){.lb-grid{grid-template-columns:1fr}.lb-search{grid-template-columns:auto 1fr}.lb-head{align-items:flex-start}.lb-count{width:76px;height:76px;font-size:1.9rem}.lb-count small{font-size:.45rem;margin-top:-16px}}
+@media(max-width:520px){.lb-search{grid-template-columns:1fr}.lb-head{gap:.5rem}.lb-count{display:none}.lb-cover{width:73px;height:109px}.lb-cover span{font-size:2.1rem}.lb-cover small{font-size:.49rem}.lb-book{gap:.7rem;padding:.6rem}.lb-book-copy h3{font-size:1.03rem}}
