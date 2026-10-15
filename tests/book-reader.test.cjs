@@ -42,7 +42,7 @@ class Node {
   scrollIntoView() { this.scrolled = true; }
 }
 
-function app(initialHash = "") {
+function app(initialHash = "", unit = "Chapter") {
   const names = ["reader-previous","reader-next","reader-progress","reader-progress-copy",
     "reader-page-label","reader-smaller","reader-larger","reader-size"];
   const ids = Object.fromEntries(names.map(x => [x, new Node()]));
@@ -70,6 +70,7 @@ function app(initialHash = "") {
   const bookTop = new Node();
   const body = new Node();
   body.dataset.readerTheme = "paper";
+  body.dataset.readerUnit = unit;
   const document = new Node();
   document.body = body;
   document.getElementById = key => ids[key] || null;
@@ -165,4 +166,16 @@ test("arrow keys navigate only when not focused on an input or control", () => {
   const controlTarget = { closest: () => ({ tagName: "INPUT" }) };
   v.document.fire("keydown", { key: "ArrowRight", target: controlTarget });
   assert.equal(v.ids["reader-progress"].value, 1);
+});
+
+test("complete classic edition pages display Page labels while original demo still uses Chapter", () => {
+  const v = app("", "Page");
+  assert.ok(v.ids["reader-progress-copy"].textContent.startsWith("Page 1 of 5"));
+  assert.equal(v.ids["reader-next"].textContent, "Next page →");
+  v.ids["reader-next"].fire("click");
+  assert.ok(v.ids["reader-progress-copy"].textContent.startsWith("Page 2 of 5"));
+  assert.equal(v.window.location.hash, "#chapter-2");
+  const original = app();
+  assert.ok(original.ids["reader-progress-copy"].textContent.startsWith("Chapter 1 of 5"));
+  assert.equal(original.ids["reader-next"].textContent, "Next chapter →");
 });
