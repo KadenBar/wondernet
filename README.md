@@ -9,7 +9,7 @@
 [![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
 > [!IMPORTANT]
-> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, a 16-word Word Workshop early spelling game, live section filtering and two read-only API endpoints. Reviewed phonics courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
+> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, a 16-word Word Workshop early spelling game, an eleven-title Library research catalog (no downloaded books), live section filtering and two read-only API endpoints. Reviewed phonics courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
 
 **[Vision](docs/vision.md) · [Roadmap](docs/roadmap.md) · [Run locally](#run-the-prototype) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public launch checklist](docs/public-launch-checklist.md)**
 
@@ -41,8 +41,8 @@ We're deliberately building a **fast, accessible website**, not a virtual town t
 | Ready to explore | Still to be built |
 |:---|:---|
 | Responsive six-section homepage and interior pages | Full curriculum and phonics games |
-| Search/filter for homepage sections | Searchable library and reviewed uploads |\n| Circuit Garden (10 puzzles), Word Workshop (16 words) and two practice demos | Larger games, adaptive lessons and learner progress |
-| Local-only FastAPI prototype | Student profiles and progress |
+| Search/filter for homepage sections | Imported book files, approved offline readers and reviewed uploads |\n| Circuit Garden (10 puzzles), Word Workshop (16 words) and two practice demos | Larger games, adaptive lessons and learner progress |
+| Eleven-item, rights-scoped Library research queue (no actual books yet) | Approved offline ebook reader and imported books |\n| Local-only FastAPI prototype | Student profiles and progress |
 | Read-only health/catalog API | Secure multiplayer rooms and game engines |
 | Security/accessibility planning docs | Pi hotspot, local TLS and segmented networking |
 | Smoke tests and automated CI | Browser code sandbox and isolated cyber labs |
@@ -62,7 +62,7 @@ See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe
 
 ## Public website preview
 
-The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game and Word Workshop word builder. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
+The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game, Word Workshop word builder, and an eleven-book **research-only** Library shelf. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
 
 **Important:** This is a public internet-hosted static UI preview, not an offline Raspberry Pi deployment, a complete curriculum, or a child-safe release. The FastAPI backend is deliberately not published to Pages.
 
