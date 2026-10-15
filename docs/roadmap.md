@@ -29,12 +29,16 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [x] Rights-scoped eleven-book research catalog with metadata and a local-only filtered preview (no files installed)
 - [ ] Review and approve a small, varied set of exact licensed editions before distributing any media
 - [ ] Secure administrator-only media import with size/type and archive checks
-- [ ] Offline search and an accessible reader/media viewer
-- [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)\n- [ ] One evidence-informed early phonics activity and accessible alternatives\n- [ ] Educator review and manual keyboard/touch/screen-reader tests for Word Workshop
+- [x] First original five-chapter static reader demo with adjustable type, colors and chapters (manual a11y review pending)
+- [ ] Generalized approved-content reader and offline indexed search
+- [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)
+- [ ] One evidence-informed early phonics activity and accessible alternatives
+- [ ] Educator review and manual keyboard/touch/screen-reader tests for Word Workshop
 - [ ] Content provenance/licensing metadata and export/import validation
 
 ## 🎮 Alpha 0.5 — Arcade + WonderParty
-- [x] One ten-level, locally hosted Circuit Garden puzzle game (prototype only, awaiting manual accessibility validation)\n- [ ] Verify full keyboard, touch, screen-reader and contrast accessibility of Circuit Garden
+- [x] One ten-level, locally hosted Circuit Garden puzzle game (prototype only, awaiting manual accessibility validation)
+- [ ] Verify full keyboard, touch, screen-reader and contrast accessibility of Circuit Garden
 - [ ] Private room-code party game with server-authoritative membership
 - [ ] Local multiplayer test across phones/tablets; host controls and abuse cases
 - [ ] Accessibility and load tests for games
