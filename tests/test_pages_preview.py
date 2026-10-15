@@ -59,8 +59,8 @@ def test_export_builds_eleven_live_html_routes(tmp_path):
     assert (tmp_path / "assets/word-workshop.css").is_file()
     workshop = (tmp_path / "play/word-workshop/index.html").read_text(encoding="utf-8")
     assert 'src="/wondernet/assets/word-workshop-engine.js"' in workshop
-    assert 'src="/wondernet/assets/word-workshop.js"' in workshop
-    assert 'href="/wondernet/assets/word-workshop.css"' in workshop
+    assert 'src="/wondernet/assets/word-workshop.js?v=touch2"' in workshop
+    assert 'href="/wondernet/assets/word-workshop.css?v=touch2"' in workshop
     garden = (tmp_path / "play/circuit-garden/index.html").read_text(encoding="utf-8")
     assert 'src="/wondernet/assets/circuit-engine.js"' in garden
     assert 'src="/wondernet/assets/circuit-garden.js"' in garden

@@ -158,3 +158,33 @@
 @media(prefers-reduced-motion:reduce){
   .ww-drag-ghost{transition:none;animation:none}
 }
+
+/* Mobile scroll protection starts at finger contact with the letter tray.
+   The rest of the document stays vertically scrollable. */
+#ww-tray,#ww-tray .ww-letter{
+  touch-action:none;
+  -ms-touch-action:none;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+}
+.ww-letter.ww-selected-letter{
+  background:#b0f1d1;
+  border-color:#116c57;
+  box-shadow:0 0 0 4px rgba(34,151,108,.22),3px 4px 0 rgba(40,61,74,.18);
+}
+#ww-precision{
+  background:#fff5da;
+  border:2px solid #b09a61;
+  border-radius:8px;
+  padding:.47rem .7rem;
+  text-decoration:none;
+  font-weight:900;
+  color:#75572d;
+}
+#ww-precision[aria-pressed="true"]{
+  background:#d2f0e4;
+  border-color:#157b61;
+  color:#165d4e;
+}
+#ww-precision:disabled{opacity:.5}

@@ -16,10 +16,11 @@
   const clearButton = byId("ww-clear"), winCard = byId("ww-win");
   const winEmoji = byId("ww-win-emoji"), winDescription = byId("ww-win-description");
   const winStars = byId("ww-stars"), nextButton = byId("ww-next");
-  const worldList = byId("ww-world-list");
+  const worldList = byId("ww-world-list"), precisionButton = byId("ww-precision");
   let currentLevel = 0, unlocked = 1;
   let puzzle, wrongChecks = 0, hintsUsed = 0, shuffleCount = 0, won = false;
   let lastWrongWord = "";
+  let precisionMode = false, selectedTileId = null;
   const completed = new Map();
 
   const create = (tag, className, text) => {
@@ -83,10 +84,17 @@
     button.dataset.slot = String(index);
     button.disabled = won;
     button.setAttribute("aria-label", "Position " + (index + 1) + " of " +
-      puzzle.slots.length + ": " + (tile ? tile.letter + ". Press to remove this letter." :
-        "Empty. Select a tile or drag one here."));
+      puzzle.slots.length + ": " + (tile ? tile.letter : "Empty") +
+      (precisionMode && selectedTileId !== null ?
+        ". Tap to place your selected letter here." :
+        tile ? ". Tap to remove this letter." : ". Drag a letter here or use precise placement."));
     button.addEventListener("click", () => {
-      if (!tile || won) return;
+      if (won) return;
+      if (precisionMode && selectedTileId !== null) {
+        placeTileAt(selectedTileId, index);
+        return;
+      }
+      if (!tile) return;
       puzzle = engine.removeAt(puzzle, index);
       lastWrongWord = "";
       say("Letter back on the tray. You can try another!");
@@ -97,11 +105,51 @@
     return button;
   }
 
-  // Pointer Events handle both touch and mouse. Native HTML drag/drop does not
-  // consistently fire from touchscreens, particularly mobile browsers.
+  function placeTileAt(tileId, slotIndex) {
+    if (won) return;
+    const next = engine.placeAt(puzzle, tileId, slotIndex);
+    if (next === puzzle) return;
+    puzzle = next;
+    selectedTileId = null;
+    lastWrongWord = "";
+    say("Letter placed in your chosen space!");
+    renderBoard();
+  }
+
+  function activateTile(tileId) {
+    if (won) return;
+    if (precisionMode) {
+      selectedTileId = selectedTileId === tileId ? null : tileId;
+      renderBoard();
+      say(selectedTileId === null ? "Letter selection cleared." :
+        "Letter selected! Tap the word space where you want it.");
+      return;
+    }
+    const next = engine.placeNext(puzzle, tileId);
+    if (next === puzzle) {
+      say("Your word spaces are full. Tap a letter above to change it, or try precise placement.");
+      return;
+    }
+    puzzle = next;
+    lastWrongWord = "";
+    say("Nice! Keep placing letters.");
+    renderBoard();
+    if (engine.check(puzzle).filled) checkButton.focus();
+    else {
+      const nextTile = tray.querySelector("button:not(:disabled)");
+      if (nextTile) nextTile.focus();
+    }
+  }
+
+  // Touch Events explicitly call preventDefault in non-passive handlers before
+  // the page can start scrolling. Pointer Events handle mouse/pen and provide a
+  // fallback for touch devices without the Touch Events API.
   function installPointerDrag(button, tile) {
     let gesture = null;
+    let touchGesture = null;
     let suppressNextClick = false;
+    let suppressTouchClickUntil = 0;
+    const supportsTouchEvents = "ontouchstart" in window;
 
     function targetAt(x, y) {
       const element = document.elementFromPoint(x, y);
@@ -127,7 +175,8 @@
     }
 
     button.addEventListener("pointerdown", event => {
-      if (won || gesture || !event.isPrimary || event.button !== 0) return;
+      if (won || gesture || touchGesture || !event.isPrimary || event.button !== 0) return;
+      if (event.pointerType === "touch" && supportsTouchEvents) return;
       gesture = {
         pointerId: event.pointerId,
         startX: event.clientX, startY: event.clientY,
@@ -170,13 +219,7 @@
         say("Drop your letter on a word space, or tap it to place it.");
         return;
       }
-      const index = Number(slot.dataset.slot);
-      const next = engine.placeAt(puzzle, tile.id, index);
-      if (next === puzzle) return;
-      puzzle = next;
-      lastWrongWord = "";
-      say("Letter dropped into place! You can move it again.");
-      renderBoard();
+      placeTileAt(tile.id, Number(slot.dataset.slot));
     });
 
     button.addEventListener("pointercancel", event => {
@@ -193,28 +236,99 @@
       if (gesture) finish(gesture.pointerId);
     });
 
+    // Android and iOS dispatch Touch Events from the starting letter tile even
+    // when the finger moves over another cell. Non-passive listeners are vital:
+    // pointermove.preventDefault runs too late once scrolling has begun.
+    function findChangedTouch(event) {
+      if (!touchGesture) return null;
+      for (const touch of Array.from(event.changedTouches || [])) {
+        if (touch.identifier === touchGesture.identifier) return touch;
+      }
+      return null;
+    }
+
+    function finishTouch() {
+      if (!touchGesture) return;
+      const { ghost, highlighted } = touchGesture;
+      touchGesture = null;
+      if (highlighted) highlighted.classList.remove("ww-drop-target");
+      if (ghost) ghost.remove();
+      button.classList.remove("ww-being-dragged");
+    }
+
+    button.addEventListener("touchstart", event => {
+      if (won || touchGesture || event.touches.length !== 1) return;
+      const touch = event.changedTouches[0];
+      if (event.cancelable) event.preventDefault();
+      touchGesture = {
+        identifier: touch.identifier, startX: touch.clientX, startY: touch.clientY,
+        dragging: false, ghost: null, highlighted: null
+      };
+      // Touchstart.preventDefault normally cancels the compatibility click,
+      // but guard against delayed synthetic clicks from other mobile browsers.
+      suppressTouchClickUntil = Date.now() + 800;
+    }, { passive: false });
+
+    button.addEventListener("touchmove", event => {
+      const touch = findChangedTouch(event);
+      if (!touchGesture || !touch) return;
+      if (event.cancelable) event.preventDefault();
+      const distance = Math.hypot(
+        touch.clientX - touchGesture.startX,
+        touch.clientY - touchGesture.startY
+      );
+      if (!touchGesture.dragging && distance < 9) return;
+      if (!touchGesture.dragging) {
+        touchGesture.dragging = true;
+        touchGesture.ghost = create("span", "ww-drag-ghost", tile.letter);
+        touchGesture.ghost.setAttribute("aria-hidden", "true");
+        document.body.appendChild(touchGesture.ghost);
+        button.classList.add("ww-being-dragged");
+      }
+      touchGesture.ghost.style.left = touch.clientX + "px";
+      touchGesture.ghost.style.top = touch.clientY + "px";
+      const slot = targetAt(touch.clientX, touch.clientY);
+      if (slot !== touchGesture.highlighted) {
+        if (touchGesture.highlighted) touchGesture.highlighted.classList.remove("ww-drop-target");
+        touchGesture.highlighted = slot;
+        if (slot) slot.classList.add("ww-drop-target");
+      }
+    }, { passive: false });
+
+    button.addEventListener("touchend", event => {
+      const touch = findChangedTouch(event);
+      if (!touchGesture || !touch) return;
+      if (event.cancelable) event.preventDefault();
+      const dragged = touchGesture.dragging;
+      const slot = dragged ? targetAt(touch.clientX, touch.clientY) : null;
+      finishTouch();
+      suppressTouchClickUntil = Date.now() + 800;
+      if (!dragged) {
+        activateTile(tile.id);
+      } else if (slot && !won) {
+        placeTileAt(tile.id, Number(slot.dataset.slot));
+      } else {
+        say("Try dropping on a word space, or turn on precise placement.");
+      }
+    }, { passive: false });
+
+    button.addEventListener("touchcancel", event => {
+      if (!findChangedTouch(event)) return;
+      finishTouch();
+      suppressTouchClickUntil = Date.now() + 800;
+    }, { passive: false });
+
     button.addEventListener("click", event => {
+      if (Date.now() < suppressTouchClickUntil) {
+        event.preventDefault();
+        return;
+      }
       if (suppressNextClick) {
         event.preventDefault();
         suppressNextClick = false;
         return;
       }
-      if (won) return;
-      const next = engine.placeNext(puzzle, tile.id);
-      if (next === puzzle) {
-        say("Your word spaces are full. Tap a letter above to change it.");
-        return;
-      }
-      puzzle = next;
-      lastWrongWord = "";
-      say("Nice! Keep placing letters.");
-      renderBoard();
-      if (engine.check(puzzle).filled) {
-        checkButton.focus();
-      } else {
-        const nextTile = tray.querySelector("button:not(:disabled)");
-        if (nextTile) nextTile.focus();
-      }
+      activateTile(tile.id);
     });
   }
 
@@ -222,8 +336,11 @@
     const button = create("button", "ww-letter", tile.letter);
     button.type = "button";
     button.dataset.tile = String(tile.id);
-    button.setAttribute("aria-label",
-      "Letter " + tile.letter + ". Tap to place in the next empty space, or drag to a word space.");
+    if (tile.id === selectedTileId) button.classList.add("ww-selected-letter");
+    button.setAttribute("aria-pressed", String(precisionMode && selectedTileId === tile.id));
+    button.setAttribute("aria-label", "Letter " + tile.letter +
+      (precisionMode ? ". Tap to select, then tap a word space." :
+        ". Tap to place in the next empty space, or drag to a word space."));
     installPointerDrag(button, tile);
     return button;
   }
@@ -238,6 +355,10 @@
     hintButton.disabled = won;
     shuffleButton.disabled = won;
     clearButton.disabled = won;
+    precisionButton.disabled = won;
+    precisionButton.setAttribute("aria-pressed", String(precisionMode));
+    precisionButton.textContent = precisionMode ?
+      "✓ Precise placement ON" : "☞ Choose a specific space";
     slotsEl.setAttribute("aria-label", "Your word: " +
       (puzzle.slots.map(id => id === null ? "blank" : puzzle.pool[id].letter).join(", ")));
   }
@@ -268,6 +389,7 @@
     puzzle = engine.createPuzzle(index);
     won = false;
     wrongChecks = 0;
+    selectedTileId = null;
     hintsUsed = 0;
     shuffleCount = 0;
     lastWrongWord = "";
@@ -310,6 +432,7 @@
   });
   clearButton.addEventListener("click", () => {
     if (won) return;
+    selectedTileId = null;
     puzzle = engine.clear(puzzle);
     lastWrongWord = "";
     renderBoard();
@@ -324,6 +447,7 @@
   });
   hintButton.addEventListener("click", () => {
     if (won) return;
+    selectedTileId = null;
     const result = engine.hint(puzzle);
     if (!result.changed) {
       say("All the letters are in the right spaces. Try building your word!");
@@ -339,6 +463,15 @@
       slot.classList.add("ww-hinted");
       slot.focus();
     }
+  });
+  precisionButton.addEventListener("click", () => {
+    if (won) return;
+    precisionMode = !precisionMode;
+    selectedTileId = null;
+    renderBoard();
+    say(precisionMode ?
+      "Precise placement is on. Tap a letter, then tap any word space." :
+      "Quick placement is on. Tap letters to fill spaces in order.");
   });
   nextButton.addEventListener("click", () => {
     loadLevel((currentLevel + 1) % engine.LEVELS.length);

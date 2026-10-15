@@ -188,8 +188,8 @@ def test_word_workshop_is_accessible_through_allowlisted_local_routes():
     assert 'id="ww-hint"' in html
     assert 'id="ww-world-list"' in html
     assert 'src="/assets/word-workshop-engine.js"' in html
-    assert 'src="/assets/word-workshop.js"' in html
-    assert 'href="/assets/word-workshop.css"' in html
+    assert 'src="/assets/word-workshop.js?v=touch2"' in html
+    assert 'href="/assets/word-workshop.css?v=touch2"' in html
     assert "not ready for unsupervised child use" in html
     assert 'href="https://' not in html
     assert 'src="https://' not in html
