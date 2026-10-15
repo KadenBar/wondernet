@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: AGPL-3.0-only
 from fastapi.testclient import TestClient
 from backend.app.main import app
 

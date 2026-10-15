@@ -4,7 +4,7 @@ Use this checklist **before changing repository visibility to public**. Publishi
 
 ## Ownership, identity and legal
 - [ ] Confirm rights to publish code created on personal time/equipment under any applicable employer agreements
-- [ ] Review software license (currently MIT) with the maintainer's commercialization and copyleft preferences
+- [ ] Verify AGPL-3.0-only source-code licensing, copyright ownership, and compatibility with planned dependencies and contributors
 - [ ] Check the provisional WonderNet name for conflicting brands/trademarks
 - [ ] Confirm contributor guidance and separate third-party asset/content licenses
 

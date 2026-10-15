@@ -10,7 +10,7 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [x] First threat model, accessibility guidelines and contribution documentation
 
 ## 🔧 Alpha 0.2 — Public project foundation
-- [ ] Review project name and software/content licensing before visibility changes
+- [ ] Confirm AGPL-3.0-only code licensing, copyright rights and content licensing before visibility changes
 - [ ] Review repository contents and full Git history for credentials and personal data
 - [ ] Enable private vulnerability reporting and establish a maintainer contact process
 - [ ] Confirm CI passes; set appropriate branch protections and dependency updates

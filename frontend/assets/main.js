@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (c) 2026 WonderNet contributors
 "use strict";
 const field = document.getElementById("section-search");
 const cards = Array.from(document.querySelectorAll("#sections .tile"));
