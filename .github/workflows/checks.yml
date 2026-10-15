@@ -24,6 +24,10 @@ jobs:
         run: python scripts/import_bookdash.py --verify-only
       - name: Check the static site export
         run: python scripts/build_pages_preview.py --output /tmp/wondernet-site --base-path /wondernet
+      - name: Check actual Library layout in Chromium at phone and desktop widths
+        run: |
+          python -m pip install playwright==1.56.0
+          python scripts/check_bookdash_mobile_browser.py
       - name: Check frontend JavaScript syntax
         run: |
           node --check frontend/assets/main.js
