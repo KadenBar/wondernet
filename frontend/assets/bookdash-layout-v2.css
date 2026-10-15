@@ -1,0 +1,133 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/*
+ * Book Dash card layout, isolated from the legacy library-shelf stylesheet.
+ *
+ * Important: use natural image height. The earlier height:100%/aspect-ratio
+ * combination could enlarge a cover independently of its narrow grid column,
+ * painting the cover beneath its own title on Android.
+ *
+ * Treat narrow pointer/touch viewports as phone layouts even when an in-app
+ * browser requests a wider virtual desktop viewport. This is a fresh URL,
+ * because some Android browser tabs retain the old library stylesheet.
+ */
+.section--library .lb-dash-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  min-width:0;
+}
+.section--library .lb-dash-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  max-width:100%;
+  height:auto;
+  position:relative;
+  isolation:isolate;
+}
+.section--library .lb-dash-cover{
+  box-sizing:border-box;
+  display:block;
+  flex:0 0 auto;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  min-height:0;
+  height:auto;
+  aspect-ratio:auto;
+  border-right:0;
+  border-bottom:2px solid #7da08c;
+  position:relative;
+  overflow:hidden;
+}
+.section--library .lb-dash-cover img{
+  box-sizing:border-box;
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+}
+.section--library .lb-dash-meta{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  flex:1 0 auto;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  height:auto;
+  position:relative;
+  z-index:1;
+  background:#fffef8;
+}
+@media (max-width:980px){
+  .section--library .lb-dash-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+/* Actual phone widths AND virtual-desktop-width touch WebViews. */
+@media (max-width:740px), (hover:none) and (pointer:coarse) and (max-width:1120px){
+  .section--library .lb-dash-section{
+    box-sizing:border-box;
+    max-width:100%;
+    min-width:0;
+    padding:clamp(.65rem,3vw,1.05rem);
+    margin:1.25rem 0 2rem;
+    box-shadow:4px 5px 0 #29534d;
+  }
+  .section--library .lb-dash-grid{grid-template-columns:minmax(0,1fr);gap:1rem;}
+  .section--library .lb-dash-card{
+    display:block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+  }
+  .section--library .lb-dash-cover{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+  }
+  .section--library .lb-dash-cover img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
+  }
+  .section--library .lb-dash-meta{
+    display:flex;
+    width:100%;
+    padding:clamp(.9rem,3.4vw,1.25rem);
+  }
+  .section--library .lb-dash-meta h3{
+    font-size:clamp(1.15rem,4vw,1.45rem);
+    line-height:1.25;
+    overflow-wrap:anywhere;
+  }
+  .section--library .lb-dash-desc{
+    font-size:.95rem;
+    line-height:1.55;
+  }
+  .section--library .lb-dash-credit{
+    font-size:.82rem;
+    margin:.25rem 0 1rem;
+    overflow-wrap:anywhere;
+  }
+  .section--library .lb-dash-read{
+    min-height:44px;
+    font-size:.9rem;
+  }
+}
+/* Reduced screen area + larger accessibility fonts should never move content
+   into the cover area or overflow the containing card. */
+@media (max-width:420px){
+  .section--library .lb-dash-head>p:not(.eyebrow){
+    font-size:.96rem;
+    line-height:1.55;
+  }
+  .section--library .lb-dash-meta h3{font-size:1.2rem;}
+}
