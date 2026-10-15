@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" role="img" aria-labelledby="scene-title scene-desc">
+<title id="scene-title">Mara's Moving Garden - scene 3</title>
+<desc id="scene-desc">Original vector illustration for a WonderNet bilingual picture book.</desc>
+<defs><linearGradient id="sky" x1="0" y1="0" x2=".4" y2="1"><stop stop-color="#f7eac8"/><stop offset="1" stop-color="#fff7e5"/></linearGradient></defs>
+<rect width="900" height="550" fill="url(#sky)"/><path d="M0 427 Q240 392 451 428 Q658 397 900 417V550H0Z" fill="#9bc0a0"/>
+<path d="M0 492Q210 475 420 491T900 481" stroke="#7da98d" stroke-width="10" fill="none"/>
+<g transform="translate(785 130) scale(0.65)"><path d="M-9 0V140 H17 V0" fill="#9a6f54" stroke="#304351" stroke-width="5"/><circle cx="-32" cy="-12" r="67" fill="#7eb293" stroke="#304351" stroke-width="5"/><circle cx="38" cy="-38" r="63" fill="#69a384" stroke="#304351" stroke-width="5"/><circle cx="0" cy="-79" r="63" fill="#90c3a0" stroke="#304351" stroke-width="5"/></g><g transform="translate(680 85)" stroke="#e3ab54" stroke-width="5" stroke-linecap="round"><circle r="37" fill="#ffdf88" stroke="#d5a457"/><path d="M47.0 0.0 L59.0 0.0"/><path d="M33.2 33.2 L41.7 41.7"/><path d="M0.0 47.0 L0.0 59.0"/><path d="M-33.2 33.2 L-41.7 41.7"/><path d="M-47.0 0.0 L-59.0 0.0"/><path d="M-33.2 -33.2 L-41.7 -41.7"/><path d="M-0.0 -47.0 L-0.0 -59.0"/><path d="M33.2 -33.2 L41.7 -41.7"/></g><g transform="translate(154 228) scale(1.06)" stroke="#304351" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-16 106 L-23 157 M13 106 L23 157" fill="none" stroke="#486b81" stroke-width="14"/>
+ <path d="M-31 154 l20 4 M12 158 l23 1" stroke="#324a55" stroke-width="11"/>
+ <path d="M-31 47 Q-34 35 -14 34 L19 35 Q38 41 30 94 L-25 94Z" fill="#edaa53"/>
+ <path d="M-21 64 L-39 104 M23 65 M20 69 L34 109" stroke="#b97450" stroke-width="14" fill="none"/>
+ <circle cy="-8" r="31" fill="#b97450"/>
+ <circle cx="-22" cy="-14" r="12" fill="#32374f"/><circle cx="-12" cy="-26" r="12" fill="#32374f"/><circle cx="0" cy="-30" r="12" fill="#32374f"/><circle cx="13" cy="-28" r="12" fill="#32374f"/><circle cx="23" cy="-15" r="12" fill="#32374f"/><circle cx="26" cy="-4" r="12" fill="#32374f"/>
+ <circle cx="-10" cy="-4" r="2.8" fill="#304351" stroke="none"/><circle cx="12" cy="-4" r="2.8" fill="#304351" stroke="none"/>
+ <path d="M-6 10 Q2 17 11 8" fill="none" stroke="#304351" stroke-width="2.8"/>
+ 
+ </g><g transform="translate(697 255) scale(0.95)" stroke="#304351" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-16 106 L-23 157 M13 106 L23 157" fill="none" stroke="#3e6582" stroke-width="14"/>
+ <path d="M-31 154 l20 4 M12 158 l23 1" stroke="#324a55" stroke-width="11"/>
+ <path d="M-31 47 Q-34 35 -14 34 L19 35 Q38 41 30 94 L-25 94Z" fill="#8eaf88"/>
+ <path d="M-21 64 L-39 104 M23 65 M18 64 L62 22" stroke="#9d6948" stroke-width="14" fill="none"/>
+ <circle cy="-8" r="31" fill="#9d6948"/>
+ <path d="M-31 -10 Q-31 -41 0 -44 Q34 -43 29 -10 Q17 -25 8 -23 Q-10 -18 -25 -10Z" fill="#e4e6e0"/>
+ <circle cx="-10" cy="-4" r="2.8" fill="#304351" stroke="none"/><circle cx="12" cy="-4" r="2.8" fill="#304351" stroke="none"/>
+ <path d="M-6 10 Q2 17 11 8" fill="none" stroke="#304351" stroke-width="2.8"/>
+ <path d="M-16 2 Q0 29 18 4 M-22 -10 Q-6 -20 0 -6 Q14 -18 22 -8" fill="none" stroke="#eee8df" stroke-width="5"/>
+ </g><g transform="translate(258 294) scale(1.2)" stroke="#304351" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g transform="translate(52 34)"><path d="M0 56 Q-8 -10 3 -17.5" stroke="#396e50" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-18" cy="17" rx="20" ry="9" fill="#5eaa78" stroke="#304351" stroke-width="2" transform="rotate(-28 -18 17)"/><ellipse cx="15" cy="20" rx="21" ry="10" fill="#66b47f" stroke="#304351" stroke-width="2" transform="rotate(24 15 20)"/></g><g transform="translate(132 34)"><path d="M0 56 Q-8 -10 3 -17.5" stroke="#396e50" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-18" cy="17" rx="20" ry="9" fill="#5eaa78" stroke="#304351" stroke-width="2" transform="rotate(-28 -18 17)"/><ellipse cx="15" cy="20" rx="21" ry="10" fill="#66b47f" stroke="#304351" stroke-width="2" transform="rotate(24 15 20)"/></g><g transform="translate(212 34)"><path d="M0 56 Q-8 -10 3 -17.5" stroke="#396e50" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-18" cy="17" rx="20" ry="9" fill="#5eaa78" stroke="#304351" stroke-width="2" transform="rotate(-28 -18 17)"/><ellipse cx="15" cy="20" rx="21" ry="10" fill="#66b47f" stroke="#304351" stroke-width="2" transform="rotate(24 15 20)"/></g>
+<path d="M15 35 H315 L290 129 Q165 150 37 127Z" fill="#d96c6f"/>
+<path d="M42 35 H285 L267 74 H57Z" fill="#96684c"/>
+<path d="M14 45 L-28 11" stroke="#94574d" stroke-width="11" fill="none"/>
+<circle cx="79" cy="151" r="26" fill="#344f5e"/><circle cx="242" cy="151" r="26" fill="#344f5e"/>
+<circle cx="79" cy="151" r="9" fill="#f3d59c" stroke-width="2"/><circle cx="242" cy="151" r="9" fill="#f3d59c" stroke-width="2"/>
+<path d="M35 42 H293" stroke="#ffd7b4" stroke-width="5" fill="none"/>
+</g><g fill="#eacb81" stroke="#304351" stroke-width="2"><ellipse cx="280" cy="345" rx="7" ry="5"/><ellipse cx="309" cy="338" rx="7" ry="5"/><ellipse cx="341" cy="345" rx="7" ry="5"/><ellipse cx="378" cy="338" rx="7" ry="5"/></g>
+<circle cx="51" cy="480" r="2" fill="#ebd9a4"/><circle cx="164" cy="493" r="3" fill="#7ba48c"/><circle cx="277" cy="506" r="4" fill="#ebd9a4"/><circle cx="390" cy="519" r="2" fill="#7ba48c"/><circle cx="503" cy="480" r="3" fill="#ebd9a4"/><circle cx="616" cy="493" r="4" fill="#7ba48c"/><circle cx="729" cy="506" r="2" fill="#ebd9a4"/><circle cx="842" cy="519" r="3" fill="#7ba48c"/><circle cx="55" cy="480" r="4" fill="#ebd9a4"/><circle cx="168" cy="493" r="2" fill="#7ba48c"/><circle cx="281" cy="506" r="3" fill="#ebd9a4"/><circle cx="394" cy="519" r="4" fill="#7ba48c"/><circle cx="507" cy="480" r="2" fill="#ebd9a4"/><circle cx="620" cy="493" r="3" fill="#7ba48c"/><circle cx="733" cy="506" r="4" fill="#ebd9a4"/><circle cx="846" cy="519" r="2" fill="#7ba48c"/><circle cx="59" cy="480" r="3" fill="#ebd9a4"/><circle cx="172" cy="493" r="4" fill="#7ba48c"/>
+<path d="M1 1H899V549H1Z" stroke="#304351" stroke-width="2.5" fill="none"/></svg>
