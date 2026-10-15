@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "status": "curation-only",
+  "updated": "2026-10-14",
+  "notice": "Discovery metadata only. No book files have been downloaded, licensed for distribution as specific editions, or reviewed for learner access.",
+  "items": [
+    {
+      "id": "alice-wonderland",
+      "title": "Alice’s Adventures in Wonderland",
+      "creator": "Lewis Carroll",
+      "illustrator": "John Tenniel",
+      "collection": "classics",
+      "audience": "independent",
+      "subjects": [
+        "fantasy"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland/john-tenniel",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Older language and peril; review illustrations and adaptations"
+    },
+    {
+      "id": "wonderful-wizard-oz",
+      "title": "The Wonderful Wizard of Oz",
+      "creator": "L. Frank Baum",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "independent",
+      "subjects": [
+        "fantasy"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/l-frank-baum/the-wonderful-wizard-of-oz",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Scary scenes, period language and illustrations need review"
+    },
+    {
+      "id": "little-princess",
+      "title": "A Little Princess",
+      "creator": "Frances Hodgson Burnett",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "friendship"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/frances-hodgson-burnett/a-little-princess",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Themes of poverty, bullying, bereavement and period depictions of India"
+    },
+    {
+      "id": "secret-garden",
+      "title": "The Secret Garden",
+      "creator": "Frances Hodgson Burnett",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "nature"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/frances-hodgson-burnett/the-secret-garden",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Bereavement, disability portrayals and colonial stereotypes require review"
+    },
+    {
+      "id": "black-beauty",
+      "title": "Black Beauty",
+      "creator": "Anna Sewell",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "animals"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/anna-sewell/black-beauty",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Animal cruelty and suffering; emotional sensitivity review"
+    },
+    {
+      "id": "wind-in-willows",
+      "title": "The Wind in the Willows",
+      "creator": "Kenneth Grahame",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "independent",
+      "subjects": [
+        "animals"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/kenneth-grahame/the-wind-in-the-willows",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Period language and some tense scenes; consider read-together version"
+    },
+    {
+      "id": "anne-green-gables",
+      "title": "Anne of Green Gables",
+      "creator": "L. M. Montgomery",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "friendship"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/l-m-montgomery/anne-of-green-gables",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Orphanhood and period language; assess audience"
+    },
+    {
+      "id": "jungle-book",
+      "title": "The Jungle Book",
+      "creator": "Rudyard Kipling",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "animals"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/rudyard-kipling/the-jungle-book",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Colonial framing and portrayals warrant editorial context"
+    },
+    {
+      "id": "peter-and-wendy",
+      "title": "Peter and Wendy",
+      "creator": "J. M. Barrie",
+      "illustrator": null,
+      "collection": "classics",
+      "audience": "older",
+      "subjects": [
+        "fantasy"
+      ],
+      "language": "English",
+      "source": "Standard Ebooks",
+      "source_url": "https://standardebooks.org/ebooks/j-m-barrie/peter-and-wendy",
+      "media_kind": "ebook",
+      "rights": {
+        "classification": "PD-US",
+        "territory": "United States public domain assessment; check other jurisdictions",
+        "edition_contributions": "Standard Ebooks contributions dedicated CC0 1.0; verify edition sources",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Racial stereotyping, violence and gender roles; high editorial review priority"
+    },
+    {
+      "id": "cloud-of-trash",
+      "title": "A Cloud of Trash",
+      "creator": "Karanjeet Kaur",
+      "illustrator": "Bhavana Vyas Vipparthi",
+      "collection": "illustrated",
+      "audience": "read-together",
+      "subjects": [
+        "environment"
+      ],
+      "language": "English",
+      "source": "StoryWeaver",
+      "source_url": "https://storyweaver.org.in/en/stories/show-in-iframe/11166-a-cloud-of-trash?iframe=true",
+      "media_kind": "illustrated-book",
+      "rights": {
+        "classification": "CC-BY-4.0",
+        "territory": "CC BY 4.0 for story text and illustrations; audio/readalongs excluded",
+        "edition_contributions": "Original creator, illustrator, publisher and donor attribution required",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Verify specific edition, donor/funder credits and full attribution before packaging"
+    },
+    {
+      "id": "ammachis-amazing-machines",
+      "title": "Ammachi’s Amazing Machines",
+      "creator": "Rajiv Eipe",
+      "illustrator": "Rajiv Eipe",
+      "collection": "illustrated",
+      "audience": "read-together",
+      "subjects": [
+        "science"
+      ],
+      "language": "English",
+      "source": "StoryWeaver",
+      "source_url": "https://storyweaver.org.in/en/stories/show-in-iframe/10118-ammachi-s-amazing-machines?iframe=true",
+      "media_kind": "illustrated-book",
+      "rights": {
+        "classification": "CC-BY-4.0",
+        "territory": "CC BY 4.0 for story text and illustrations; audio/readalongs excluded",
+        "edition_contributions": "Original creator, illustrator, publisher and donor attribution required",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "gate": {
+        "rights_review": "pending",
+        "content_review": "pending",
+        "accessibility_review": "pending",
+        "package_review": "pending"
+      },
+      "import_status": "not-imported",
+      "local_file": null,
+      "sha256": null,
+      "review_note": "Verify specific edition, donor/funder credits and full attribution before packaging"
+    }
+  ]
+}
