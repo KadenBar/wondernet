@@ -31,7 +31,8 @@ WARNING = (
     '<div class="public-preview-notice" role="note">'
     '<strong>Developer preview · not a child-ready product.</strong> '
     'This site demonstrates early webpages and two tiny browser activities. '
-    'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet.'
+    'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet. '
+    '<a href="https://github.com/KadenBar/wondernet" rel="noopener noreferrer">Source code and feedback</a>.'
     "</div>"
 )
 SECURITY_META = (
