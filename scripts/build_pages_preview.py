@@ -57,6 +57,14 @@ READERS = {
     "study-in-scarlet": "book-study-in-scarlet.html",
     "island-doctor-moreau": "book-island-doctor-moreau.html",
     "lost-world": "book-lost-world.html",
+    "kidnapped": "book-kidnapped.html",
+    "sign-of-four": "book-sign-of-four.html",
+    "return-sherlock": "book-return-sherlock.html",
+    "first-men-moon": "book-first-men-moon.html",
+    "pollyanna": "book-pollyanna.html",
+    "pinocchio": "book-pinocchio.html",
+    "rebecca-sunnybrook": "book-rebecca-sunnybrook.html",
+    "children-new-forest": "book-children-new-forest.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
