@@ -36,16 +36,18 @@ class Node {
   removeAttribute(name) { delete this.attrs[name]; }
   querySelector(name) {
     if (name === "h2") return this.heading;
+    if (name === '[data-story-lang]:not([hidden])') return (this.translations || []).find(x => !x.hidden) || null;
     return null;
   }
   focus() { this.focused = true; }
   scrollIntoView() { this.scrolled = true; }
 }
 
-function app(initialHash = "", unit = "Chapter") {
+function app(initialHash = "", unit = "Chapter", bilingual = false) {
   const names = ["reader-previous","reader-next","reader-progress","reader-progress-copy",
     "reader-page-label","reader-smaller","reader-larger","reader-size"];
   const ids = Object.fromEntries(names.map(x => [x, new Node()]));
+  if (bilingual) { ids["reader-language"] = new Node(); ids["reader-language"].value = "en"; }
   const chapters = [
     "The Sky Goes Quiet", "A Map of Missing Lights", "The Fog Collector",
     "A Small, Brave Spark", "Room for Every Star"
@@ -55,6 +57,25 @@ function app(initialHash = "", unit = "Chapter") {
     node.heading = new Node(text);
     return node;
   });
+  const translations = [];
+  if (bilingual) {
+    for (const [i, chapter] of chapters.entries()) {
+      const en = new Node("English " + (i + 1));
+      en.dataset.storyLang = "en";
+      const es = new Node("Español " + (i + 1));
+      es.dataset.storyLang = "es";
+      es.hidden = true;
+      chapter.heading.translations = [en, es];
+      translations.push(en, es);
+    }
+  }
+  const illustrations = bilingual ? Array.from({ length: 5 }, (_, i) => {
+    const node = new Node();
+    node.dataset.altEn = "English scene " + i;
+    node.dataset.altEs = "Escena en español " + i;
+    node.alt = node.dataset.altEn;
+    return node;
+  }) : [];
   const toc = chapters.map((_, i) => {
     const node = new Node();
     node.dataset.openChapter = String(i + 1);
@@ -78,6 +99,8 @@ function app(initialHash = "", unit = "Chapter") {
     if (selector === ".reader-chapter") return chapters;
     if (selector === "[data-open-chapter]") return toc;
     if (selector === 'input[name="reading-theme"]') return themes;
+    if (selector === "[data-story-lang]") return translations;
+    if (selector === ".story-illustration img") return illustrations;
     return [];
   };
   document.querySelector = selector => {
@@ -91,7 +114,7 @@ function app(initialHash = "", unit = "Chapter") {
   const js = fs.readFileSync(
     path.join(__dirname, "../frontend/assets/book-reader.js"), "utf8");
   vm.runInNewContext(js, { document, window }, { filename:"book-reader.js" });
-  return { ids, chapters, toc, themes, paper, bookTop, document, window, body };
+  return { ids, chapters, toc, themes, paper, bookTop, document, window, body, translations, illustrations };
 }
 
 test("only the selected chapter is shown and controls track its location", () => {
@@ -178,4 +201,39 @@ test("complete classic edition pages display Page labels while original demo sti
   const original = app();
   assert.ok(original.ids["reader-progress-copy"].textContent.startsWith("Chapter 1 of 5"));
   assert.equal(original.ids["reader-next"].textContent, "Next chapter →");
+});
+
+test("bilingual story switches all visible text and image alt descriptions without changing page", () => {
+  const v = app("", "Page", true);
+  v.toc[2].fire("click");
+  assert.equal(v.window.location.hash, "#chapter-3");
+  assert.equal(v.ids["reader-progress-copy"].textContent, "Page 3 of 5 · English 3");
+  const lang = v.ids["reader-language"];
+  lang.value = "es";
+  lang.fire("change");
+  assert.equal(v.ids["reader-progress-copy"].textContent, "Página 3 de 5 · Español 3");
+  assert.equal(v.window.location.hash, "#chapter-3", "switching must preserve page");
+  assert.equal(v.ids["reader-next"].textContent, "Página siguiente →");
+  assert.equal(v.ids["reader-previous"].textContent, "← Página anterior");
+  assert.equal(v.translations[4].hidden, true);
+  assert.equal(v.translations[5].hidden, false);
+  assert.equal(v.illustrations[0].alt, "Escena en español 0");
+  lang.value = "en";
+  lang.fire("change");
+  assert.equal(v.ids["reader-progress-copy"].textContent, "Page 3 of 5 · English 3");
+  assert.equal(v.illustrations[0].alt, "English scene 0");
+  assert.equal(v.translations[4].hidden, false);
+  lang.value = "fr";
+  lang.fire("change");
+  assert.equal(v.ids["reader-progress-copy"].textContent, "Page 3 of 5 · English 3",
+    "unsupported language must be ignored");
+});
+
+test("classic books without language selector continue to work normally", () => {
+  const v = app("", "Page");
+  assert.equal(v.ids["reader-language"], undefined);
+  v.ids["reader-next"].fire("click");
+  assert.equal(v.ids["reader-progress-copy"].textContent,
+    "Page 2 of 5 · A Map of Missing Lights");
+  assert.equal(v.ids["reader-previous"].textContent, "← Previous page");
 });
