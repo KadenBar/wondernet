@@ -84,7 +84,7 @@ def test_books_are_complete_local_read_only_with_original_illustrations():
         assert r.headers["content-type"].startswith("image/jpeg")
     pooh = client.get("/read/winnie-the-pooh").text
     assert "Here is Edward Bear" in pooh
-    assert "CHAPTER X" in pooh
+    assert "Chapter X" in pooh
     assert "INTRODUCTION" not in pooh or "Introduction" in pooh
     assert 'data-reader-unit="Chapter"' in pooh
     rabbit = client.get("/read/velveteen-rabbit").text
