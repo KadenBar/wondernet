@@ -118,7 +118,10 @@ def test_all_interior_pages_use_the_handmade_design_and_local_assets():
         assert f'class="interior-page section--{section}"' in html
         assert 'href="/assets/interiors.css"' in html
         assert 'class="detail-scene"' in html
-        assert "CONCEPT ART" in html
+        if section == "arcade":
+            assert "CIRCUIT GARDEN" in html
+        else:
+            assert "CONCEPT ART" in html
         assert 'href="https://' not in html
         assert 'src="https://' not in html
     for game in ACTIVITIES:
