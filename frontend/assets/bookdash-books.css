@@ -1,0 +1,18 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Book Dash CC BY 4.0 original cover and illustrated spreads; see library/BOOKDASH-CREDITS.md */
+.dash-book .reader-cover{background:#eff5ea;}
+.dash-book .reader-cover-art{min-height:280px;background:#ece6cd;}
+.dash-book .reader-cover-art:before{display:none;}
+.dash-cover img{display:block;width:100%;height:100%;max-height:420px;object-fit:contain;object-position:center}
+.dash-book .reader-cover h1{font-size:clamp(2.1rem,4.3vw,3.8rem)}
+.dash-book .reader-byline{font-size:.8rem;line-height:1.6}
+.dash-book .reader-paper{padding:clamp(.85rem,2.6vw,2.5rem);min-height:380px}
+.dash-book .reader-chapter h2{font:900 clamp(1.5rem,3vw,2.15rem)/1.2 ui-rounded,"Trebuchet MS",system-ui,sans-serif;letter-spacing:-.035em;margin:0 0 1rem}
+.dash-book .reader-chapter p:not(.reader-chapter-number):not(.reader-the-end){max-width:60ch;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;line-height:1.75;letter-spacing:-.01em;font-weight:500;text-wrap:pretty}
+.dash-book .reader-chapter p:nth-of-type(2):first-letter{font-size:inherit;color:inherit}
+.dash-spread{margin:0 auto 1.7rem;background:#fffef8;border:2px solid #517269;border-radius:12px;overflow:hidden;box-shadow:5px 6px 0 #d4dfd0;max-width:850px}
+.dash-spread img{display:block;width:100%;height:auto;max-height:600px;object-fit:contain}
+.dash-book .reader-note a{color:inherit}
+@media(max-width:830px){.dash-book .reader-cover{grid-template-columns:minmax(0,1fr) minmax(180px,.6fr)}}
+@media(max-width:560px){.dash-book .reader-cover{grid-template-columns:1fr}.dash-cover img{height:225px}.dash-book .reader-paper{padding:.95rem}.dash-spread{border-radius:6px;box-shadow:3px 4px 0 #d4dfd0}}
+@media print{.dash-spread{box-shadow:none;border:1px solid #888;break-inside:avoid}.dash-spread img{max-height:350px}}
