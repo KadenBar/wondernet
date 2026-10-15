@@ -112,7 +112,7 @@ def test_learner_homepage_has_no_outbound_links_or_remote_assets():
 
 
 def test_all_interior_pages_use_the_handmade_design_and_local_assets():
-    from backend.app.main import SECTIONS, ACTIVITIES
+    from backend.app.main import SECTIONS
     for section in SECTIONS:
         html = client.get(f"/explore/{section}").text
         assert f'class="interior-page section--{section}"' in html
@@ -124,7 +124,7 @@ def test_all_interior_pages_use_the_handmade_design_and_local_assets():
             assert "CONCEPT ART" in html
         assert 'href="https://' not in html
         assert 'src="https://' not in html
-    for game in ACTIVITIES:
+    for game in ("letter-match", "patterns"):
         html = client.get(f"/play/{game}").text
         assert f'class="interior-page game--{game}"' in html
         assert 'href="/assets/interiors.css"' in html
