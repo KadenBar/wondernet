@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = ROOT / "frontend"
 CATALOG = ROOT / "curriculum" / "catalog.json"
 SECTIONS = frozenset({"early-learning", "academy", "special-interests", "arcade", "library", "wonderparty"})
-ACTIVITIES = {"letter-match", "patterns"}
+ACTIVITIES = {"letter-match", "patterns", "circuit-garden"}
 
 app = FastAPI(title="WonderNet Prototype", version="0.1.0", docs_url=None, redoc_url=None, openapi_url=None)
 
