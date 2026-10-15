@@ -31,6 +31,15 @@ class ManifestValidationTests(unittest.TestCase):
         result = validate({"schema_version": 1, "items": [book(import_status="staged")]}, [])
         self.assertTrue(any("SHA-256" in error for error in result))
 
+    def test_fake_https_url_rejected(self):
+        for source in ("https://", "https://example.org@/", "https://example.org\\n.evil.test"):
+            result = validate({"schema_version": 1, "items": [book(source_url=source)]}, [])
+            self.assertTrue(any("HTTPS" in error for error in result), source)
+
+    def test_duplicate_within_batch_rejected(self):
+        result = validate({"schema_version": 1, "items": [book(), book(id="another-book")]}, [])
+        self.assertTrue(any("duplicate title" in error for error in result))
+
     def test_insecure_source_rejected(self):
         result = validate({"schema_version": 1, "items": [book(source_url="http://example.org")]}, [])
         self.assertTrue(any("HTTPS" in error for error in result))
