@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="stylesheet" href="/assets/section-pages.css">
   <link rel="stylesheet" href="/assets/interiors.css">
-  <link rel="stylesheet" href="/assets/word-workshop.css">
+  <link rel="stylesheet" href="/assets/word-workshop.css?v=touch2">
   <script defer src="/assets/word-workshop-engine.js"></script>
-  <script defer src="/assets/word-workshop.js"></script>
+  <script defer src="/assets/word-workshop.js?v=touch2"></script>
 </head>
 <body class="interior-page word-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -71,7 +71,7 @@
           <div class="ww-build-zone" aria-labelledby="ww-build-label">
             <div class="ww-zone-heading">
               <h3 id="ww-build-label">Your word</h3>
-              <span>Tap a filled space to take its letter back</span>
+              <span>Tap a filled space to take a letter back, or use precise placement</span>
             </div>
             <div id="ww-slots" class="ww-slots" role="group" aria-label="Word building spaces"></div>
           </div>
@@ -79,7 +79,7 @@
           <div class="ww-tray-zone" aria-labelledby="ww-tray-label">
             <div class="ww-zone-heading">
               <h3 id="ww-tray-label">Letter tray</h3>
-              <span>Tap to place, or hold and drag to any space</span>
+              <span>Tap for the next space, drag onto a space, or switch to precise placement</span>
             </div>
             <div id="ww-tray" class="ww-tray" role="group" aria-label="Available letter tiles"></div>
           </div>
@@ -91,6 +91,7 @@
           <div class="ww-secondary-actions">
             <button type="button" id="ww-clear">↻ Start this word over</button>
             <button type="button" id="ww-shuffle">⤨ Mix up the letters</button>
+            <button type="button" id="ww-precision" aria-pressed="false">☞ Choose a specific space</button>
           </div>
           <p id="ww-feedback" class="ww-feedback" role="status" aria-live="polite" aria-atomic="true">Choose a letter tile to begin. You can change your mind!</p>
         </section>
@@ -112,7 +113,7 @@
           <div class="ww-rule"><span aria-hidden="true">1</span><p>Look at the picture and read the clue.</p></div>
           <div class="ww-rule"><span aria-hidden="true">2</span><p>Put letter tiles into the spaces in the right order.</p></div>
           <div class="ww-rule"><span aria-hidden="true">3</span><p>Press <strong>Build this word!</strong> and collect your star stamp.</p></div>
-          <div class="ww-guide-foot">Works with finger dragging, taps, mouse or keyboard. Press Tab to move between tiles. Your progress lives only in this open page.</div>
+          <div class="ww-guide-foot">On phones, touch a letter and slide your finger to a word space. If dragging is difficult, select <strong>Choose a specific space</strong>, tap a letter, then tap the destination. Ordinary taps and keyboard buttons still work. Progress is in memory only.</div>
         </section>
         <section class="ww-sidebar-card ww-collection" aria-labelledby="ww-collection-title">
           <p class="ww-little-label">YOUR WORD COLLECTION</p>
