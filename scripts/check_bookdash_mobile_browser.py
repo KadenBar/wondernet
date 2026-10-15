@@ -38,6 +38,14 @@ MEASURE_JS = """() => {
     meta:rect(card.querySelector('.lb-dash-meta')),
     button:rect(card.querySelector('.lb-dash-read')),
     imageLoaded:card.querySelector('.lb-dash-cover img').naturalWidth>0
+  })),
+  classics: [...document.querySelectorAll('.lb-favorite-card')].map(card => ({
+    card:rect(card),
+    cover:rect(card.querySelector('.lb-favorite-cover')),
+    image:rect(card.querySelector('.lb-favorite-cover img')),
+    meta:rect(card.querySelector('.lb-favorite-copy')),
+    button:rect(card.querySelector('.lb-favorite-read')),
+    imageLoaded:card.querySelector('.lb-favorite-cover img').naturalWidth>0
   }))
  };
 }"""
@@ -57,12 +65,13 @@ def check_page(browser, url: str, width: int, touch: bool, scale: float = 1.0) -
         assert response and response.status == 200, "Library failed to load"
         if scale > 1:
             page.evaluate("(value) => { document.documentElement.style.fontSize = value; }", f"{100*scale:.0f}%")
-        for card in page.locator(".lb-dash-card").all():
+        for card in page.locator(".lb-dash-card, .lb-favorite-card").all():
             card.scroll_into_view_if_needed()
             card.locator("img").evaluate("(img) => img.decode()")
         sizes = page.evaluate(MEASURE_JS)
         assert sizes["loadedLayoutCss"], f"New layout stylesheet absent: {sizes}"
         assert len(sizes["cards"]) == 5, f"Expected five Book Dash cards: {sizes}"
+        assert len(sizes["classics"]) == 2, f"Expected two historic illustrated classics: {sizes}"
         assert sizes["width"] <= sizes["innerWidth"] + 3, f"Page has horizontal overflow: {sizes}"
         if touch or width <= 740:
             columns = sizes["gridColumns"].split()
@@ -91,7 +100,18 @@ def check_page(browser, url: str, width: int, touch: bool, scale: float = 1.0) -
                 fail("Read button outside text region")
             if card["left"] < -1 or card["right"] > sizes["innerWidth"] + 2:
                 fail("Card extends offscreen")
-        print(f"PASS browser geometry width={width} touch={touch} text-scale={scale} x{len(sizes['cards'])}")
+        for n, geometry in enumerate(sizes["classics"], start=1):
+            card, cover, image, meta, button = (
+                geometry["card"], geometry["cover"], geometry["image"], geometry["meta"], geometry["button"]
+            )
+            assert geometry["imageLoaded"], f"Classic book cover #{n} failed to load"
+            assert cover["width"] <= card["width"] + 1, f"Classic cover #{n} exceeds its card"
+            assert image["width"] <= cover["width"] + 1, f"Classic image #{n} exceeds cover"
+            assert meta["top"] >= cover["bottom"] - 1.5, f"Classic #{n} image/text overlap at {width}px"
+            assert card["bottom"] >= meta["bottom"] - 2, f"Classic #{n} text outside card"
+            assert button["bottom"] <= meta["bottom"] + 2, f"Classic #{n} button outside details"
+            assert card["left"] >= -1 and card["right"] <= sizes["innerWidth"] + 2, f"Classic #{n} offscreen"
+        print(f"PASS browser geometry width={width} touch={touch} text-scale={scale} BookDash={len(sizes['cards'])} classics={len(sizes['classics'])}")
     finally:
         context.close()
 
