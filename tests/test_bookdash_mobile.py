@@ -42,3 +42,18 @@ def test_desktop_book_grid_still_has_three_columns():
     css = (ROOT / "frontend/assets/library-shelf.css").read_text(encoding="utf-8")
     assert ".lb-dash-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))" in css
     assert "@media(max-width:900px){.lb-dash-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}" in css
+
+
+def test_new_mobile_layout_stylesheet_is_loaded_after_legacy_styles_and_exported():
+    html = client.get("/explore/library").text
+    assert 'href="/assets/library-shelf.css?v=mobile1"' in html
+    assert 'href="/assets/bookdash-layout-v2.css"' in html
+    assert html.index('/assets/library-shelf.css?v=mobile1') < html.index('/assets/bookdash-layout-v2.css')
+    response = client.get("/assets/bookdash-layout-v2.css")
+    assert response.status_code == 200
+    assert "height:auto" in response.text
+    assert "aspect-ratio:auto" in response.text
+    assert "(pointer:coarse)" in response.text
+    assert "flex:0 0 auto" in response.text
+    # This is additive rather than modifying desktop cards or the older books.
+    assert html.count('data-bookdash="') == 5
