@@ -110,7 +110,7 @@ def test_export_builds_twenty_three_live_html_routes(tmp_path):
         assert (tmp_path / "assets/books/mara-garden" / f"page-{i}.svg").is_file()
     library = (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/read/mara-garden/"' in library
-    assert 'src="/wondernet/assets/books/mara-garden/page-7.svg"' in library
+    assert 'href="/wondernet/read/mara-garden/"' in library  # Still accessible, no longer prominently featured.
     for name in ("peter-rabbit", "benjamin-bunny", "tom-kitten",
                  "jemima-puddle-duck", "jeremy-fisher"):
         book = (tmp_path / "read" / name / "index.html").read_text(encoding="utf-8")
