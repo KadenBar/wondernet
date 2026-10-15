@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_kind": "U.S.-public-domain illustrated-source-text",
-  "status": "staged-import",
+  "status": "bundled-and-source-verified",
   "territory": "United States public domain only; local laws elsewhere may differ",
   "build_import": "Maintainer-only explicit pinned import, never exposed via web endpoint",
   "content_review": "not approved for unsupervised use with children",
@@ -837,7 +837,8 @@
         "editorial": "pending",
         "accessibility": "pending",
         "child_use": "not-approved"
-      }
+      },
+      "import_status": "complete-story-plus-historical-images-locally-bundled"
     },
     {
       "id": "velveteen-rabbit",
@@ -921,7 +922,8 @@
         "editorial": "pending",
         "accessibility": "pending",
         "child_use": "not-approved"
-      }
+      },
+      "import_status": "complete-story-plus-historical-images-locally-bundled"
     }
   ]
 }
