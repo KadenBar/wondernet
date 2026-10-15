@@ -18,7 +18,7 @@ def test_export_builds_twenty_five_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 26 public preview pages" in result.stdout
+    assert "Built 28 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -34,6 +34,7 @@ def test_export_builds_twenty_five_live_html_routes(tmp_path):
         "read/peter-rabbit/index.html", "read/benjamin-bunny/index.html",
         "read/tom-kitten/index.html", "read/jemima-puddle-duck/index.html",
         "read/jeremy-fisher/index.html", "read/wonderful-wizard-oz/index.html",
+        "read/secret-garden/index.html", "read/anne-green-gables/index.html",
     ]
     for relative in expected:
         html = (tmp_path / relative).read_text(encoding="utf-8")
