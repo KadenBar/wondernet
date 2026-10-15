@@ -90,3 +90,22 @@ def test_section_pages_do_not_load_third_party_assets():
         assert 'src="https://' not in html
         assert 'href="https://' not in html
         assert "<script " not in html or 'src="/assets/activities.js"' in html
+
+
+def test_homepage_puts_real_demos_before_future_features():
+    html = client.get("/").text
+    assert 'href="/play/letter-match"' in html
+    assert 'href="/play/patterns"' in html
+    assert 'href="/assets/home.css"' in html
+    assert "safer offline internet for kids" in html
+    assert "Free code. Open doors." in html
+    assert "Pi Wi-Fi network is planned" in html
+    assert 'id="next-up"' in html
+
+
+def test_learner_homepage_has_no_outbound_links_or_remote_assets():
+    html = client.get("/").text
+    assert 'href="https://' not in html
+    assert 'src="https://' not in html
+    assert "github.com/KadenBar/wondernet" in html  # text only for local deployments
+    assert "Developer preview" not in html  # banner belongs to the public export
