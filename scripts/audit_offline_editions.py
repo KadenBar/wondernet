@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-"""Audit the 50 imported offline editions without granting editorial approval.
+"""Audit the 51 imported offline editions without granting editorial approval.
 
 Run: python scripts/audit_offline_editions.py
 Prints JSON for review; nonzero exit only for structural/security failures.
