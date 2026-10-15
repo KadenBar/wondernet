@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_eleven_live_html_routes(tmp_path):
+def test_export_builds_twelve_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,7 +18,7 @@ def test_export_builds_eleven_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 11 public preview pages" in result.stdout
+    assert "Built 12 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -26,6 +26,7 @@ def test_export_builds_eleven_live_html_routes(tmp_path):
         "explore/wonderparty/index.html",
         "play/letter-match/index.html", "play/patterns/index.html",
         "play/circuit-garden/index.html", "play/word-workshop/index.html",
+        "read/lantern/index.html",
     ]
     for relative in expected:
         html = (tmp_path / relative).read_text(encoding="utf-8")
@@ -39,6 +40,7 @@ def test_export_builds_eleven_live_html_routes(tmp_path):
         assert 'src="/assets/' not in html
         assert 'href="/explore/' not in html
         assert 'href="/play/' not in html
+        assert 'href="/read/' not in html
         assert "<main" in html
     homepage = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/explore/early-learning/"' in homepage
@@ -65,6 +67,14 @@ def test_export_builds_eleven_live_html_routes(tmp_path):
     assert 'src="/wondernet/assets/circuit-engine.js"' in garden
     assert 'src="/wondernet/assets/circuit-garden.js"' in garden
     assert 'href="/wondernet/assets/circuit-garden.css"' in garden
+    assert (tmp_path / "assets/book-reader.js").is_file()
+    assert (tmp_path / "assets/book-reader.css").is_file()
+    reader = (tmp_path / "read/lantern/index.html").read_text(encoding="utf-8")
+    assert 'src="/wondernet/assets/book-reader.js"' in reader
+    assert 'href="/wondernet/assets/book-reader.css"' in reader
+    assert 'href="/wondernet/explore/library/"' in reader
+    assert 'id="chapter-5"' in reader
+    assert 'href="/wondernet/read/lantern/"' in (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
     assert (tmp_path / "assets/interiors.css").is_file()
     for relative in expected[1:]:
         html = (tmp_path / relative).read_text(encoding="utf-8")
@@ -90,6 +100,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/play/patterns", "/wondernet") == "/wondernet/play/patterns/"
     assert rewrite_url("/play/circuit-garden", "/wondernet") == "/wondernet/play/circuit-garden/"
     assert rewrite_url("/play/word-workshop", "/wondernet") == "/wondernet/play/word-workshop/"
+    assert rewrite_url("/read/lantern", "/wondernet") == "/wondernet/read/lantern/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")
