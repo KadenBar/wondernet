@@ -48,6 +48,13 @@ def test_export_builds_nine_live_html_routes(tmp_path):
     first_page = (tmp_path / "explore/early-learning/index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/play/letter-match/"' in first_page
     assert (tmp_path / "assets/activities.js").is_file()
+    assert (tmp_path / "assets/interiors.css").is_file()
+    for relative in expected[1:]:
+        html = (tmp_path / relative).read_text(encoding="utf-8")
+        assert 'href="/wondernet/assets/interiors.css"' in html
+    for game in ("letter-match", "patterns"):
+        html = (tmp_path / "play" / game / "index.html").read_text(encoding="utf-8")
+        assert 'id="activity-meter"' in html
     assert (tmp_path / "assets/main.js").is_file()
     assert (tmp_path / ".nojekyll").is_file()
     assert not (tmp_path / "api").exists()
