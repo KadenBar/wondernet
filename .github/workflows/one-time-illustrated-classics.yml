@@ -35,5 +35,7 @@ jobs:
             echo 'Already imported and verified.'
           else
             git commit -m 'Bundle complete Pooh and Velveteen editions with all historical illustrations'
+            git fetch origin feature/pooh-velveteen-classics
+            git rebase origin/feature/pooh-velveteen-classics
             git push origin HEAD:refs/heads/feature/pooh-velveteen-classics
           fi
