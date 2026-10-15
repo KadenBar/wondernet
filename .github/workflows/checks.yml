@@ -28,5 +28,7 @@ jobs:
           node --check frontend/assets/activities.js
           node --check frontend/assets/circuit-engine.js
           node --check frontend/assets/circuit-garden.js
+          node --check frontend/assets/word-workshop-engine.js
+          node --check frontend/assets/word-workshop.js
       - name: Test Circuit Garden puzzles
         run: node --test tests/circuit-garden.test.cjs
