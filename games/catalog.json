@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "status": "planned",
+  "status": "prototype",
   "games": [
+    {
+      "id": "circuit-garden",
+      "title": "Circuit Garden",
+      "type": "single-player",
+      "state": "playable-alpha",
+      "route": "/play/circuit-garden",
+      "levels": 10
+    },
     {
       "id": "wonderparty",
       "title": "WonderParty",
