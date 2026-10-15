@@ -21,4 +21,6 @@ jobs:
       - name: Run smoke tests
         run: python -m pytest -q
       - name: Check frontend JavaScript syntax
-        run: node --check frontend/assets/main.js
+        run: |
+          node --check frontend/assets/main.js
+          node --check frontend/assets/activities.js
