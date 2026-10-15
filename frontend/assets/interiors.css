@@ -214,3 +214,12 @@
   .interior-page .answer-option{transition:none}
   .interior-page .answer-option:hover:not(:disabled){transform:none}
 }
+
+/* A handmade typographic game badge replaces oversized stock emoji. */
+.game-title-symbol{
+  display:inline-grid;place-items:center;min-width:1.36em;min-height:1.25em;
+  padding:.08em .17em;background:var(--page-accent);border:3px solid var(--page-ink);
+  border-radius:13px;box-shadow:3px 3px 0 var(--page-ink);font-size:.72em;
+  vertical-align:middle;transform:rotate(-7deg);margin-right:.12em;
+  letter-spacing:-.07em;line-height:1.2;
+}
