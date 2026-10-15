@@ -65,3 +65,17 @@
 .lb-full-read:focus-visible{outline:3px solid #a45624;outline-offset:3px}
 @media(max-width:790px){.lb-complete-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.lb-full-book{gap:.7rem;padding:.55rem}.lb-full-illustration{width:78px;min-height:116px;font-size:2.75rem}.lb-full-book-copy h3{font-size:1.02rem}}
+
+/* Our first REAL illustrated bilingual picture book, independent of research titles. */
+.lb-picture-feature{margin:1.5rem 0 2.6rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);background:#fff1db;border:3px solid #365c56;border-radius:18px;overflow:hidden;box-shadow:8px 9px 0 #294d47;min-height:360px}
+.lb-picture-image{position:relative;background:#dce6d2;display:grid;place-items:center;min-width:0}
+.lb-picture-image img{display:block;width:100%;height:100%;max-height:460px;object-fit:cover;object-position:center}
+.lb-picture-sticker{position:absolute;bottom:1rem;left:1rem;background:#fff7e0;border:2px solid #436b5d;border-radius:7px;box-shadow:3px 4px 0 #476c62;padding:.35rem .6rem;color:#275b4b;font-size:.68rem;letter-spacing:.06em;font-weight:950;transform:rotate(-4deg)}
+.lb-picture-copy{padding:clamp(1.2rem,3.2vw,2.45rem);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.section--library .lb-picture-copy h2{font:950 clamp(2rem,4vw,3.15rem)/1.07 ui-rounded,"Trebuchet MS",system-ui,sans-serif;letter-spacing:-.065em;color:#214d43;margin:.25rem 0 .35rem}
+.lb-picture-copy .lb-picture-es{font-size:1.09rem;color:#9c6555;font-weight:850;margin:0 0 1rem}
+.lb-picture-copy>p:not(.eyebrow):not(.lb-picture-es){color:#536c61;line-height:1.6;margin:0 0 1rem}
+.lb-picture-copy .lb-picture-meta{font-size:.78rem;font-weight:850;color:#457c63!important;margin-bottom:1.25rem!important}
+.lb-picture-copy .primary-link{background:#236556;font-weight:900;margin:.25rem 0 1rem}
+.lb-picture-copy small{font-size:.77rem;color:#735a43;line-height:1.55}
+@media(max-width:770px){.lb-picture-feature{grid-template-columns:1fr}.lb-picture-image{max-height:310px;min-height:190px}.lb-picture-copy{padding:1.5rem}}
