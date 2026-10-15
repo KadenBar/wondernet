@@ -65,6 +65,15 @@ READERS = {
     "pinocchio": "book-pinocchio.html",
     "rebecca-sunnybrook": "book-rebecca-sunnybrook.html",
     "children-new-forest": "book-children-new-forest.html",
+    "book-of-dragons": "book-book-of-dragons.html",
+    "enchanted-castle": "book-enchanted-castle.html",
+    "magic-city": "book-magic-city.html",
+    "white-company": "book-white-company.html",
+    "squirrel-nutkin": "book-squirrel-nutkin.html",
+    "timmy-tiptoes": "book-timmy-tiptoes.html",
+    "flopsy-bunnies": "book-flopsy-bunnies.html",
+    "scarlet-pimpernel": "book-scarlet-pimpernel.html",
+    "prisoner-of-zenda": "book-prisoner-of-zenda.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
