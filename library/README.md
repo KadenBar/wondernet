@@ -1,6 +1,36 @@
 # WonderNet Library: First Curation Queue
 
-**Status: one original reader demonstration plus eleven research candidates.** The original story is bundled in the static frontend. No third-party ebooks have been imported; there is no book upload endpoint, generalized EPUB/PDF reader, secure import pipeline, or approved children's shelf.
+**Status: six locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five complete US-public-domain narrative texts are packaged from specific historical editions, alongside the original WonderNet short story. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+
+## Five complete classic story texts in the reader
+
+`complete-text-editions.json` lists five **complete narrative texts** by Beatrix Potter, not five previews or summaries:
+
+| Story | First published | Gutenberg ebook number | Approximate words |
+| --- | --- | --- | ---: |
+| The Tale of Peter Rabbit | 1902 | 14838 | 948 |
+| The Tale of Benjamin Bunny | 1904 | 14407 | 1,120 |
+| The Tale of Tom Kitten | 1907 | 14837 | 691 |
+| The Tale of Jemima Puddle-Duck | 1908 | 14814 | 1,245 |
+| The Tale of Mr. Jeremy Fisher | 1906 | 15077 | 794 |
+
+These were sourced from the corresponding **GITenberg** mirrors of Project Gutenberg, with Git blob SHA and original ebook number recorded in the manifest. Source pages:
+
+- https://www.gutenberg.org/ebooks/14838
+- https://www.gutenberg.org/ebooks/14407
+- https://www.gutenberg.org/ebooks/14837
+- https://www.gutenberg.org/ebooks/14814
+- https://www.gutenberg.org/ebooks/15077
+
+Project Gutenberg lists each underlying work as public domain in the **United States**, not necessarily in other countries. The HTML source ebooks include the Gutenberg trademark and license terms, which are **not copied into these newly reformatted story pages**. The new pages include the public-domain narrative content only: original Gutenberg preambles, license, publication front matter, and historical scanned illustrations are omitted. Original prose has its whitespace normalized and is divided into screen-reading segments with no textual abridgment of the narrative. See [Project Gutenberg's licensing explanation](https://www.gutenberg.org/policy/license) for why unprotected US text can be reproduced independently of the original trademarked ebook.
+
+**Illustrations:** the original Potter illustrations **were not imported** because the connected import interface cannot transfer binary picture files. The book pages display simple **new WonderNet-authored decorative SVGs**, not historical book artwork. This is an intentionally partial picture-book reproduction: the complete story text is available, but it is not a faithful illustration-preserving reproduction of the printed picture book.
+
+**Audience review:** Potter stories can contain frightening animal situations, historical corporal punishment, and loss of eggs. The developer preview can be read by adult testers, but every book is flagged as **not approved for unsupervised child use**, with editorial and manual accessibility review still pending. There is no validation of educational reading levels.
+
+**Security:** five statically generated first-party HTML files are hardcoded into `READABLE_BOOKS` and the Pages exporter. The book source material was flattened to text paragraphs; no untrusted scripts, file embeds, arbitrary links, uploaded HTML, embedded PDFs, external images, or network fetches are allowed. This is not a general-purpose ebook renderer.
+
+The prior eleven-item `catalog.json` research queue remains entirely unchanged and pending. Some candidate titles and editions may represent the same underlying work as future imports, but an approved status must apply to the **exact edition**, not just the author or title.
 
 ## One original sample story you can actually read
 
@@ -97,7 +127,7 @@ need contextual and age-appropriate editorial screening.
    checksum before display as readable.
 
 No background downloader, arbitrary URL fetcher, third-party ebook renderer
-or unreviewed upload endpoint is included in this phase. The original reader sample has not changed the status of any of the eleven unreviewed third-party candidates.
+or unreviewed upload endpoint is included in this phase. The original sample and five US-public-domain full-text demonstrations have not changed the status of any of the eleven other unreviewed candidates.
 
 ## Code vs. book rights
 
@@ -108,4 +138,4 @@ in this repository.
 
 ## Next implementation milestone
 
-Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The original short story is a static proof of the reading experience, not a general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
+Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The original short story and five static public-domain narrative editions prove the reading experience, not a secure general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
