@@ -1,0 +1,137 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Word Workshop is a free, offline-friendly early spelling game. Pick and arrange letter tiles to build real words across four themed worlds.">
+  <title>Word Workshop | WonderNet Early Learning</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/section-pages.css">
+  <link rel="stylesheet" href="/assets/interiors.css">
+  <link rel="stylesheet" href="/assets/word-workshop.css">
+  <script defer src="/assets/word-workshop-engine.js"></script>
+  <script defer src="/assets/word-workshop.js"></script>
+</head>
+<body class="interior-page word-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="/" aria-label="WonderNet home"><span class="brand-mark" aria-hidden="true">✳</span><span>Wonder<span class="brand-emphasis">Net</span></span><span class="alpha">ALPHA 0.1</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a><a href="/explore/early-learning">Early Learning</a><a href="/#explore">All sections</a>
+    </nav>
+  </div></header>
+  <main id="main-content" class="detail-main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span>
+      <a href="/explore/early-learning">Early Learning</a><span aria-hidden="true">/</span>
+      <span aria-current="page">Word Workshop</span>
+    </nav>
+
+    <section class="ww-intro" aria-labelledby="ww-title">
+      <div>
+        <p class="ww-kicker">✦ WELCOME TO THE WORD-MAKING WORKSHOP</p>
+        <h1 id="ww-title">Word <em>Workshop</em><span aria-hidden="true">✎</span></h1>
+        <p class="ww-tagline">Little letters. Big discoveries. A whole workshop to explore.</p>
+        <p class="ww-intro-note">Look at each picture clue, then arrange letter tiles into a word. Build your way through four themed worlds, from animal friends to outer space. No timer and no rush.</p>
+      </div>
+      <div class="ww-intro-decoration" aria-hidden="true">
+        <span class="ww-stamp">A</span><span class="ww-stamp">B</span><span class="ww-stamp">C</span>
+        <span class="ww-intro-spark">✳</span>
+      </div>
+    </section>
+
+    <div class="ww-layout">
+      <div class="ww-workbench">
+        <section class="ww-bench" aria-labelledby="ww-stage-title">
+          <div class="ww-bench-top">
+            <div>
+              <p id="ww-world" class="ww-world-label">🐾 CRITTER CORNER</p>
+              <h2 id="ww-stage-title">Make a word!</h2>
+              <p id="ww-round" class="ww-round">WORD 01 OF 16</p>
+            </div>
+            <div class="ww-counter" aria-label="Words finished in this play session">
+              <strong id="ww-completed">0</strong><span>WORDS BUILT</span>
+            </div>
+          </div>
+
+          <div class="ww-clue">
+            <div class="ww-clue-art" aria-hidden="true">
+              <span id="ww-emoji">🐈</span>
+              <span class="ww-clue-spark">✧</span>
+            </div>
+            <div>
+              <p class="ww-little-label">YOUR PICTURE CLUE</p>
+              <h3 id="ww-clue-text">A pet that purrs and says meow.</h3>
+              <p id="ww-letter-count">3 letters to find</p>
+            </div>
+          </div>
+
+          <div class="ww-build-zone" aria-labelledby="ww-build-label">
+            <div class="ww-zone-heading">
+              <h3 id="ww-build-label">Your word</h3>
+              <span>Tap a filled space to take its letter back</span>
+            </div>
+            <div id="ww-slots" class="ww-slots" role="group" aria-label="Word building spaces"></div>
+          </div>
+
+          <div class="ww-tray-zone" aria-labelledby="ww-tray-label">
+            <div class="ww-zone-heading">
+              <h3 id="ww-tray-label">Letter tray</h3>
+              <span>Tap a tile or drag it into a space</span>
+            </div>
+            <div id="ww-tray" class="ww-tray" role="group" aria-label="Available letter tiles"></div>
+          </div>
+
+          <div class="ww-actions">
+            <button type="button" id="ww-check" class="ww-button ww-build-button" disabled>✦ Build this word!</button>
+            <button type="button" id="ww-hint" class="ww-button ww-hint-button">✧ Help me out</button>
+          </div>
+          <div class="ww-secondary-actions">
+            <button type="button" id="ww-clear">↻ Start this word over</button>
+            <button type="button" id="ww-shuffle">⤨ Mix up the letters</button>
+          </div>
+          <p id="ww-feedback" class="ww-feedback" role="status" aria-live="polite" aria-atomic="true">Choose a letter tile to begin. You can change your mind!</p>
+        </section>
+
+        <section id="ww-win" class="ww-win" aria-labelledby="ww-win-title" hidden>
+          <div class="ww-win-icon" id="ww-win-emoji" aria-hidden="true">🐈</div>
+          <p class="ww-little-label">STAMPED AND FINISHED!</p>
+          <h2 id="ww-win-title">You made a word!</h2>
+          <p id="ww-win-description"></p>
+          <div id="ww-stars" class="ww-stars" role="img" aria-label="Three out of three stars">★★★</div>
+          <button type="button" id="ww-next" class="ww-button ww-next-button">Next word →</button>
+        </section>
+      </div>
+
+      <aside class="ww-sidebar" aria-label="Workshop guide and unlocked words">
+        <section class="ww-sidebar-card ww-guide">
+          <p class="ww-little-label">THE WORKSHOP RULES</p>
+          <h2>How to play</h2>
+          <div class="ww-rule"><span aria-hidden="true">1</span><p>Look at the picture and read the clue.</p></div>
+          <div class="ww-rule"><span aria-hidden="true">2</span><p>Put letter tiles into the spaces in the right order.</p></div>
+          <div class="ww-rule"><span aria-hidden="true">3</span><p>Press <strong>Build this word!</strong> and collect your star stamp.</p></div>
+          <div class="ww-guide-foot">Works with taps, mouse or keyboard. Press Tab to move between tiles. Your progress lives only in this open page.</div>
+        </section>
+        <section class="ww-sidebar-card ww-collection" aria-labelledby="ww-collection-title">
+          <p class="ww-little-label">YOUR WORD COLLECTION</p>
+          <h2 id="ww-collection-title">Four little worlds</h2>
+          <p class="ww-sidebar-caption">Finish each word to unlock the next. Replay any word you've reached!</p>
+          <div id="ww-world-list" class="ww-world-list"></div>
+        </section>
+        <div class="ww-safety-note">
+          <strong>Early learning game preview</strong>
+          <p>This is informal spelling practice, not a reviewed phonics curriculum. No voice recordings or pronunciation lessons yet. WonderNet is not ready for unsupervised child use.</p>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="ww-bottom-nav" aria-label="More WonderNet activities">
+      <a href="/explore/early-learning">← Back to Early Learning</a>
+      <a href="/play/letter-match">Try Letter Match ↗</a>
+    </nav>
+  </main>
+  <footer><p>Word Workshop is an early playable prototype. Its letters, code and artwork all run locally. <a href="/">WonderNet home</a>.</p></footer>
+</body>
+</html>
