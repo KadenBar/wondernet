@@ -145,3 +145,10 @@
  .lb-favorite-copy{display:flex;width:100%;min-width:0;padding:1rem;background:#fffdf7}
  .lb-favorite-copy h3{font-size:clamp(1.3rem,4vw,1.6rem)}
 }
+
+/* The expanded classics shelf gets individual book-jacket typography rather than generic star placeholders. */
+#lb-new-grid .lb-full-illustration{width:120px;min-height:165px;padding:1.2rem .5rem .8rem;border-left-width:10px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;gap:.45rem;box-shadow:3px 4px 0 rgba(27,62,51,.16);overflow-wrap:anywhere}
+#lb-new-grid .lb-new-cover-ornament{position:static;font:1.25rem Georgia,serif;color:#496854}
+#lb-new-grid .lb-new-cover-title{position:static;font:700 clamp(.78rem,1.25vw,1rem)/1.2 Georgia,"Times New Roman",serif;color:#254b42;display:block;max-width:100%;hyphens:auto}
+#lb-new-grid .lb-new-cover-footer{position:static;font:800 .43rem/1.3 system-ui,sans-serif;letter-spacing:.08em;color:#496854}
+@media(max-width:420px){#lb-new-grid .lb-full-illustration{width:90px;min-height:128px;padding:.6rem .35rem}#lb-new-grid .lb-new-cover-title{font-size:.72rem}#lb-new-grid .lb-new-cover-footer{font-size:.36rem}}
