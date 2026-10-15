@@ -88,7 +88,7 @@ def test_books_are_complete_local_read_only_with_original_illustrations():
     assert "INTRODUCTION" not in pooh or "Introduction" in pooh
     assert 'data-reader-unit="Chapter"' in pooh
     rabbit = client.get("/read/velveteen-rabbit").text
-    assert "HERE was once a velveteen rabbit" in rabbit
+    assert "THERE was once a velveteen rabbit" in rabbit
     assert "his own Bunny, come back to look at the child" in rabbit
     assert 'data-reader-unit="Page"' in rabbit
 
