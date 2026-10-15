@@ -27,3 +27,19 @@
 .lb-footer-note{border-left:5px solid #be9762;border-radius:6px;background:#fff1d2;margin:1.5rem 0 0;padding:1rem;font-size:.83rem;line-height:1.6;color:#695630}
 @media(max-width:800px){.lb-grid{grid-template-columns:1fr}.lb-search{grid-template-columns:auto 1fr}.lb-head{align-items:flex-start}.lb-count{width:76px;height:76px;font-size:1.9rem}.lb-count small{font-size:.45rem;margin-top:-16px}}
 @media(max-width:520px){.lb-search{grid-template-columns:1fr}.lb-head{gap:.5rem}.lb-count{display:none}.lb-cover{width:73px;height:109px}.lb-cover span{font-size:2.1rem}.lb-cover small{font-size:.49rem}.lb-book{gap:.7rem;padding:.6rem}.lb-book-copy h3{font-size:1.03rem}}
+
+/* One actually readable original sample, distinct from the unapproved catalog. */
+.lb-ready{display:grid;grid-template-columns:minmax(210px,.7fr) minmax(0,1.3fr);border:3px solid #244b49;border-radius:18px;overflow:hidden;box-shadow:7px 8px 0 #244b49;background:#eaf4e4;margin:2rem 0 2.5rem}
+.lb-ready-art{background:radial-gradient(circle at 70% 22%,#4c7092,#243a59 75%);color:#f6dca0;min-height:300px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.lb-ready-art:before{content:"";position:absolute;inset:1.25rem;border:2px dashed rgba(241,217,162,.4);border-radius:60% 40% 52% 55%;transform:rotate(10deg)}
+.lb-ready-moon{font-size:6rem;position:absolute;right:12%;top:6%;line-height:1}
+.lb-ready-lamp{display:grid;place-items:center;width:110px;height:145px;border:8px solid #173d4b;background:#ffe9af;color:#88622a;box-shadow:0 12px 25px rgba(255,238,157,.4);font-size:4rem;clip-path:polygon(25% 0,75% 0,85% 13%,85% 80%,98% 95%,2% 95%,15% 80%,15% 13%);transform:rotate(-6deg)}
+.lb-ready-spark{position:absolute;top:23%;left:10%;font-size:2.2rem}
+.lb-ready-art small{position:absolute;bottom:.9rem;background:#ffe4a8;border:2px solid #173d4b;padding:.45rem .6rem;border-radius:7px;transform:rotate(5deg);font-size:.65rem;letter-spacing:.08em;font-weight:950;color:#244446}
+.lb-ready-copy{padding:clamp(1.3rem,4vw,2.35rem);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.section--library .lb-ready-copy h2{font:950 clamp(1.8rem,3.5vw,2.65rem)/1.1 ui-rounded,"Trebuchet MS",system-ui,sans-serif;letter-spacing:-.065em;color:#1d4a45;margin:0 0 .9rem}
+.lb-ready-copy>p:not(.eyebrow){line-height:1.55;color:#4b655e;margin:0 0 .7rem}
+.lb-ready-copy .lb-ready-details{font-size:.77rem;font-weight:850;color:#327265!important;margin:0 0 1.3rem!important}
+.lb-ready-copy .primary-link{background:#205b56;margin:.55rem 0 1rem;font-weight:900}
+.lb-ready-copy small{line-height:1.55;font-size:.77rem;color:#63736b}
+@media(max-width:730px){.lb-ready{grid-template-columns:1fr}.lb-ready-art{min-height:175px}.lb-ready-moon{font-size:4.5rem}.lb-ready-lamp{height:110px;width:85px;font-size:3rem}.lb-ready-copy{padding:1.3rem}}

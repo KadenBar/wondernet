@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "collection": "original-reader-demos",
+  "description": "Locally bundled demo stories, separate from pending third-party book research entries. No external imports or child-ready approval implied.",
+  "books": [
+    {
+      "id": "lantern",
+      "title": "The Lantern That Kept the Stars",
+      "author": "WonderNet contributors",
+      "media_kind": "original-short-story",
+      "chapters": 5,
+      "language": "English",
+      "audience": "read-together-or-independent",
+      "format": "static-sanitized-html",
+      "local_route": "/read/lantern",
+      "source_file": "frontend/pages/book-lantern.html",
+      "rights": {
+        "classification": "AGPL-3.0-only",
+        "basis": "Original story created specifically for this repository; confirm contributor rights before external content publication",
+        "third_party_media": false
+      },
+      "review": {
+        "editorial": "prototype-not-reviewed",
+        "accessibility": "manual-review-pending",
+        "child_use": "not-approved",
+        "packaging": "not-generalized"
+      },
+      "network_required_by_story": false,
+      "account_required": false
+    }
+  ]
+}
