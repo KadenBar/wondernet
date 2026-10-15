@@ -178,3 +178,37 @@ def test_circuit_garden_is_discoverable_without_disguising_practice_as_games():
     assert 'href="/play/circuit-garden"' in arcade
     assert "practice activities" in home
     assert "PRACTICE" in arcade
+
+
+def test_word_workshop_is_accessible_through_allowlisted_local_routes():
+    html = client.get("/play/word-workshop").text
+    assert 'id="ww-tray"' in html
+    assert 'id="ww-slots"' in html
+    assert 'id="ww-check"' in html
+    assert 'id="ww-hint"' in html
+    assert 'id="ww-world-list"' in html
+    assert 'src="/assets/word-workshop-engine.js"' in html
+    assert 'src="/assets/word-workshop.js"' in html
+    assert 'href="/assets/word-workshop.css"' in html
+    assert "not ready for unsupervised child use" in html
+    assert 'href="https://' not in html
+    assert 'src="https://' not in html
+    assert "script-src 'self'" in client.get("/play/word-workshop").headers["content-security-policy"]
+    for path in ("word-workshop-engine.js", "word-workshop.js", "word-workshop.css"):
+        response = client.get("/assets/" + path)
+        assert response.status_code == 200
+        assert "https://" not in response.text
+        assert "localStorage" not in response.text
+        assert "sessionStorage" not in response.text
+        assert "fetch(" not in response.text
+
+
+def test_word_workshop_is_visible_in_early_learning_and_on_homepage():
+    home = client.get("/").text
+    early = client.get("/explore/early-learning").text
+    assert 'href="/play/word-workshop"' in home
+    assert 'href="/play/word-workshop"' in early
+    assert "Word Workshop" in home
+    assert "Word Workshop" in early
+    assert "not a validated phonics curriculum" in early
+    assert client.get("/play/unknown-workshop").status_code == 404
