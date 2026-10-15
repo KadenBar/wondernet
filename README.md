@@ -9,7 +9,7 @@
 [![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
 > [!IMPORTANT]
-> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, live section filtering and two read-only API endpoints. The courses, games, uploads, multiplayer, accounts and Wi-Fi hotspot described below are **planned**, not released.
+> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny local browser activities, live section filtering and two read-only API endpoints. Full courses, full games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
 
 **[Vision](docs/vision.md) · [Roadmap](docs/roadmap.md) · [Run locally](#run-the-prototype) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public launch checklist](docs/public-launch-checklist.md)**
 
@@ -40,8 +40,8 @@ We're deliberately building a **fast, accessible website**, not a virtual town t
 
 | Ready to explore | Still to be built |
 |:---|:---|
-| Responsive six-section homepage | Full curriculum and phonics games |
-| Search/filter for homepage sections | Searchable library and reviewed uploads |
+| Responsive six-section homepage and interior pages | Full curriculum and phonics games |
+| Search/filter for homepage sections | Searchable library and reviewed uploads |\n| Letter Match and Pattern Playground demos | Complete games, adaptive lessons and learner progress |
 | Local-only FastAPI prototype | Student profiles and progress |
 | Read-only health/catalog API | Secure multiplayer rooms and game engines |
 | Security/accessibility planning docs | Pi hotspot, local TLS and segmented networking |
@@ -88,7 +88,7 @@ python -m pip install -e '.[dev]'
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-Visit **http://127.0.0.1:8000** to explore. Stop with `Ctrl+C`. Run tests with:
+Visit **http://127.0.0.1:8000** to explore. Open any of the six section cards, or try **Letter Match** at **/play/letter-match** and **Pattern Playground** at **/play/patterns**. See [web pages and activities](docs/web-pages.md). Stop with `Ctrl+C`. Run tests with:
 
 ```bash
 python -m pytest -q
