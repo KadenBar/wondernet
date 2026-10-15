@@ -19,9 +19,11 @@ SECTIONS = (
     "arcade", "library", "wonderparty",
 )
 ACTIVITIES = ("letter-match", "patterns", "circuit-garden", "word-workshop")
+READERS = {"lantern": "book-lantern.html"}
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
     **{f"/play/{slug}": f"/play/{slug}/" for slug in ACTIVITIES},
+    **{f"/read/{slug}": f"/read/{slug}/" for slug in READERS},
 }
 ATTRIBUTE = re.compile(
     r"""(?P<name>\b(?:href|src))(?P<equals>\s*=\s*)(?P<quote>["'])(?P<value>/[^"']*)(?P=quote)""",
@@ -30,7 +32,7 @@ ATTRIBUTE = re.compile(
 WARNING = (
     '<div class="public-preview-notice" role="note">'
     '<strong>Developer preview · not a child-ready product.</strong> '
-    'This site demonstrates early webpages, two practice activities, Circuit Garden and Word Workshop. '
+    'This site demonstrates early webpages, two practice activities, Circuit Garden, Word Workshop, and a sample book reader. '
     'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet. '
     '<a href="https://github.com/KadenBar/wondernet" rel="noopener noreferrer">Source code and feedback</a>.'
     "</div>"
@@ -111,6 +113,11 @@ def build(destination: Path, base_path: str) -> None:
         (FRONTEND / "pages" / f"{slug}.html",
          destination / "play" / slug / "index.html")
         for slug in ACTIVITIES
+    )
+    pages.extend(
+        (FRONTEND / "pages" / filename,
+         destination / "read" / slug / "index.html")
+        for slug, filename in READERS.items()
     )
     for source, output in pages:
         output.parent.mkdir(parents=True, exist_ok=True)
