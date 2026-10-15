@@ -32,3 +32,5 @@ jobs:
           node --check frontend/assets/word-workshop.js
       - name: Test Circuit Garden puzzles
         run: node --test tests/circuit-garden.test.cjs
+      - name: Test Word Workshop puzzles
+        run: node --test tests/word-workshop.test.cjs
