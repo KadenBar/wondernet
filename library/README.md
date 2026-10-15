@@ -1,6 +1,10 @@
 # WonderNet Library: First Curation Queue
 
-**Status: twelve locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five professionally illustrated CC BY 4.0 Book Dash books now have all original covers, full story text and twelve original illustration spreads bundled locally, joining five complete US-public-domain narrative texts and two WonderNet story experiments. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+**Status: fourteen locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five professionally illustrated CC BY 4.0 Book Dash books now have all original covers, full story text and twelve original illustration spreads bundled locally, joining five complete US-public-domain narrative texts and two WonderNet story experiments. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+
+## Two famous classics with their original pictures
+
+Original illustrated *Winnie-the-Pooh* (1926, A. A. Milne / E. H. Shepard) and *The Velveteen Rabbit* (1922, Margery Williams / William Nicholson) are fully bundled in local readers. The book editions are public domain in the **United States**, which does not guarantee global reuse. The Pooh edition contains 115 local pictures (including a map and cover) and complete introduction/ten chapters; the Velveteen edition contains its complete narrative and eight original illustrations. We **did not** import modern Disney or derivative images. Original source metadata, all 123 image checksums and alteration/copyright caveats are in `illustrated-classics.json`, `illustrated-classics-assets.sha256.json` and [ILLUSTRATED-CLASSICS-CREDITS.md](ILLUSTRATED-CLASSICS-CREDITS.md). Human child-suitability, original illustration alt-text and accessibility review remain pending. Original books and images load entirely locally from the exported site.
 
 ## Five complete real Book Dash picture books
 

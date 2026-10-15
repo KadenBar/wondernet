@@ -33,6 +33,7 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [x] Five complete US public-domain story texts packaged as read-only developer previews, with simple new decoration (period illustrations omitted, content/a11y review pending)
 - [x] First original eight-spread illustrated English/Spanish picture book with local SVGs and language switch (Spanish and accessibility review pending)
 - [x] Locally bundle five original-artwork Book Dash CC BY 4.0 picture books with complete text, licensing credits and checksum verification (developer preview, content/a11y review pending)
+- [x] Locally package the full 1926 Winnie-the-Pooh and 1922 Velveteen Rabbit texts with historic original illustrations and source integrity checks (U.S. public domain; child/a11y reviews pending)
 - [ ] Complete human age/content/accessibility review of Book Dash titles; manually review our original Spanish prototype
 - [ ] Generalized approved-content reader and offline indexed search
 - [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)

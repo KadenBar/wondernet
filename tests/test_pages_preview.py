@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_twenty_three_live_html_routes(tmp_path):
+def test_export_builds_twenty_five_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,7 +18,7 @@ def test_export_builds_twenty_three_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 23 public preview pages" in result.stdout
+    assert "Built 25 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -27,6 +27,7 @@ def test_export_builds_twenty_three_live_html_routes(tmp_path):
         "play/letter-match/index.html", "play/patterns/index.html",
         "play/circuit-garden/index.html", "play/word-workshop/index.html",
         "read/lantern/index.html", "read/mara-garden/index.html",
+        "read/winnie-the-pooh/index.html", "read/velveteen-rabbit/index.html",
         "read/a-beautiful-day/index.html", "read/a-tiny-seed/index.html",
         "read/a-house-for-mouse/index.html", "read/come-back-cat/index.html",
         "read/walking-together/index.html",
@@ -100,8 +101,28 @@ def test_export_builds_twenty_three_live_html_routes(tmp_path):
         assert 'href="https://' not in edition.replace('href="https://github.com/KadenBar/wondernet"', '')
         for name in ["cover.jpg"] + [f"{n:02}.jpg" for n in range(1, 13)]:
             assert (tmp_path / "assets" / "books" / "bookdash" / slug / name).is_file()
+    classics = {
+        "winnie-the-pooh": (11, 115),
+        "velveteen-rabbit": (15, 8),
+    }
+    for slug, (chapters, image_count) in classics.items():
+        book = (tmp_path / "read" / slug / "index.html").read_text(encoding="utf-8")
+        assert 'href="/wondernet/assets/illustrated-classics.css"' in book
+        assert 'src="/wondernet/assets/book-reader.js?v=classic1"' in book
+        assert book.count('class="reader-chapter classic-chapter"') == chapters
+        assert book.count('data-open-chapter="') == chapters
+        assert "US public domain" in book
+        assert 'src="https://' not in book
+        assert 'href="https://' not in book.replace('href="https://github.com/KadenBar/wondernet"', '')
+        assert (tmp_path / "assets/books/classics" / slug).is_dir()
+        for name in ("christmas.jpg", "last.jpg") if slug == "velveteen-rabbit" else ("cover.jpg", "illus1.jpg", "illus113.jpg", "map.jpg"):
+            assert (tmp_path / "assets/books/classics" / slug / name).is_file()
+        assert len(list((tmp_path / "assets/books/classics" / slug).glob("*.jpg"))) == image_count
+    assert (tmp_path / "assets/illustrated-classics.css").is_file()
     bookshelf = (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
     assert bookshelf.count('data-bookdash="') == 5
+    for slug in ("winnie-the-pooh", "velveteen-rabbit"):
+        assert f'href="/wondernet/read/{slug}/"' in bookshelf
     for slug in bookdash:
         assert 'href="/wondernet/read/' + slug + '/"' in bookshelf
     assert (tmp_path / "assets/bookdash-books.css").is_file()
@@ -150,6 +171,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/read/peter-rabbit", "/wondernet") == "/wondernet/read/peter-rabbit/"
     assert rewrite_url("/read/mara-garden", "/wondernet") == "/wondernet/read/mara-garden/"
     assert rewrite_url("/read/a-beautiful-day", "/wondernet") == "/wondernet/read/a-beautiful-day/"
+    assert rewrite_url("/read/winnie-the-pooh", "/wondernet") == "/wondernet/read/winnie-the-pooh/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")

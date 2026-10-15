@@ -15,7 +15,7 @@ GitHub may take a few minutes to complete the deployment.
 
 ## What's in the preview
 
-- Responsive homepage and six interior pages. The Library page now includes five fully illustrated Book Dash CC BY story editions, five complete US-public-domain story texts, two original story experiments (including one English/Spanish prototype), and eleven separately unapproved candidates.
+- Responsive homepage and six interior pages. The Library page now includes two original-era illustrated U.S.-public-domain classics, five Book Dash CC BY picture books, five US-public-domain Potter texts, two original story experiments (including one English/Spanish prototype), and eleven separately unapproved candidates.
 - Letter Match and Pattern Playground: five browser-only practice questions each.
 - Circuit Garden: ten handcrafted circuit puzzles with session-only level progression; no data stored.
 - Word Workshop: sixteen word-building puzzles, four thematic collections and optional hints, with in-memory progress only.
@@ -23,6 +23,7 @@ GitHub may take a few minutes to complete the deployment.
 - Original English/Spanish illustrated picture-book prototype at `/read/mara-garden/` with eight original local SVG scenes; fluent-speaker and accessibility review pending.
 - Five original-text Beatrix Potter stories under `/read/` with full US public-domain narrative, newly authored basic decorations and no historical illustrations. Human editorial and accessibility review is still pending.
 - Five Book Dash CC BY English picture books under `/read/` with their 65 original cover/spread JPEGs locally bundled, pinned to exact upstream hashes and fully attributed. Manual audience and accessibility review is pending.
+- Original illustrated 1926 *Winnie-the-Pooh* and 1922 *The Velveteen Rabbit* with complete text, 123 locally bundled period illustrations and exact source checksums; U.S. public domain only, unreviewed for unsupervised children.
 - A prominent early-development warning banner on every page.
 - No analytics, logins, ads, user uploads, chat or persistent learner data.
 - Static asset links rewritten to work under `/wondernet/`.

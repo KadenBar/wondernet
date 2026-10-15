@@ -1,0 +1,929 @@
+{
+  "schema_version": 1,
+  "source_kind": "U.S.-public-domain illustrated-source-text",
+  "status": "bundled-and-source-verified",
+  "territory": "United States public domain only; local laws elsewhere may differ",
+  "build_import": "Maintainer-only explicit pinned import, never exposed via web endpoint",
+  "content_review": "not approved for unsupervised use with children",
+  "books": [
+    {
+      "id": "winnie-the-pooh",
+      "title": "Winnie-the-Pooh",
+      "author": "A. A. Milne",
+      "illustrator": "E. H. Shepard",
+      "year": 1926,
+      "pg": 67098,
+      "sourceRepo": "GITenberg/Winnie-the-Pooh_67098",
+      "commit": "8e2945e548754afc55c919576e664979469d1c64",
+      "html": "67098-h/67098-h.htm",
+      "cover": "cover.jpg",
+      "source_image_prefix": "67098-h/images/",
+      "description": "The original adventures of Winnie-the-Pooh and friends, with E. H. Shepard's illustrations.",
+      "edition": "1926 Canadian publication text and original-era illustrations",
+      "reading_type": "chapter book",
+      "review_note": "Period language and occasional depictions of anxiety or danger; editorial/age suitability review pending.",
+      "source_sha": "7a282420cddccc6fd222fba93a05e626bf379b7b",
+      "source_size": 181356,
+      "images": [
+        {
+          "name": "cover.jpg",
+          "source_path": "67098-h/images/cover.jpg",
+          "git_sha": "f25a1274975a9a0b02e2bc39cfa84ed4a637a824",
+          "bytes": 47509,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/cover.jpg"
+        },
+        {
+          "name": "illus1.jpg",
+          "source_path": "67098-h/images/illus1.jpg",
+          "git_sha": "52108aa66ae758dc1b896763ae56a9ff3e7bb25a",
+          "bytes": 13252,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus1.jpg"
+        },
+        {
+          "name": "illus10.jpg",
+          "source_path": "67098-h/images/illus10.jpg",
+          "git_sha": "7e951a581721efc1f5770e3bea30fdf71607fcfa",
+          "bytes": 33812,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus10.jpg"
+        },
+        {
+          "name": "illus100.jpg",
+          "source_path": "67098-h/images/illus100.jpg",
+          "git_sha": "dddbb1b380d327f266fe38769f8ebd096cfc617a",
+          "bytes": 22325,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus100.jpg"
+        },
+        {
+          "name": "illus101.jpg",
+          "source_path": "67098-h/images/illus101.jpg",
+          "git_sha": "38be9a1a9a0f05dd1e27e49e9410a96235513b0d",
+          "bytes": 47416,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus101.jpg"
+        },
+        {
+          "name": "illus102.jpg",
+          "source_path": "67098-h/images/illus102.jpg",
+          "git_sha": "1f54a89a38d15270ecb29df4c8905c4464b6b233",
+          "bytes": 134080,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus102.jpg"
+        },
+        {
+          "name": "illus103.jpg",
+          "source_path": "67098-h/images/illus103.jpg",
+          "git_sha": "186d5ea791fcf875a9b6259833f876149a4df8f1",
+          "bytes": 21849,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus103.jpg"
+        },
+        {
+          "name": "illus104.jpg",
+          "source_path": "67098-h/images/illus104.jpg",
+          "git_sha": "942c5db31b2c8d53f48434a48cfc56267604a9bb",
+          "bytes": 71558,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus104.jpg"
+        },
+        {
+          "name": "illus105.jpg",
+          "source_path": "67098-h/images/illus105.jpg",
+          "git_sha": "36325ad1e28e912594c2ac970f934aa9b26986f4",
+          "bytes": 20124,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus105.jpg"
+        },
+        {
+          "name": "illus106.jpg",
+          "source_path": "67098-h/images/illus106.jpg",
+          "git_sha": "9ef81d561c1c82cda794b72ee54818851c30b673",
+          "bytes": 21432,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus106.jpg"
+        },
+        {
+          "name": "illus107.jpg",
+          "source_path": "67098-h/images/illus107.jpg",
+          "git_sha": "16eb99dedb3a269748ee67fb29877e12222930ac",
+          "bytes": 16865,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus107.jpg"
+        },
+        {
+          "name": "illus108.jpg",
+          "source_path": "67098-h/images/illus108.jpg",
+          "git_sha": "9200df470b77d3a196473711d601978f699267b3",
+          "bytes": 18912,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus108.jpg"
+        },
+        {
+          "name": "illus109.jpg",
+          "source_path": "67098-h/images/illus109.jpg",
+          "git_sha": "5c697854d4c3314c24eb57e15610166acad3a6c2",
+          "bytes": 23879,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus109.jpg"
+        },
+        {
+          "name": "illus11.jpg",
+          "source_path": "67098-h/images/illus11.jpg",
+          "git_sha": "728df3ac7404d2f7cbd449d716e80133abc0d99e",
+          "bytes": 10669,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus11.jpg"
+        },
+        {
+          "name": "illus110.jpg",
+          "source_path": "67098-h/images/illus110.jpg",
+          "git_sha": "ad906c2d097a08ef730410b6e2b9792ccbf8603b",
+          "bytes": 90294,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus110.jpg"
+        },
+        {
+          "name": "illus111.jpg",
+          "source_path": "67098-h/images/illus111.jpg",
+          "git_sha": "b9ce63878ffc5c5cadce46e5023845f9b8a887a5",
+          "bytes": 31062,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus111.jpg"
+        },
+        {
+          "name": "illus112.jpg",
+          "source_path": "67098-h/images/illus112.jpg",
+          "git_sha": "bf3b52811a501af44d4fbeb3b8b4b65edf5a9c65",
+          "bytes": 39347,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus112.jpg"
+        },
+        {
+          "name": "illus113.jpg",
+          "source_path": "67098-h/images/illus113.jpg",
+          "git_sha": "f6f5cac920853141e4aa8b4e3f4cdd55fe2b668c",
+          "bytes": 58717,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus113.jpg"
+        },
+        {
+          "name": "illus12.jpg",
+          "source_path": "67098-h/images/illus12.jpg",
+          "git_sha": "32115a75fed79d4c2fa00a6b00971725a11d25a1",
+          "bytes": 14322,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus12.jpg"
+        },
+        {
+          "name": "illus13.jpg",
+          "source_path": "67098-h/images/illus13.jpg",
+          "git_sha": "5b93132afd73d09852f611c89443d0bb8376b351",
+          "bytes": 19429,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus13.jpg"
+        },
+        {
+          "name": "illus14.jpg",
+          "source_path": "67098-h/images/illus14.jpg",
+          "git_sha": "9cc9f348ff6466f607e2276d540b24533d7b1fa8",
+          "bytes": 9426,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus14.jpg"
+        },
+        {
+          "name": "illus15.jpg",
+          "source_path": "67098-h/images/illus15.jpg",
+          "git_sha": "4c240e80b5ff683b6de8862c3e73e37fc581f016",
+          "bytes": 6258,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus15.jpg"
+        },
+        {
+          "name": "illus16.jpg",
+          "source_path": "67098-h/images/illus16.jpg",
+          "git_sha": "1275e221174ae02375a346baf30b51cb1f53e270",
+          "bytes": 22023,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus16.jpg"
+        },
+        {
+          "name": "illus17.jpg",
+          "source_path": "67098-h/images/illus17.jpg",
+          "git_sha": "9156728a9696aa56dc70eeedbdb19b07485c370c",
+          "bytes": 45794,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus17.jpg"
+        },
+        {
+          "name": "illus18.jpg",
+          "source_path": "67098-h/images/illus18.jpg",
+          "git_sha": "3866bf34e3391d6df9a7a728ef56a95a5596f710",
+          "bytes": 20429,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus18.jpg"
+        },
+        {
+          "name": "illus19.jpg",
+          "source_path": "67098-h/images/illus19.jpg",
+          "git_sha": "64a8468c92a70463ed18227662bf509dd1c064c3",
+          "bytes": 96722,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus19.jpg"
+        },
+        {
+          "name": "illus2.jpg",
+          "source_path": "67098-h/images/illus2.jpg",
+          "git_sha": "046c7c33211b0aa35dc812ed16c20e27396c23e3",
+          "bytes": 51162,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus2.jpg"
+        },
+        {
+          "name": "illus20.jpg",
+          "source_path": "67098-h/images/illus20.jpg",
+          "git_sha": "f8758d4a10400764648e37f77b185b4da77a6ede",
+          "bytes": 47848,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus20.jpg"
+        },
+        {
+          "name": "illus21.jpg",
+          "source_path": "67098-h/images/illus21.jpg",
+          "git_sha": "0f8eba6bb816c4c26f3e9c2054c31f4c5b1fa7db",
+          "bytes": 48708,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus21.jpg"
+        },
+        {
+          "name": "illus22.jpg",
+          "source_path": "67098-h/images/illus22.jpg",
+          "git_sha": "3e18df4bc9bb97d75880c1455ed13519c8e1d102",
+          "bytes": 31698,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus22.jpg"
+        },
+        {
+          "name": "illus23.jpg",
+          "source_path": "67098-h/images/illus23.jpg",
+          "git_sha": "96add01ffc7fc3bd576e5bb3af4fee54bc628cfa",
+          "bytes": 34559,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus23.jpg"
+        },
+        {
+          "name": "illus24.jpg",
+          "source_path": "67098-h/images/illus24.jpg",
+          "git_sha": "a81bdfa64debbdc39f8caad6342176de5e80e29c",
+          "bytes": 39173,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus24.jpg"
+        },
+        {
+          "name": "illus25.jpg",
+          "source_path": "67098-h/images/illus25.jpg",
+          "git_sha": "ea7582ace21f96bcab0d291a444ac3440006a836",
+          "bytes": 40601,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus25.jpg"
+        },
+        {
+          "name": "illus26.jpg",
+          "source_path": "67098-h/images/illus26.jpg",
+          "git_sha": "3a216ba4ba51be17df831c94abd41fa319e3a545",
+          "bytes": 82901,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus26.jpg"
+        },
+        {
+          "name": "illus27.jpg",
+          "source_path": "67098-h/images/illus27.jpg",
+          "git_sha": "a179f5d63da1e3cacead18f0541d6764a807f831",
+          "bytes": 30632,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus27.jpg"
+        },
+        {
+          "name": "illus28.jpg",
+          "source_path": "67098-h/images/illus28.jpg",
+          "git_sha": "9dc87e365d5d0db6370c0cfc95e5799330143b8f",
+          "bytes": 46058,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus28.jpg"
+        },
+        {
+          "name": "illus29.jpg",
+          "source_path": "67098-h/images/illus29.jpg",
+          "git_sha": "52bc1444d24508cbaf25cddb43411be6d5937d00",
+          "bytes": 17582,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus29.jpg"
+        },
+        {
+          "name": "illus3.jpg",
+          "source_path": "67098-h/images/illus3.jpg",
+          "git_sha": "9768db0576233871b30b9e7f545a1c83d1135a44",
+          "bytes": 95306,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus3.jpg"
+        },
+        {
+          "name": "illus30.jpg",
+          "source_path": "67098-h/images/illus30.jpg",
+          "git_sha": "a822f6845a51cbd1dd101e49dbf4ae89891bc90c",
+          "bytes": 27443,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus30.jpg"
+        },
+        {
+          "name": "illus31.jpg",
+          "source_path": "67098-h/images/illus31.jpg",
+          "git_sha": "b30635c635f50bb39285a883c80bf4a1619108d4",
+          "bytes": 74907,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus31.jpg"
+        },
+        {
+          "name": "illus32.jpg",
+          "source_path": "67098-h/images/illus32.jpg",
+          "git_sha": "1485c2fdd97cd5291511e0a66c79135be0c4fb90",
+          "bytes": 9439,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus32.jpg"
+        },
+        {
+          "name": "illus33.jpg",
+          "source_path": "67098-h/images/illus33.jpg",
+          "git_sha": "c66881658a25fdbc1b27faa338b0db388a93546c",
+          "bytes": 33861,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus33.jpg"
+        },
+        {
+          "name": "illus34.jpg",
+          "source_path": "67098-h/images/illus34.jpg",
+          "git_sha": "a6d166fbda23e6867e71ea8fb89d0ddfe25f397c",
+          "bytes": 38232,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus34.jpg"
+        },
+        {
+          "name": "illus35.jpg",
+          "source_path": "67098-h/images/illus35.jpg",
+          "git_sha": "732b197014c2b990e214d203a5f94f209b877063",
+          "bytes": 33176,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus35.jpg"
+        },
+        {
+          "name": "illus36.jpg",
+          "source_path": "67098-h/images/illus36.jpg",
+          "git_sha": "4e96d6cce1a030bab2db92d92cb0997e5ef9154b",
+          "bytes": 25757,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus36.jpg"
+        },
+        {
+          "name": "illus37.jpg",
+          "source_path": "67098-h/images/illus37.jpg",
+          "git_sha": "d2ef3c9af623aa03a34a225733fab60551f0188b",
+          "bytes": 99850,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus37.jpg"
+        },
+        {
+          "name": "illus38.jpg",
+          "source_path": "67098-h/images/illus38.jpg",
+          "git_sha": "498fc88ea8eb3b673fcb37e9c97c79b2d94b659e",
+          "bytes": 60631,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus38.jpg"
+        },
+        {
+          "name": "illus39.jpg",
+          "source_path": "67098-h/images/illus39.jpg",
+          "git_sha": "459c933abfceb52a99a45e56b592ce39a42f0131",
+          "bytes": 86921,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus39.jpg"
+        },
+        {
+          "name": "illus4.jpg",
+          "source_path": "67098-h/images/illus4.jpg",
+          "git_sha": "6ee3b44aefb7c1f1c016759869e0434ab1bf88c3",
+          "bytes": 7071,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus4.jpg"
+        },
+        {
+          "name": "illus40.jpg",
+          "source_path": "67098-h/images/illus40.jpg",
+          "git_sha": "0539ca3eda48b7f8658d3abcbee2acb34e39ca48",
+          "bytes": 38093,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus40.jpg"
+        },
+        {
+          "name": "illus41.jpg",
+          "source_path": "67098-h/images/illus41.jpg",
+          "git_sha": "c6bf6a243165e9c68e7267a643183a17ab264dd3",
+          "bytes": 27278,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus41.jpg"
+        },
+        {
+          "name": "illus42.jpg",
+          "source_path": "67098-h/images/illus42.jpg",
+          "git_sha": "bd647a767fd5f4c91abc69d59fbe358ee70ecdf4",
+          "bytes": 17305,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus42.jpg"
+        },
+        {
+          "name": "illus43.jpg",
+          "source_path": "67098-h/images/illus43.jpg",
+          "git_sha": "39f7a1c408231b9a0cbc5470fa58e87f4c41fc94",
+          "bytes": 112501,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus43.jpg"
+        },
+        {
+          "name": "illus44.jpg",
+          "source_path": "67098-h/images/illus44.jpg",
+          "git_sha": "0f2da22f43c7ae1e9af8d79584eb05907373d84d",
+          "bytes": 35986,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus44.jpg"
+        },
+        {
+          "name": "illus45.jpg",
+          "source_path": "67098-h/images/illus45.jpg",
+          "git_sha": "a156bee3c0bd57904737449c18478fdd53d0a68f",
+          "bytes": 20031,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus45.jpg"
+        },
+        {
+          "name": "illus46.jpg",
+          "source_path": "67098-h/images/illus46.jpg",
+          "git_sha": "6696c3d38d0b2d7f487985881cbf0de2a017af29",
+          "bytes": 23345,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus46.jpg"
+        },
+        {
+          "name": "illus47.jpg",
+          "source_path": "67098-h/images/illus47.jpg",
+          "git_sha": "880b5e64e65e3f9ef4cd9a4e582691debab54e57",
+          "bytes": 42654,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus47.jpg"
+        },
+        {
+          "name": "illus48.jpg",
+          "source_path": "67098-h/images/illus48.jpg",
+          "git_sha": "5951cc2a96738a2040c1ffe0989e18f2a3ccabdc",
+          "bytes": 60896,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus48.jpg"
+        },
+        {
+          "name": "illus49.jpg",
+          "source_path": "67098-h/images/illus49.jpg",
+          "git_sha": "407a98046d0c09e5c041182cfa4335accb3ac6e6",
+          "bytes": 27697,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus49.jpg"
+        },
+        {
+          "name": "illus5.jpg",
+          "source_path": "67098-h/images/illus5.jpg",
+          "git_sha": "eb4abe9edd12f48b24db826f4a939d691cdf5979",
+          "bytes": 43035,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus5.jpg"
+        },
+        {
+          "name": "illus50.jpg",
+          "source_path": "67098-h/images/illus50.jpg",
+          "git_sha": "fb93500788eb391cf23d9bdadc5cde60a789ac70",
+          "bytes": 59494,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus50.jpg"
+        },
+        {
+          "name": "illus51.jpg",
+          "source_path": "67098-h/images/illus51.jpg",
+          "git_sha": "bb346311cb9300b7bdfdd245483a149b3a1c3623",
+          "bytes": 16114,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus51.jpg"
+        },
+        {
+          "name": "illus52.jpg",
+          "source_path": "67098-h/images/illus52.jpg",
+          "git_sha": "6c039f057242f43b58e727492fa88d1d67dfdfe3",
+          "bytes": 15413,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus52.jpg"
+        },
+        {
+          "name": "illus53.jpg",
+          "source_path": "67098-h/images/illus53.jpg",
+          "git_sha": "08381b6908b9891a150c6eb1e15ee35807709efb",
+          "bytes": 15593,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus53.jpg"
+        },
+        {
+          "name": "illus54.jpg",
+          "source_path": "67098-h/images/illus54.jpg",
+          "git_sha": "4e1d1e63907e2a7a11eade617c1b6f7087c05ef1",
+          "bytes": 21591,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus54.jpg"
+        },
+        {
+          "name": "illus55.jpg",
+          "source_path": "67098-h/images/illus55.jpg",
+          "git_sha": "cc82f285dd320bc5c8f2f6d384bbf765d3d78c65",
+          "bytes": 87004,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus55.jpg"
+        },
+        {
+          "name": "illus56.jpg",
+          "source_path": "67098-h/images/illus56.jpg",
+          "git_sha": "f1a568ab124dccf5bff4fbe89bc3909467ecaab6",
+          "bytes": 12344,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus56.jpg"
+        },
+        {
+          "name": "illus57.jpg",
+          "source_path": "67098-h/images/illus57.jpg",
+          "git_sha": "4ba14d4a5fbb0fde2c280a5ed9d5ed29a1536392",
+          "bytes": 26504,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus57.jpg"
+        },
+        {
+          "name": "illus58.jpg",
+          "source_path": "67098-h/images/illus58.jpg",
+          "git_sha": "11f6ccfa0b66e20b83d0137db142c697875d00c4",
+          "bytes": 43403,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus58.jpg"
+        },
+        {
+          "name": "illus59.jpg",
+          "source_path": "67098-h/images/illus59.jpg",
+          "git_sha": "a0bd5dbbd3234e2b0190c30edddac0212247c36d",
+          "bytes": 13577,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus59.jpg"
+        },
+        {
+          "name": "illus6.jpg",
+          "source_path": "67098-h/images/illus6.jpg",
+          "git_sha": "0f8e793e22cec11f14f275351ad309cab12685a9",
+          "bytes": 36712,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus6.jpg"
+        },
+        {
+          "name": "illus60.jpg",
+          "source_path": "67098-h/images/illus60.jpg",
+          "git_sha": "93db3c84c96a2d0f9755bb70534ceb1ea1979799",
+          "bytes": 12641,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus60.jpg"
+        },
+        {
+          "name": "illus61.jpg",
+          "source_path": "67098-h/images/illus61.jpg",
+          "git_sha": "3e773f90c950b1ed6eea7cad0d880d78e3e861a8",
+          "bytes": 19767,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus61.jpg"
+        },
+        {
+          "name": "illus62.jpg",
+          "source_path": "67098-h/images/illus62.jpg",
+          "git_sha": "aaa91973824b7cf05944bfe8ecc23bebcb42535d",
+          "bytes": 25191,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus62.jpg"
+        },
+        {
+          "name": "illus63.jpg",
+          "source_path": "67098-h/images/illus63.jpg",
+          "git_sha": "0242177db506fb483d31ecfcd3d53dcea67316e5",
+          "bytes": 20870,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus63.jpg"
+        },
+        {
+          "name": "illus64.jpg",
+          "source_path": "67098-h/images/illus64.jpg",
+          "git_sha": "283ab655082286bc58467d5e9e414e56eb62b73d",
+          "bytes": 18078,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus64.jpg"
+        },
+        {
+          "name": "illus65.jpg",
+          "source_path": "67098-h/images/illus65.jpg",
+          "git_sha": "cd1795ad20f68f378e4c65e5d7b6f4d5cf4d3e91",
+          "bytes": 25215,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus65.jpg"
+        },
+        {
+          "name": "illus66.jpg",
+          "source_path": "67098-h/images/illus66.jpg",
+          "git_sha": "36dde9fda3ddf9ee73243499294114b15a626ef6",
+          "bytes": 25773,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus66.jpg"
+        },
+        {
+          "name": "illus67.jpg",
+          "source_path": "67098-h/images/illus67.jpg",
+          "git_sha": "61bc839745dc318c0ca00efa9ff1d6c4dee30a9c",
+          "bytes": 25401,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus67.jpg"
+        },
+        {
+          "name": "illus68.jpg",
+          "source_path": "67098-h/images/illus68.jpg",
+          "git_sha": "0c8e3a8f2eaab82311f25f5060e77c798b9d4dc0",
+          "bytes": 68280,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus68.jpg"
+        },
+        {
+          "name": "illus69.jpg",
+          "source_path": "67098-h/images/illus69.jpg",
+          "git_sha": "d317ea76d380dcda5ec730b8e6808f24016993a6",
+          "bytes": 25277,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus69.jpg"
+        },
+        {
+          "name": "illus7.jpg",
+          "source_path": "67098-h/images/illus7.jpg",
+          "git_sha": "1a9b6c0e7b7ca39878184cd7425e6dadb86fd2ae",
+          "bytes": 38184,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus7.jpg"
+        },
+        {
+          "name": "illus70.jpg",
+          "source_path": "67098-h/images/illus70.jpg",
+          "git_sha": "319a547696c07f26cd70f2edd0cd54c6781ae95d",
+          "bytes": 27457,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus70.jpg"
+        },
+        {
+          "name": "illus71.jpg",
+          "source_path": "67098-h/images/illus71.jpg",
+          "git_sha": "cfc1e1c151be66ef307feae4bb41b73555368ff9",
+          "bytes": 47277,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus71.jpg"
+        },
+        {
+          "name": "illus72.jpg",
+          "source_path": "67098-h/images/illus72.jpg",
+          "git_sha": "488d3fadc4d1f88b7f098e3559aa9e688c5eac9a",
+          "bytes": 30323,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus72.jpg"
+        },
+        {
+          "name": "illus73.jpg",
+          "source_path": "67098-h/images/illus73.jpg",
+          "git_sha": "50209dfe6accf089426bcb7a79271f4a8e2a364d",
+          "bytes": 15916,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus73.jpg"
+        },
+        {
+          "name": "illus74.jpg",
+          "source_path": "67098-h/images/illus74.jpg",
+          "git_sha": "65b8b8418d1594718736a921af6506aa052f1e08",
+          "bytes": 40335,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus74.jpg"
+        },
+        {
+          "name": "illus75.jpg",
+          "source_path": "67098-h/images/illus75.jpg",
+          "git_sha": "ca15fe1f70742627c7232282958e95d6bffc780c",
+          "bytes": 23382,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus75.jpg"
+        },
+        {
+          "name": "illus76.jpg",
+          "source_path": "67098-h/images/illus76.jpg",
+          "git_sha": "2a921d99b40a6bd8bb522e3cb84f76321c5d5af5",
+          "bytes": 24458,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus76.jpg"
+        },
+        {
+          "name": "illus77.jpg",
+          "source_path": "67098-h/images/illus77.jpg",
+          "git_sha": "c8f8eedae05fc9fd9556db19f8d878cf6c1da40e",
+          "bytes": 22174,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus77.jpg"
+        },
+        {
+          "name": "illus78.jpg",
+          "source_path": "67098-h/images/illus78.jpg",
+          "git_sha": "d0f310ac2ef93763bba3055e536da8924d6343a6",
+          "bytes": 22048,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus78.jpg"
+        },
+        {
+          "name": "illus79.jpg",
+          "source_path": "67098-h/images/illus79.jpg",
+          "git_sha": "1fa8ed09e8aad00137fb323fc9bde94343b143fb",
+          "bytes": 34317,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus79.jpg"
+        },
+        {
+          "name": "illus8.jpg",
+          "source_path": "67098-h/images/illus8.jpg",
+          "git_sha": "903b28e0f9311bf88cb86abf8e402acdfb25f5e0",
+          "bytes": 90747,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus8.jpg"
+        },
+        {
+          "name": "illus80.jpg",
+          "source_path": "67098-h/images/illus80.jpg",
+          "git_sha": "3a0e4dadfff2b058d2e0d85e32c6e9650a9e78ea",
+          "bytes": 30664,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus80.jpg"
+        },
+        {
+          "name": "illus81.jpg",
+          "source_path": "67098-h/images/illus81.jpg",
+          "git_sha": "21864322f4556577ca9223b5859ae5151fcbe83f",
+          "bytes": 29200,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus81.jpg"
+        },
+        {
+          "name": "illus82.jpg",
+          "source_path": "67098-h/images/illus82.jpg",
+          "git_sha": "42161e40f87f4dd6e061a3f24a7b2493313c5abf",
+          "bytes": 43852,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus82.jpg"
+        },
+        {
+          "name": "illus83.jpg",
+          "source_path": "67098-h/images/illus83.jpg",
+          "git_sha": "daf701a66af66c46decea8ea54d38b2d958a5ec3",
+          "bytes": 26724,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus83.jpg"
+        },
+        {
+          "name": "illus84.jpg",
+          "source_path": "67098-h/images/illus84.jpg",
+          "git_sha": "38945874164e220c56a1fe2eb1ce8ebc2283fc4b",
+          "bytes": 53336,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus84.jpg"
+        },
+        {
+          "name": "illus85.jpg",
+          "source_path": "67098-h/images/illus85.jpg",
+          "git_sha": "30f05afcf5835b33feb42ad2dd9a35c902633fb7",
+          "bytes": 22114,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus85.jpg"
+        },
+        {
+          "name": "illus86.jpg",
+          "source_path": "67098-h/images/illus86.jpg",
+          "git_sha": "3e3fcf63e53c8d368e2812773fee8cf937e60eca",
+          "bytes": 36456,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus86.jpg"
+        },
+        {
+          "name": "illus87.jpg",
+          "source_path": "67098-h/images/illus87.jpg",
+          "git_sha": "ebaf870aa103ff4b6b1bc28f7fc8fda95e7d1bb2",
+          "bytes": 28147,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus87.jpg"
+        },
+        {
+          "name": "illus88.jpg",
+          "source_path": "67098-h/images/illus88.jpg",
+          "git_sha": "a97aa6aa65b692005d947276d7046da71e50745a",
+          "bytes": 56188,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus88.jpg"
+        },
+        {
+          "name": "illus89.jpg",
+          "source_path": "67098-h/images/illus89.jpg",
+          "git_sha": "f87062889d7bec0c279685b97492c56e07d8c7bf",
+          "bytes": 65110,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus89.jpg"
+        },
+        {
+          "name": "illus9.jpg",
+          "source_path": "67098-h/images/illus9.jpg",
+          "git_sha": "da6996ad35dfd67bd80718fdf09c6bf83f3a4037",
+          "bytes": 13584,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus9.jpg"
+        },
+        {
+          "name": "illus90.jpg",
+          "source_path": "67098-h/images/illus90.jpg",
+          "git_sha": "5a8cb84e2e17b391daa4f426b61e61fb19d58b15",
+          "bytes": 31149,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus90.jpg"
+        },
+        {
+          "name": "illus91.jpg",
+          "source_path": "67098-h/images/illus91.jpg",
+          "git_sha": "ff7865338fcadceab197c3c7c87711e2813a3db8",
+          "bytes": 101143,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus91.jpg"
+        },
+        {
+          "name": "illus92.jpg",
+          "source_path": "67098-h/images/illus92.jpg",
+          "git_sha": "e1cc3191a9b6ed08b079d55de70a509b65ab446e",
+          "bytes": 19759,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus92.jpg"
+        },
+        {
+          "name": "illus93.jpg",
+          "source_path": "67098-h/images/illus93.jpg",
+          "git_sha": "52b58040ccd144bea84348fe55c4f0ab11faf853",
+          "bytes": 51065,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus93.jpg"
+        },
+        {
+          "name": "illus94.jpg",
+          "source_path": "67098-h/images/illus94.jpg",
+          "git_sha": "635a2a7f2a5e443d570d4cb9e6510e5a8ac75f1b",
+          "bytes": 20686,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus94.jpg"
+        },
+        {
+          "name": "illus95.jpg",
+          "source_path": "67098-h/images/illus95.jpg",
+          "git_sha": "dbf115647230d6208f9b0b469331d38a17d83648",
+          "bytes": 19816,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus95.jpg"
+        },
+        {
+          "name": "illus96.jpg",
+          "source_path": "67098-h/images/illus96.jpg",
+          "git_sha": "9edec5c27deb2a3ceaf8da6b1f1410a67f8dc682",
+          "bytes": 26477,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus96.jpg"
+        },
+        {
+          "name": "illus97.jpg",
+          "source_path": "67098-h/images/illus97.jpg",
+          "git_sha": "4f7b407ae7c65d04bdd84b238dc3108a886fd47a",
+          "bytes": 22599,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus97.jpg"
+        },
+        {
+          "name": "illus98.jpg",
+          "source_path": "67098-h/images/illus98.jpg",
+          "git_sha": "606644523cac8eca814ddc60001c271fea7a83d2",
+          "bytes": 137072,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus98.jpg"
+        },
+        {
+          "name": "illus99.jpg",
+          "source_path": "67098-h/images/illus99.jpg",
+          "git_sha": "cc5dffcb9ff65140dd2c7407258d06c6931498d5",
+          "bytes": 27655,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/illus99.jpg"
+        },
+        {
+          "name": "map.jpg",
+          "source_path": "67098-h/images/map.jpg",
+          "git_sha": "3682fbb9bd075366c276aa91dc807b85118b459a",
+          "bytes": 87212,
+          "local": "frontend/assets/books/classics/winnie-the-pooh/map.jpg"
+        }
+      ],
+      "route": "/read/winnie-the-pooh",
+      "review": {
+        "rights": "public-domain-US-verified-for-source-era",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      },
+      "import_status": "complete-story-plus-historical-images-locally-bundled"
+    },
+    {
+      "id": "velveteen-rabbit",
+      "title": "The Velveteen Rabbit",
+      "author": "Margery Williams",
+      "illustrator": "William Nicholson",
+      "year": 1922,
+      "pg": 11757,
+      "sourceRepo": "GITenberg/The-Velveteen-Rabbit_11757",
+      "commit": "4e0b5bda90a99e98cb1ace8572aac3196b1ce7e6",
+      "html": "11757-h/11757-h.htm",
+      "cover": "christmas.jpg",
+      "source_image_prefix": "11757-h/images/",
+      "description": "A stuffed rabbit discovers what it means to become real.",
+      "edition": "Early illustrated edition, original William Nicholson art",
+      "reading_type": "illustrated story",
+      "review_note": "Illness (scarlet fever), the threat of a toy being burned, and separation themes; caregiver review recommended.",
+      "source_sha": "daba6052407e67511e480992855ad558a28d559d",
+      "source_size": 45343,
+      "images": [
+        {
+          "name": "anxious.jpg",
+          "source_path": "11757-h/images/anxious.jpg",
+          "git_sha": "b010f8a69a67b8471f998c9892241f6625b0b152",
+          "bytes": 47029,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/anxious.jpg"
+        },
+        {
+          "name": "christmas.jpg",
+          "source_path": "11757-h/images/christmas.jpg",
+          "git_sha": "155743409d09c04941c2116f8346b665b1ec47e4",
+          "bytes": 50721,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/christmas.jpg"
+        },
+        {
+          "name": "detail.jpg",
+          "source_path": "11757-h/images/detail.jpg",
+          "git_sha": "14fafe413699ec1a6e274737ebadda304630f38a",
+          "bytes": 6563,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/detail.jpg"
+        },
+        {
+          "name": "fairy.jpg",
+          "source_path": "11757-h/images/fairy.jpg",
+          "git_sha": "7a1f2eeaa33857b08302134fb2e5623d95380775",
+          "bytes": 40861,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/fairy.jpg"
+        },
+        {
+          "name": "horse.jpg",
+          "source_path": "11757-h/images/horse.jpg",
+          "git_sha": "e090e5c1f243919309b45646bdcc4833f0f7be98",
+          "bytes": 88764,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/horse.jpg"
+        },
+        {
+          "name": "last.jpg",
+          "source_path": "11757-h/images/last.jpg",
+          "git_sha": "4190ca62904dde368a459d20b09cd1b72202bd58",
+          "bytes": 93286,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/last.jpg"
+        },
+        {
+          "name": "spring.jpg",
+          "source_path": "11757-h/images/spring.jpg",
+          "git_sha": "b9f5f78907ac9662f3f24095619a4dc15876a34e",
+          "bytes": 44490,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/spring.jpg"
+        },
+        {
+          "name": "summer.jpg",
+          "source_path": "11757-h/images/summer.jpg",
+          "git_sha": "7800e3aaf70e972c42a1bbced389353d30545551",
+          "bytes": 72276,
+          "local": "frontend/assets/books/classics/velveteen-rabbit/summer.jpg"
+        }
+      ],
+      "route": "/read/velveteen-rabbit",
+      "review": {
+        "rights": "public-domain-US-verified-for-source-era",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      },
+      "import_status": "complete-story-plus-historical-images-locally-bundled"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 [![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
 > [!IMPORTANT]
-> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, a 16-word Word Workshop early spelling game, an eleven-title research queue plus twelve locally readable stories, including five professionally illustrated CC BY 4.0 Book Dash titles, live section filtering and two read-only API endpoints. Reviewed phonics courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
+> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, a 16-word Word Workshop early spelling game, an eleven-title research queue plus fourteen locally readable stories, including illustrated original-era Winnie-the-Pooh and The Velveteen Rabbit, live section filtering and two read-only API endpoints. Reviewed phonics courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
 
 **[Vision](docs/vision.md) · [Roadmap](docs/roadmap.md) · [Run locally](#run-the-prototype) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public launch checklist](docs/public-launch-checklist.md)**
 
@@ -43,7 +43,7 @@ We're deliberately building a **fast, accessible website**, not a virtual town t
 | Responsive six-section homepage and interior pages | Full curriculum and phonics games |
 | Search/filter for homepage sections | Reviewed third-party book files and secure imports |
 | Circuit Garden (10 puzzles), Word Workshop (16 words) and two practice demos | Larger games, adaptive lessons and learner progress |
-| Five Book Dash CC BY picture books with all original illustrations, five US-public-domain texts, two original stories, and an eleven-item research queue | General-purpose secure ebook importer and approved third-party content |
+| Two historic illustrated US-public-domain classics, five illustrated Book Dash CC BY titles, five Potter texts, two original stories and eleven research entries | General-purpose secure ebook importer and approved third-party content |
 | Local-only FastAPI prototype | Student profiles and progress |
 | Read-only health/catalog API | Secure multiplayer rooms and game engines |
 | Security/accessibility planning docs | Pi hotspot, local TLS and segmented networking |
@@ -64,7 +64,7 @@ See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe
 
 ## Public website preview
 
-The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game, Word Workshop word builder, an eleven-book **research-only** shelf, five real Book Dash picture books with their original cover and twelve illustrated spreads each, five public-domain classic texts, and two original story prototypes. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
+The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game, Word Workshop word builder, an eleven-book **research-only** shelf, two famous historical illustrated books, five Book Dash picture books with original art, five public-domain Potter texts, and two original story prototypes. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
 
 **Important:** This is a public internet-hosted static UI preview, not an offline Raspberry Pi deployment, a complete curriculum, or a child-safe release. The FastAPI backend is deliberately not published to Pages.
 
@@ -96,7 +96,7 @@ python -m pip install -e '.[dev]'
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-Visit **http://127.0.0.1:8000** to explore. Open any of the six section cards, or try **Letter Match** at **/play/letter-match** and **Pattern Playground** at **/play/patterns**, or **Circuit Garden** at **/play/circuit-garden**, or **Word Workshop** at **/play/word-workshop**. Our first licensed Book Dash picture book is **/read/a-beautiful-day**; four more original-illustration books are listed on the Library shelf. Our early original bilingual prototype remains at **/read/mara-garden** (Spanish draft and visuals need review). The original short story is at **/read/lantern**. Five complete public-domain story texts are linked from Library. Their original illustrations are not included. Eleven separately listed third-party editions remain **unreviewed and unavailable**. See [web pages and activities](docs/web-pages.md). Stop with `Ctrl+C`. Run tests with:
+Visit **http://127.0.0.1:8000** to explore. Open any of the six section cards, or try **Letter Match** at **/play/letter-match** and **Pattern Playground** at **/play/patterns**, or **Circuit Garden** at **/play/circuit-garden**, or **Word Workshop** at **/play/word-workshop**. Two famous illustrated classics are at **/read/winnie-the-pooh** and **/read/velveteen-rabbit** (U.S. public-domain originals; child-content and accessibility review pending). Our first licensed Book Dash picture book is **/read/a-beautiful-day**; four more original-illustration books are listed on the Library shelf. Our early original bilingual prototype remains at **/read/mara-garden** (Spanish draft and visuals need review). The original short story is at **/read/lantern**. Five complete public-domain story texts are linked from Library. Their original illustrations are not included. Eleven separately listed third-party editions remain **unreviewed and unavailable**. See [web pages and activities](docs/web-pages.md). Stop with `Ctrl+C`. Run tests with:
 
 ```bash
 python -m pytest -q
