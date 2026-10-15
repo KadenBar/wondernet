@@ -18,7 +18,7 @@ SECTIONS = (
     "early-learning", "academy", "special-interests",
     "arcade", "library", "wonderparty",
 )
-ACTIVITIES = ("letter-match", "patterns")
+ACTIVITIES = ("letter-match", "patterns", "circuit-garden")
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
     **{f"/play/{slug}": f"/play/{slug}/" for slug in ACTIVITIES},
@@ -30,7 +30,7 @@ ATTRIBUTE = re.compile(
 WARNING = (
     '<div class="public-preview-notice" role="note">'
     '<strong>Developer preview · not a child-ready product.</strong> '
-    'This site demonstrates early webpages and two tiny browser activities. '
+    'This site demonstrates early webpages, two practice activities and Circuit Garden. '
     'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet. '
     '<a href="https://github.com/KadenBar/wondernet" rel="noopener noreferrer">Source code and feedback</a>.'
     "</div>"

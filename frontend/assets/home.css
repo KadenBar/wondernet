@@ -147,3 +147,23 @@
 /* Contributor address is plain text in the learner UI, not an outbound link. */
 .source-address{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92rem;font-weight:900;color:#17353b;background:#ffe19a;border:2px solid #17353b;border-radius:10px;padding:.9rem 1rem;overflow-wrap:anywhere;margin:0;flex-shrink:1}
 .anchor-target{display:block;position:relative;top:-1.5rem}
+
+/* Featured first standalone Arcade game. All artwork is locally rendered. */
+.cg-feature{display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;background:#d4eac9;border:3px solid #17353b;border-radius:18px;box-shadow:7px 8px 0 #17353b;margin:0 0 2rem}
+.cg-feature-copy{padding:clamp(1.4rem,3vw,2.45rem);display:flex;align-items:flex-start;flex-direction:column;justify-content:center}
+.cg-feature-kicker{color:#196c4e;font-size:.7rem;font-weight:950;letter-spacing:.11em;margin:0 0 .65rem}
+.cg-feature h3{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-size:clamp(2.4rem,4.4vw,4.5rem);font-weight:900;letter-spacing:-.07em;line-height:1.1;margin:0 0 .9rem;color:#17353b}
+.cg-feature h3 em{color:#1d8159;font-style:normal}
+.cg-feature h3 span{color:#ce698b;font-size:.65em}
+.cg-feature-copy>p:not(.cg-feature-kicker){color:#3d5b4d;line-height:1.65;font-size:1.06rem;margin:0 0 1.3rem;max-width:550px}
+.cg-feature-link{display:inline-flex;align-items:center;justify-content:space-between;gap:2rem;text-decoration:none;font-weight:900;background:#17353b;color:white;padding:.76rem 1.2rem;border:2px solid #17353b;border-radius:10px;min-height:49px}
+.cg-feature-link:hover{background:#11644c}
+.cg-feature-copy small{font-size:.75rem;color:#446b54;font-weight:750;margin-top:1rem}
+.cg-feature-art{min-height:350px;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle at 65% 25%,#bce4ac,#75b38c);border-left:2px solid #17353b}
+.cg-mini-board{display:grid;grid-template-columns:repeat(3,73px);grid-template-rows:repeat(3,73px);gap:7px;background:#43895c;border:3px solid #17353b;border-radius:15px;padding:10px;box-shadow:8px 9px 0 #17353b;transform:rotate(-7deg)}
+.cg-mini-board span{display:grid;place-items:center;background:#f9f0cf;border:2px solid #225848;border-radius:9px;font-size:2.5rem;font-weight:950;color:#236c54}
+.cg-mini-board span:first-child{color:#d68d23;background:#ffe8a9}
+.cg-mini-board span:last-child,.cg-mini-board span:nth-child(4){color:#dc7591;background:#e5ffd4}
+.cg-feature-sticker{position:absolute;right:.9rem;top:1.1rem;font-size:.76rem;font-weight:900;transform:rotate(8deg);border:2px solid #17353b;background:#fce7a3;padding:.6rem .8rem;box-shadow:4px 4px 0 #17353b}
+.cg-practice-label{font-size:.74rem;letter-spacing:.11em;font-weight:900;color:#347461;margin:0 0 1rem}
+@media(max-width:740px){.cg-feature{grid-template-columns:1fr}.cg-feature-art{border-left:0;border-top:2px solid #17353b;min-height:275px}.cg-mini-board{grid-template-columns:repeat(3,57px);grid-template-rows:repeat(3,57px)}.cg-mini-board span{font-size:2rem}}

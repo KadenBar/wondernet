@@ -112,16 +112,19 @@ def test_learner_homepage_has_no_outbound_links_or_remote_assets():
 
 
 def test_all_interior_pages_use_the_handmade_design_and_local_assets():
-    from backend.app.main import SECTIONS, ACTIVITIES
+    from backend.app.main import SECTIONS
     for section in SECTIONS:
         html = client.get(f"/explore/{section}").text
         assert f'class="interior-page section--{section}"' in html
         assert 'href="/assets/interiors.css"' in html
         assert 'class="detail-scene"' in html
-        assert "CONCEPT ART" in html
+        if section == "arcade":
+            assert "CIRCUIT GARDEN" in html
+        else:
+            assert "CONCEPT ART" in html
         assert 'href="https://' not in html
         assert 'src="https://' not in html
-    for game in ACTIVITIES:
+    for game in ("letter-match", "patterns"):
         html = client.get(f"/play/{game}").text
         assert f'class="interior-page game--{game}"' in html
         assert 'href="/assets/interiors.css"' in html
@@ -141,3 +144,37 @@ def test_game_progress_remains_in_browser_memory_only():
     assert "localStorage" not in script
     assert "sessionStorage" not in script
     assert "fetch(" not in script
+
+
+def test_circuit_garden_is_a_complete_locally_served_game():
+    html = client.get("/play/circuit-garden").text
+    assert '<main id="main-content"' in html
+    assert 'class="interior-page circuit-page"' in html
+    assert 'id="cg-board"' in html
+    assert 'id="cg-level-list"' in html
+    assert 'id="cg-reset"' in html
+    assert 'id="cg-hint"' in html
+    assert 'src="/assets/circuit-engine.js"' in html
+    assert 'src="/assets/circuit-garden.js"' in html
+    assert 'href="/assets/circuit-garden.css"' in html
+    assert "No timer" in html
+    assert "not ready for unsupervised child use" in html
+    assert "script-src 'self'" in client.get("/play/circuit-garden").headers["content-security-policy"]
+    for url in ("/assets/circuit-engine.js", "/assets/circuit-garden.js", "/assets/circuit-garden.css"):
+        response = client.get(url)
+        assert response.status_code == 200
+        assert "https://" not in response.text
+        assert "localStorage" not in response.text
+        assert "sessionStorage" not in response.text
+        assert "fetch(" not in response.text
+    assert 'href="https://' not in html
+    assert 'src="https://' not in html
+
+
+def test_circuit_garden_is_discoverable_without_disguising_practice_as_games():
+    home = client.get("/").text
+    arcade = client.get("/explore/arcade").text
+    assert 'href="/play/circuit-garden"' in home
+    assert 'href="/play/circuit-garden"' in arcade
+    assert "practice activities" in home
+    assert "PRACTICE" in arcade

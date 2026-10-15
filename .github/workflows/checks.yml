@@ -26,3 +26,7 @@ jobs:
         run: |
           node --check frontend/assets/main.js
           node --check frontend/assets/activities.js
+          node --check frontend/assets/circuit-engine.js
+          node --check frontend/assets/circuit-garden.js
+      - name: Test Circuit Garden puzzles
+        run: node --test tests/circuit-garden.test.cjs
