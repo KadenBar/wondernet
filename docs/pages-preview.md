@@ -15,11 +15,12 @@ GitHub may take a few minutes to complete the deployment.
 
 ## What's in the preview
 
-- Responsive homepage and six interior pages. The Library page now includes one original story, five complete US public-domain story-text editions, and a separately marked research-only list of eleven other unapproved candidates.
+- Responsive homepage and six interior pages. The Library page now includes two original stories (including an eight-spread English/Spanish illustrated book), five complete US public-domain story-text editions, and a separate research-only list of eleven other unapproved candidates.
 - Letter Match and Pattern Playground: five browser-only practice questions each.
 - Circuit Garden: ten handcrafted circuit puzzles with session-only level progression; no data stored.
 - Word Workshop: sixteen word-building puzzles, four thematic collections and optional hints, with in-memory progress only.
 - Original five-chapter short-story reader at `/read/lantern/` with locally bundled prose, themes and text sizing, not age-reviewed.
+- Original English/Spanish illustrated picture-book prototype at `/read/mara-garden/` with eight original local SVG scenes; fluent-speaker and accessibility review pending.
 - Five original-text Beatrix Potter stories under `/read/` with full US public-domain narrative, newly authored basic decorations and no historical illustrations. Human editorial and accessibility review is still pending.
 - A prominent early-development warning banner on every page.
 - No analytics, logins, ads, user uploads, chat or persistent learner data.
@@ -30,7 +31,7 @@ GitHub may take a few minutes to complete the deployment.
 
 - The FastAPI backend, including `/api/health` and `/api/catalog`.
 - Raspberry Pi configuration, private Wi-Fi, TLS and host isolation.
-- General-purpose imported EPUB/PDF media, historical picture-book illustrations, bulk ebook viewers/importers, uploads, code labs, multiplayer, progress, accounts, or production security features.
+- Approved third-party modern Creative Commons picture books, general-purpose EPUB/PDF files, historical Potter illustrations, bulk ebook importers, uploads, code labs, multiplayer, progress, accounts, or production security features.
 
 GitHub Pages is publicly accessible over the internet. It does **not** demonstrate offline-first networking and is **not approved for children or unsupervised learner use**. Do not use it to gather children's data. Adult contributors can download and run the prototype bound to `127.0.0.1` if they need to test the API.
 
