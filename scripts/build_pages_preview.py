@@ -74,6 +74,17 @@ READERS = {
     "flopsy-bunnies": "book-flopsy-bunnies.html",
     "scarlet-pimpernel": "book-scarlet-pimpernel.html",
     "prisoner-of-zenda": "book-prisoner-of-zenda.html",
+    "scarlet-letter": "book-scarlet-letter.html",
+    "oliver-twist": "book-oliver-twist.html",
+    "great-expectations": "book-great-expectations.html",
+    "tale-two-cities": "book-tale-two-cities.html",
+    "man-iron-mask": "book-man-iron-mask.html",
+    "last-man": "book-last-man.html",
+    "sleepy-hollow": "book-sleepy-hollow.html",
+    "dorian-gray": "book-dorian-gray.html",
+    "dracula": "book-dracula.html",
+    "food-of-the-gods": "book-food-of-the-gods.html",
+    "phantom-of-the-opera": "book-phantom-of-the-opera.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
