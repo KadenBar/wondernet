@@ -2,7 +2,7 @@ from scripts.audit_offline_editions import BOOK_IDS, audit_page, audit
 
 def test_all_fifty_imported_editions_have_structural_security_baseline():
     reports = audit()
-    assert len(BOOK_IDS) == len(set(BOOK_IDS)) == len(reports) == 50
+    assert len(BOOK_IDS) == len(set(BOOK_IDS)) == len(reports) == 51
     assert not [(r["id"], r["errors"]) for r in reports if r["errors"]]
 
 def test_audit_detects_active_content_and_broken_anchors():
