@@ -29,6 +29,8 @@ def test_export_builds_nine_live_html_routes(tmp_path):
     for relative in expected:
         html = (tmp_path / relative).read_text(encoding="utf-8")
         assert "Developer preview" in html
+        assert 'href="https://github.com/KadenBar/wondernet"' in html
+        assert "Source code and feedback" in html
         assert "not a child-ready product" in html
         assert 'name="robots" content="noindex,nofollow"' in html
         assert 'href="/wondernet/assets/preview.css"' in html
@@ -39,7 +41,10 @@ def test_export_builds_nine_live_html_routes(tmp_path):
         assert "<main" in html
     homepage = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/explore/early-learning/"' in homepage
-    assert 'href="/wondernet/play/' not in homepage
+    assert 'href="/wondernet/play/letter-match/"' in homepage
+    assert 'href="/wondernet/play/patterns/"' in homepage
+    assert 'href="/wondernet/assets/home.css"' in homepage
+    assert "Pi Wi-Fi network is planned" in homepage
     first_page = (tmp_path / "explore/early-learning/index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/play/letter-match/"' in first_page
     assert (tmp_path / "assets/activities.js").is_file()
@@ -78,3 +83,12 @@ def test_preview_security_meta_and_no_remote_code():
     assert "connect-src &#39;none&#39;" in html
     assert 'src="/wondernet/assets/main.js"' in html
     assert 'href="/wondernet/"' in html
+
+
+def test_preview_banner_handles_body_classes():
+    html = make_html(
+        '<html><head></head><body class="home-page"><main>Hi</main></body></html>',
+        "/wondernet",
+    )
+    assert '<body class="home-page"><div class="public-preview-notice"' in html
+    assert "Source code and feedback" in html

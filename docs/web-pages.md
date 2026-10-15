@@ -4,7 +4,7 @@ WonderNet's early site now has six direct section routes. Navigation is delibera
 
 | URL | State |
 | --- | --- |
-| `/` | Homepage and live section filter |
+| `/` | Playful homepage with two visible activity links, six sections, and live local filtering |
 | `/explore/early-learning` | Section preview, links to Letter Match |
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
@@ -19,6 +19,8 @@ WonderNet's early site now has six direct section routes. Navigation is delibera
 The two activities are intentionally tiny prototype exercises, not evidence-based literacy curricula or validated child-ready games. We have not yet validated phonics outcomes, accessibility with assistive technologies, or suitability for independent child use. No new server-side state, accounts, analytics, cookies, uploads, multiplayer or code execution are introduced.
 
 Questions and choices are hard-coded in `frontend/assets/activities.js`. The activities keep state only in browser memory until refresh; they make no fetch requests. All CSS/JS remains local. No remote content or external hyperlinks are embedded in learner pages; GitHub links remain in repository documentation, not in the browser-facing learning experience.
+
+The GitHub Pages export adds an explicit **adult developer-preview banner** with a contributor link to GitHub. That link does not exist in the actual learner-facing homepage served by FastAPI, which displays the repository address as text only. This keeps its clickable navigation local while still letting adult reviewers find the source in the public preview.
 
 All `/explore/{section}` and `/play/{activity}` routes are hard-coded allowlists in `backend/app/main.py`. No arbitrary file paths, route names or dynamic user-provided assets are accepted.
 
