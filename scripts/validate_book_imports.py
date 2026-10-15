@@ -11,6 +11,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_GATES = ("rights_review", "content_review", "accessibility_review", "package_review")
@@ -21,6 +22,16 @@ SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 def normalized(value: str) -> str:
     value = unicodedata.normalize("NFKD", value).casefold()
     return " ".join(re.findall(r"[a-z0-9]+", value))
+
+
+def valid_https(value: str) -> bool:
+    try:
+        url = urlsplit(value)
+        return (url.scheme == "https" and bool(url.hostname) and
+                url.username is None and url.password is None and
+                not any(ch.isspace() for ch in value))
+    except ValueError:
+        return False
 
 
 def validate(manifest: dict, existing: list[dict]) -> list[str]:
@@ -50,7 +61,7 @@ def validate(manifest: dict, existing: list[dict]) -> list[str]:
                 errors.append(f"{tag}: duplicate title/creator already cataloged")
             known.add(key)
         source = item.get("source_url")
-        if not isinstance(source, str) or not source.startswith("https://"):
+        if not isinstance(source, str) or not valid_https(source):
             errors.append(f"{tag}: source_url must be HTTPS")
         rights = item.get("rights")
         if not isinstance(rights, dict) or not all(isinstance(rights.get(k), str) and rights[k].strip()
@@ -72,13 +83,23 @@ def validate(manifest: dict, existing: list[dict]) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("manifest", type=Path, help="Staging JSON file")
-    parser.add_argument("--existing", type=Path, action="append", default=[], help="Existing catalog/edition JSON; repeatable")
+    parser.add_argument("--existing", type=Path, action="append", default=None, help="Existing catalog/edition JSON; repeatable; defaults to all local library inventories")
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     existing = []
-    for path in args.existing:
+    paths = args.existing if args.existing is not None else [
+        ROOT / "library" / name for name in (
+            "catalog.json", "complete-text-editions.json", "illustrated-classics.json",
+            "bookdash-books.json", "picture-books.json", "reader-demos.json"
+        )
+    ]
+    for path in paths:
         data = json.loads(path.read_text(encoding="utf-8"))
-        existing.extend(data.get("items", []))
+        if isinstance(data, dict):
+            for key in ("items", "books", "stories"):
+                entries = data.get(key, [])
+                if isinstance(entries, list):
+                    existing.extend(entries)
     errors = validate(manifest, existing)
     for error in errors:
         print(error)
