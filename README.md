@@ -9,7 +9,7 @@
 [![CI checks](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml/badge.svg)](https://github.com/KadenBar/wondernet/actions/workflows/checks.yml)
 
 > [!IMPORTANT]
-> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, live section filtering and two read-only API endpoints. Full courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
+> **Early development preview — not ready for children or public deployment.** The working app currently shows a prototype homepage, six navigable section pages, two tiny practice activities, a ten-level Circuit Garden puzzle game, a 16-word Word Workshop early spelling game, live section filtering and two read-only API endpoints. Reviewed phonics courses, advanced games, uploads, multiplayer, accounts and the Pi Wi-Fi hotspot are **planned**, not released.
 
 **[Vision](docs/vision.md) · [Roadmap](docs/roadmap.md) · [Run locally](#run-the-prototype) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public launch checklist](docs/public-launch-checklist.md)**
 
@@ -41,7 +41,7 @@ We're deliberately building a **fast, accessible website**, not a virtual town t
 | Ready to explore | Still to be built |
 |:---|:---|
 | Responsive six-section homepage and interior pages | Full curriculum and phonics games |
-| Search/filter for homepage sections | Searchable library and reviewed uploads |\n| Circuit Garden (10 puzzles) and two practice demos | Larger games, adaptive lessons and learner progress |
+| Search/filter for homepage sections | Searchable library and reviewed uploads |\n| Circuit Garden (10 puzzles), Word Workshop (16 words) and two practice demos | Larger games, adaptive lessons and learner progress |
 | Local-only FastAPI prototype | Student profiles and progress |
 | Read-only health/catalog API | Secure multiplayer rooms and game engines |
 | Security/accessibility planning docs | Pi hotspot, local TLS and segmented networking |
@@ -62,7 +62,7 @@ See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe
 
 ## Public website preview
 
-The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
+The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages, two practice activities and the Circuit Garden puzzle game and Word Workshop word builder. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
 
 **Important:** This is a public internet-hosted static UI preview, not an offline Raspberry Pi deployment, a complete curriculum, or a child-safe release. The FastAPI backend is deliberately not published to Pages.
 
@@ -94,7 +94,7 @@ python -m pip install -e '.[dev]'
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-Visit **http://127.0.0.1:8000** to explore. Open any of the six section cards, or try **Letter Match** at **/play/letter-match** and **Pattern Playground** at **/play/patterns**, or **Circuit Garden** at **/play/circuit-garden**. See [web pages and activities](docs/web-pages.md). Stop with `Ctrl+C`. Run tests with:
+Visit **http://127.0.0.1:8000** to explore. Open any of the six section cards, or try **Letter Match** at **/play/letter-match** and **Pattern Playground** at **/play/patterns**, or **Circuit Garden** at **/play/circuit-garden**, or **Word Workshop** at **/play/word-workshop**. See [web pages and activities](docs/web-pages.md). Stop with `Ctrl+C`. Run tests with:
 
 ```bash
 python -m pytest -q

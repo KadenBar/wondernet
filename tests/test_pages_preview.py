@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_ten_live_html_routes(tmp_path):
+def test_export_builds_eleven_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,14 +18,14 @@ def test_export_builds_ten_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 10 public preview pages" in result.stdout
+    assert "Built 11 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
         "explore/arcade/index.html", "explore/library/index.html",
         "explore/wonderparty/index.html",
         "play/letter-match/index.html", "play/patterns/index.html",
-        "play/circuit-garden/index.html",
+        "play/circuit-garden/index.html", "play/word-workshop/index.html",
     ]
     for relative in expected:
         html = (tmp_path / relative).read_text(encoding="utf-8")
@@ -45,6 +45,7 @@ def test_export_builds_ten_live_html_routes(tmp_path):
     assert 'href="/wondernet/play/letter-match/"' in homepage
     assert 'href="/wondernet/play/patterns/"' in homepage
     assert 'href="/wondernet/play/circuit-garden/"' in homepage
+    assert 'href="/wondernet/play/word-workshop/"' in homepage
     assert 'href="/wondernet/assets/home.css"' in homepage
     assert "Pi Wi-Fi network is planned" in homepage
     first_page = (tmp_path / "explore/early-learning/index.html").read_text(encoding="utf-8")
@@ -53,6 +54,13 @@ def test_export_builds_ten_live_html_routes(tmp_path):
     assert (tmp_path / "assets/circuit-engine.js").is_file()
     assert (tmp_path / "assets/circuit-garden.js").is_file()
     assert (tmp_path / "assets/circuit-garden.css").is_file()
+    assert (tmp_path / "assets/word-workshop-engine.js").is_file()
+    assert (tmp_path / "assets/word-workshop.js").is_file()
+    assert (tmp_path / "assets/word-workshop.css").is_file()
+    workshop = (tmp_path / "play/word-workshop/index.html").read_text(encoding="utf-8")
+    assert 'src="/wondernet/assets/word-workshop-engine.js"' in workshop
+    assert 'src="/wondernet/assets/word-workshop.js"' in workshop
+    assert 'href="/wondernet/assets/word-workshop.css"' in workshop
     garden = (tmp_path / "play/circuit-garden/index.html").read_text(encoding="utf-8")
     assert 'src="/wondernet/assets/circuit-engine.js"' in garden
     assert 'src="/wondernet/assets/circuit-garden.js"' in garden
@@ -81,6 +89,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/#explore", "/wondernet") == "/wondernet/#explore"
     assert rewrite_url("/play/patterns", "/wondernet") == "/wondernet/play/patterns/"
     assert rewrite_url("/play/circuit-garden", "/wondernet") == "/wondernet/play/circuit-garden/"
+    assert rewrite_url("/play/word-workshop", "/wondernet") == "/wondernet/play/word-workshop/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")
