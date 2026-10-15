@@ -47,6 +47,16 @@ READERS = {
     "five-children-and-it": "book-five-children-and-it.html",
     "princess-and-the-goblin": "book-princess-and-the-goblin.html",
     "war-of-the-worlds": "book-war-of-the-worlds.html",
+    "yellow-fairy-book": "book-yellow-fairy-book.html",
+    "violet-fairy-book": "book-violet-fairy-book.html",
+    "pink-fairy-book": "book-pink-fairy-book.html",
+    "brown-fairy-book": "book-brown-fairy-book.html",
+    "crimson-fairy-book": "book-crimson-fairy-book.html",
+    "sherlock-adventures": "book-sherlock-adventures.html",
+    "hound-baskervilles": "book-hound-baskervilles.html",
+    "study-in-scarlet": "book-study-in-scarlet.html",
+    "island-doctor-moreau": "book-island-doctor-moreau.html",
+    "lost-world": "book-lost-world.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
