@@ -34,3 +34,5 @@ jobs:
         run: node --test tests/circuit-garden.test.cjs
       - name: Test Word Workshop puzzles
         run: node --test tests/word-workshop.test.cjs
+      - name: Test Word Workshop touch and mouse interactions
+        run: node --test tests/word-workshop-gesture.test.cjs
