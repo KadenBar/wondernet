@@ -18,7 +18,7 @@ SECTIONS = (
     "early-learning", "academy", "special-interests",
     "arcade", "library", "wonderparty",
 )
-ACTIVITIES = ("letter-match", "patterns", "circuit-garden")
+ACTIVITIES = ("letter-match", "patterns", "circuit-garden", "word-workshop")
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
     **{f"/play/{slug}": f"/play/{slug}/" for slug in ACTIVITIES},
