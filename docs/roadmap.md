@@ -26,6 +26,8 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [ ] Offline functional and recovery tests
 
 ## 📚 Alpha 0.4 — Library + first learning activity
+- [x] Rights-scoped eleven-book research catalog with metadata and a local-only filtered preview (no files installed)
+- [ ] Review and approve a small, varied set of exact licensed editions before distributing any media
 - [ ] Secure administrator-only media import with size/type and archive checks
 - [ ] Offline search and an accessible reader/media viewer
 - [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)\n- [ ] One evidence-informed early phonics activity and accessible alternatives\n- [ ] Educator review and manual keyboard/touch/screen-reader tests for Word Workshop
