@@ -132,7 +132,7 @@ def parse_pooh(source: bytes, book: dict) -> tuple[list[dict], set[str]]:
     # and map added to their appropriate opening scenes.
     expected = {m["name"] for m in book["images"]}
     if used != expected - {"cover.jpg"}:
-        raise ValueError(f"Pooh source artwork mismatch: missing={expected-used-{"cover.jpg"}}, extra={used-expected}")
+        raise ValueError(f"Pooh source artwork mismatch: missing={(expected - {'cover.jpg'})-used}, extra={used-expected}")
     return chapters, used
 
 
