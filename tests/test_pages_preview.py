@@ -83,3 +83,12 @@ def test_preview_security_meta_and_no_remote_code():
     assert "connect-src &#39;none&#39;" in html
     assert 'src="/wondernet/assets/main.js"' in html
     assert 'href="/wondernet/"' in html
+
+
+def test_preview_banner_handles_body_classes():
+    html = make_html(
+        '<html><head></head><body class="home-page"><main>Hi</main></body></html>',
+        "/wondernet",
+    )
+    assert '<body class="home-page"><div class="public-preview-notice"' in html
+    assert "Source code and feedback" in html
