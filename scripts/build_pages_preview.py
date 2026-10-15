@@ -30,7 +30,7 @@ ATTRIBUTE = re.compile(
 WARNING = (
     '<div class="public-preview-notice" role="note">'
     '<strong>Developer preview · not a child-ready product.</strong> '
-    'This site demonstrates early webpages, two practice activities and Circuit Garden. '
+    'This site demonstrates early webpages, two practice activities, Circuit Garden and Word Workshop. '
     'Full lessons, safety validation, offline Wi-Fi and multiplayer are not available yet. '
     '<a href="https://github.com/KadenBar/wondernet" rel="noopener noreferrer">Source code and feedback</a>.'
     "</div>"
