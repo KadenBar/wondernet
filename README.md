@@ -2,7 +2,7 @@
 
 ### A little internet. A lot of possibility.
 
-**An offline-first, accessible learning and gaming platform for all ages, designed to run on affordable hardware like the Raspberry Pi 4B.**
+**Building a safer offline internet for kids: educational, free and open source. Designed to run on accessible hardware like the Raspberry Pi 4B.**
 
 [![Status: Alpha 0.1](https://img.shields.io/badge/status-alpha%200.1-52627c)](docs/roadmap.md)
 [![License: AGPLv3](https://img.shields.io/badge/license-AGPLv3-137c72)](LICENSE)
@@ -62,7 +62,7 @@ See the [roadmap](docs/roadmap.md) for phased milestones. We will never describe
 
 ## Public website preview
 
-We are preparing a **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** for adults to explore the homepage, six sections and two local-only mini-activities. The link works only **after a repository owner enables GitHub Pages and the deployment workflow succeeds**. See the [GitHub Pages setup guide](docs/pages-preview.md).
+The **[GitHub Pages developer preview](https://kadenbar.github.io/wondernet/)** lets adults explore our early homepage, six section pages and two tiny browser activities. It is publicly hosted and updates from `main` after a successful Pages deployment. See the [preview guide](docs/pages-preview.md).
 
 **Important:** This is a public internet-hosted static UI preview, not an offline Raspberry Pi deployment, a complete curriculum, or a child-safe release. The FastAPI backend is deliberately not published to Pages.
 
