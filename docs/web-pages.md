@@ -9,12 +9,16 @@ WonderNet's early site has six direct section routes and four playable browser a
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
 | `/explore/arcade` | Links to Circuit Garden plus a small pattern practice activity |
-| `/explore/library` | Planned content library and import review |
+| `/explore/library` | Searchable 11-title research preview, with no downloadable book content |
 | `/explore/wonderparty` | Planned private local party games |
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning practice |
 | `/play/circuit-garden` | Ten-level circuit-rotation puzzle game; mouse, touch and keyboard support |
 | `/play/word-workshop` | Sixteen hands-on spelling/letter-building puzzles across four themed worlds |
+
+## First Library research shelf
+
+The Library section exposes an offline-capable **metadata-only** preview of eleven potential titles, each clearly labeled *under review*. The source-of-truth curation queue is `library/catalog.json`; the local page contains only safe display metadata, not outside provider links or downloadable books. All items have uncompleted rights, content, accessibility and package review gates. They must not be served to learners until each specific edition is approved and separately imported into secure offline storage.
 
 ## Interior design refresh
 
