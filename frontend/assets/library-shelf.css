@@ -102,4 +102,20 @@
 .lb-previous-story p{font-size:.83rem;margin:0}
 .lb-previous-story a{color:#225c50;font-weight:800}
 @media(max-width:900px){.lb-dash-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.lb-dash-grid{grid-template-columns:1fr}.lb-dash-card{display:grid;grid-template-columns:120px minmax(0,1fr)}.lb-dash-cover{height:100%;border-right:2px solid #7da08c;border-bottom:0}.lb-dash-meta{padding:.8rem}.lb-dash-meta h3{font-size:1.06rem}.lb-dash-read{font-size:.75rem}}
+/* Small screens: stack the real cover ABOVE its details. The previous
+   120px two-column grid combined height:100% with a 1:1 aspect-ratio cover,
+   which enlarged the intrinsic grid item and painted the image beneath text. */
+@media(max-width:680px){
+  .lb-dash-section{max-width:100%;min-width:0;padding:1rem;margin:1.5rem 0 2.2rem;box-shadow:4px 5px 0 #29534d}
+  .lb-dash-grid{grid-template-columns:minmax(0,1fr);gap:1rem;min-width:0}
+  .lb-dash-card{display:flex;flex-direction:column;min-width:0;max-width:100%;width:100%}
+  .lb-dash-cover{box-sizing:border-box;display:block;width:100%;min-width:0;min-height:0;height:auto;aspect-ratio:4/3;border-right:0;border-bottom:2px solid #7da08c}
+  .lb-dash-cover img{display:block;width:100%;max-width:100%;height:100%;object-fit:contain;object-position:center}
+  .lb-dash-meta{box-sizing:border-box;width:100%;min-width:0;flex:1 1 auto;padding:1rem}
+  .lb-dash-meta h3{font-size:clamp(1.12rem,5vw,1.4rem);overflow-wrap:anywhere}
+  .lb-dash-desc{font-size:.92rem;line-height:1.5}
+  .lb-dash-credit{font-size:.78rem;overflow-wrap:anywhere}
+  .lb-dash-read{min-height:44px;font-size:.9rem;max-width:100%}
+  .lb-dash-head>p:not(.eyebrow){font-size:.94rem;line-height:1.55}
+}
+
