@@ -1,6 +1,16 @@
 # WonderNet Library: First Curation Queue
 
-**Status: seven locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five complete US-public-domain narrative texts are packaged from specific historical editions, alongside two original WonderNet stories, one of which is an illustrated bilingual English/Spanish picture book. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+**Status: twelve locally readable stories in an adult developer preview, plus eleven separate research candidates.** Five professionally illustrated CC BY 4.0 Book Dash books now have all original covers, full story text and twelve original illustration spreads bundled locally, joining five complete US-public-domain narrative texts and two WonderNet story experiments. This is not an approved children's shelf: human editorial and accessibility reviews, image attribution, and international copyright checks remain open. No arbitrary EPUB/PDF importer, upload endpoint, or Pi-hosted child-facing service exists.
+
+## Five complete real Book Dash picture books
+
+We've locally imported the original illustrated English editions of *A Beautiful Day*, *A Tiny Seed*, *A House for Mouse*, *Come Back, Cat!* and *Walking Together*. Each contains twelve complete source story-image spreads and its original cover, with page text faithfully rendered from Book Dash's original markdown. Unlike our previous original SVG experiment, these are **professionally illustrated, published books**.
+
+The [Book Dash publisher](https://bookdash.org/) licenses them under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The original authors, illustrators, designers, and named editors appear on each local reader page, with detailed clickable source/attribution details in [`BOOKDASH-CREDITS.md`](BOOKDASH-CREDITS.md).
+
+The exact source commit and 65 image blob hashes/expected sizes are in `bookdash-books.json`. Downloaded media SHA-256 digests live in `bookdash-assets.sha256.json`. `scripts/import_bookdash.py` is a developer-only fixed allowlist importer; `--verify-only` checks all assets without internet. No arbitrary student downloads or general book import endpoints were introduced. The temporary privileged GitHub import action was removed after import.
+
+**Still pending:** educator/content, age appropriateness, reading-level and manual accessibility review. These are adult developer previews, **not approved for unsupervised child use**. GitHub Pages is publicly internet-hosted; the actual static pages can be served on a local offline device, but browser service-worker caching and the Pi hotspot are not yet built.
 
 ## Five complete classic story texts in the reader
 
@@ -135,7 +145,7 @@ need contextual and age-appropriate editorial screening.
    checksum before display as readable.
 
 No background downloader, arbitrary URL fetcher, third-party ebook renderer
-or unreviewed upload endpoint is included in this phase. The two original samples and five US-public-domain full-text demonstrations have not changed the status of any of the eleven other unreviewed candidates.
+or unreviewed upload endpoint is included in this phase. The two original samples, five US-public-domain full-text demonstrations and five separate Book Dash source editions have not changed the status of any of the eleven other research candidates.
 
 ## Code vs. book rights
 
@@ -146,4 +156,4 @@ in this repository.
 
 ## Next implementation milestone
 
-Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The two original stories and five static public-domain narrative editions prove the reading experience, not a secure general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.
+Build a **secure general-purpose reader and importer for individually reviewed third-party content**, with attribution and a restricted rendering pipeline. The two original stories, five static public-domain text editions and five Book Dash illustrated source editions demonstrate a local reading experience, not a secure general ebook importer. The Raspberry Pi private Wi-Fi service remains unimplemented.

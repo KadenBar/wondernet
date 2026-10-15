@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "source": "Book Dash HTML/ebook source mirror",
+  "source_repo": "bookdash/bookdash-books",
+  "source_ref": "54916310c5c06a5282e2d5d4add18d64f90e5fde",
+  "source_ref_date": "2019-11-04",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "status": "bundled-original-images-verified",
+  "import_notice": "Original English Book Dash image covers and all 12 story illustrations for each title are bundled locally and pinned by Git blob SHA and separate SHA-256 manifest. No runtime external requests. Editorial and manual accessibility reviews remain pending.",
+  "books": [
+    {
+      "id": "a-beautiful-day",
+      "title": "A Beautiful Day",
+      "author": "Elana Bregin",
+      "illustrator": "Lindy Pelzl",
+      "designer": "Raeesah Vawda",
+      "editor": null,
+      "year": 2015,
+      "isbn": "978-1-928318-15-6",
+      "blurb": "A family picnic brings friends and animals together.",
+      "subject": "Family and friendship",
+      "language": "en",
+      "local_route": "/read/a-beautiful-day",
+      "official_url": "https://bookdash.org/books/a-beautiful-day/",
+      "source_markdown": "a-beautiful-day/en/index.md",
+      "source_md_sha": "00f1c85dae50c8366c90e8c93827f0adb161a54e",
+      "media": [
+        {
+          "name": "cover.jpg",
+          "source_path": "a-beautiful-day/en/images/cover.jpg",
+          "git_blob_sha": "591fc7815de9820d3bd64e9d8ac3955066accff8",
+          "bytes": 150856,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/cover.jpg"
+        },
+        {
+          "name": "01.jpg",
+          "source_path": "a-beautiful-day/en/images/01.jpg",
+          "git_blob_sha": "687cfa4563918bfb639abeef5576c65e1cf19d26",
+          "bytes": 119175,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/01.jpg"
+        },
+        {
+          "name": "02.jpg",
+          "source_path": "a-beautiful-day/en/images/02.jpg",
+          "git_blob_sha": "87d7f2bc496439afcd141fd9f2e26848a395f984",
+          "bytes": 139079,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/02.jpg"
+        },
+        {
+          "name": "03.jpg",
+          "source_path": "a-beautiful-day/en/images/03.jpg",
+          "git_blob_sha": "47fde4b9b1fba2ca16bda319d10880cf7d491208",
+          "bytes": 141548,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/03.jpg"
+        },
+        {
+          "name": "04.jpg",
+          "source_path": "a-beautiful-day/en/images/04.jpg",
+          "git_blob_sha": "94d9fb5ae40d359ae27b159b306284f558892938",
+          "bytes": 141732,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/04.jpg"
+        },
+        {
+          "name": "05.jpg",
+          "source_path": "a-beautiful-day/en/images/05.jpg",
+          "git_blob_sha": "164b105f3162bc25b449c15e2c321a8a26fbd900",
+          "bytes": 144507,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/05.jpg"
+        },
+        {
+          "name": "06.jpg",
+          "source_path": "a-beautiful-day/en/images/06.jpg",
+          "git_blob_sha": "f2e0f8b6efcb204563b65a628e720704ce5daece",
+          "bytes": 103790,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/06.jpg"
+        },
+        {
+          "name": "07.jpg",
+          "source_path": "a-beautiful-day/en/images/07.jpg",
+          "git_blob_sha": "d32b301532c9cebdcc8706548dbbf935c9b92192",
+          "bytes": 124477,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/07.jpg"
+        },
+        {
+          "name": "08.jpg",
+          "source_path": "a-beautiful-day/en/images/08.jpg",
+          "git_blob_sha": "740eec0535f139e598020ab879403c68d02e3317",
+          "bytes": 147813,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/08.jpg"
+        },
+        {
+          "name": "09.jpg",
+          "source_path": "a-beautiful-day/en/images/09.jpg",
+          "git_blob_sha": "3a2b1599fa3408e5a0d1b9d11adff6a4c8ffb72a",
+          "bytes": 145898,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/09.jpg"
+        },
+        {
+          "name": "10.jpg",
+          "source_path": "a-beautiful-day/en/images/10.jpg",
+          "git_blob_sha": "176c5bf8d2de25e4e1381b8a6934cddbbfb20ad8",
+          "bytes": 155246,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/10.jpg"
+        },
+        {
+          "name": "11.jpg",
+          "source_path": "a-beautiful-day/en/images/11.jpg",
+          "git_blob_sha": "652b1203c7de3458084abd1e0e62b9f5c5f1e854",
+          "bytes": 141428,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/11.jpg"
+        },
+        {
+          "name": "12.jpg",
+          "source_path": "a-beautiful-day/en/images/12.jpg",
+          "git_blob_sha": "0726573e28f66017de431bc0e98b13c0021f94c2",
+          "bytes": 161986,
+          "local_path": "frontend/assets/books/bookdash/a-beautiful-day/12.jpg"
+        }
+      ],
+      "spread_count": 12,
+      "media_status": "locally-imported-verified",
+      "text_status": "full-source-text",
+      "review": {
+        "source_license": "CC BY 4.0 from Book Dash",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      }
+    },
+    {
+      "id": "a-tiny-seed",
+      "title": "A Tiny Seed: The Story of Wangari Maathai",
+      "author": "Nicola Rijsdijk",
+      "illustrator": "Maya Marshak",
+      "designer": "Tarryn-Anne Anderson",
+      "editor": null,
+      "year": 2014,
+      "isbn": "978-0-9946519-2-1",
+      "blurb": "The true story of Wangari Maathai and the power of planting trees.",
+      "subject": "Nature and history",
+      "language": "en",
+      "local_route": "/read/a-tiny-seed",
+      "official_url": "https://bookdash.org/books/a-tiny-seed/",
+      "source_markdown": "a-tiny-seed/en/index.md",
+      "source_md_sha": "0165547ce0984a18d36aebfc4e26cd60798c5c00",
+      "media": [
+        {
+          "name": "cover.jpg",
+          "source_path": "a-tiny-seed/en/images/cover.jpg",
+          "git_blob_sha": "0002544444ca1a6f676fa2799de20eba4988d8d4",
+          "bytes": 104641,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/cover.jpg"
+        },
+        {
+          "name": "01.jpg",
+          "source_path": "a-tiny-seed/en/images/01.jpg",
+          "git_blob_sha": "5d536f668130855da9e2422daf3c2cc69f4646e4",
+          "bytes": 49183,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/01.jpg"
+        },
+        {
+          "name": "02.jpg",
+          "source_path": "a-tiny-seed/en/images/02.jpg",
+          "git_blob_sha": "82080fcd6c56c3e4eee51a1b909b24806e8e2a90",
+          "bytes": 36330,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/02.jpg"
+        },
+        {
+          "name": "03.jpg",
+          "source_path": "a-tiny-seed/en/images/03.jpg",
+          "git_blob_sha": "5787f5cb2b2581dd061f94fb77644eeaa342b2f0",
+          "bytes": 34581,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/03.jpg"
+        },
+        {
+          "name": "04.jpg",
+          "source_path": "a-tiny-seed/en/images/04.jpg",
+          "git_blob_sha": "9e1835cba54d5903c03ea79d83e2a5debd0ff531",
+          "bytes": 38149,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/04.jpg"
+        },
+        {
+          "name": "05.jpg",
+          "source_path": "a-tiny-seed/en/images/05.jpg",
+          "git_blob_sha": "81c486b9c34dcab6038916b029b6402903241497",
+          "bytes": 36062,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/05.jpg"
+        },
+        {
+          "name": "06.jpg",
+          "source_path": "a-tiny-seed/en/images/06.jpg",
+          "git_blob_sha": "83d8047caf2445404d9bc673a039304c533092d6",
+          "bytes": 31614,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/06.jpg"
+        },
+        {
+          "name": "07.jpg",
+          "source_path": "a-tiny-seed/en/images/07.jpg",
+          "git_blob_sha": "698e7cd4e8c1dceb38b5d3471d8191991b2a11af",
+          "bytes": 35150,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/07.jpg"
+        },
+        {
+          "name": "08.jpg",
+          "source_path": "a-tiny-seed/en/images/08.jpg",
+          "git_blob_sha": "8496c43f95a2c5c029b44123f00b295083901e96",
+          "bytes": 36416,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/08.jpg"
+        },
+        {
+          "name": "09.jpg",
+          "source_path": "a-tiny-seed/en/images/09.jpg",
+          "git_blob_sha": "304fdba6aa0b44a0fc183d28fb6e137a84df6e08",
+          "bytes": 35442,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/09.jpg"
+        },
+        {
+          "name": "10.jpg",
+          "source_path": "a-tiny-seed/en/images/10.jpg",
+          "git_blob_sha": "86ba54de2e522605304cc98605d90f9ff68b7db5",
+          "bytes": 42416,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/10.jpg"
+        },
+        {
+          "name": "11.jpg",
+          "source_path": "a-tiny-seed/en/images/11.jpg",
+          "git_blob_sha": "8a7bf195bd20b0dea7fe6b2e2e9c6a8cdb18d863",
+          "bytes": 43693,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/11.jpg"
+        },
+        {
+          "name": "12.jpg",
+          "source_path": "a-tiny-seed/en/images/12.jpg",
+          "git_blob_sha": "a7409b44caaadf04ceccc61bcdd0c6dd0fe1ec1b",
+          "bytes": 58419,
+          "local_path": "frontend/assets/books/bookdash/a-tiny-seed/12.jpg"
+        }
+      ],
+      "spread_count": 12,
+      "media_status": "locally-imported-verified",
+      "text_status": "full-source-text",
+      "review": {
+        "source_license": "CC BY 4.0 from Book Dash",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      }
+    },
+    {
+      "id": "a-house-for-mouse",
+      "title": "A House for Mouse",
+      "author": "Michele Fry",
+      "illustrator": "Amy Uzzell",
+      "designer": "Jennifer Jacobs",
+      "editor": null,
+      "year": 2014,
+      "isbn": "978-0-9922357-5-8",
+      "blurb": "A mouse searches for the perfect cozy home.",
+      "subject": "Animals and friendship",
+      "language": "en",
+      "local_route": "/read/a-house-for-mouse",
+      "official_url": "https://bookdash.org/books/a-house-for-mouse/",
+      "source_markdown": "a-house-for-mouse/en/index.md",
+      "source_md_sha": "19b7084a2bc36dd17138a1d40335bf2b7de093a7",
+      "media": [
+        {
+          "name": "cover.jpg",
+          "source_path": "a-house-for-mouse/en/images/cover.jpg",
+          "git_blob_sha": "09872a165db32ea1fcc7c2acb04a6129f3bc48b7",
+          "bytes": 119137,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/cover.jpg"
+        },
+        {
+          "name": "01.jpg",
+          "source_path": "a-house-for-mouse/en/images/01.jpg",
+          "git_blob_sha": "df09c020dbfcfe7a638c6c4e94019633d470dd88",
+          "bytes": 33650,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/01.jpg"
+        },
+        {
+          "name": "02.jpg",
+          "source_path": "a-house-for-mouse/en/images/02.jpg",
+          "git_blob_sha": "9177be6cab390f44fc90033d6aff392064e6edfd",
+          "bytes": 52363,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/02.jpg"
+        },
+        {
+          "name": "03.jpg",
+          "source_path": "a-house-for-mouse/en/images/03.jpg",
+          "git_blob_sha": "f1422c6011b4c8c3609f0b7f8d120e7d2488bfff",
+          "bytes": 44013,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/03.jpg"
+        },
+        {
+          "name": "04.jpg",
+          "source_path": "a-house-for-mouse/en/images/04.jpg",
+          "git_blob_sha": "0b9127995d39b80a8d98d99e38e58c0ad69dced0",
+          "bytes": 80960,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/04.jpg"
+        },
+        {
+          "name": "05.jpg",
+          "source_path": "a-house-for-mouse/en/images/05.jpg",
+          "git_blob_sha": "c98659fb8649258f00fabe15db380751c0221732",
+          "bytes": 38815,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/05.jpg"
+        },
+        {
+          "name": "06.jpg",
+          "source_path": "a-house-for-mouse/en/images/06.jpg",
+          "git_blob_sha": "97b72beacf8bb8e030ec9ebfa3f12f2b168e48f7",
+          "bytes": 78182,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/06.jpg"
+        },
+        {
+          "name": "07.jpg",
+          "source_path": "a-house-for-mouse/en/images/07.jpg",
+          "git_blob_sha": "de3ca3a6ebd71142ae2e79cd7021d8d8b48b009d",
+          "bytes": 34681,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/07.jpg"
+        },
+        {
+          "name": "08.jpg",
+          "source_path": "a-house-for-mouse/en/images/08.jpg",
+          "git_blob_sha": "929f539322e5f5c034e1d751aad4f3551d9475a4",
+          "bytes": 41087,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/08.jpg"
+        },
+        {
+          "name": "09.jpg",
+          "source_path": "a-house-for-mouse/en/images/09.jpg",
+          "git_blob_sha": "3dbc69f9865bb2b41a9e7e344659f73887dbf730",
+          "bytes": 51711,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/09.jpg"
+        },
+        {
+          "name": "10.jpg",
+          "source_path": "a-house-for-mouse/en/images/10.jpg",
+          "git_blob_sha": "7f0a59976971606165abf1b0e8a986bc1483623b",
+          "bytes": 73262,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/10.jpg"
+        },
+        {
+          "name": "11.jpg",
+          "source_path": "a-house-for-mouse/en/images/11.jpg",
+          "git_blob_sha": "3585dc13d7ba42d7d0361bee9a58a537b344cdea",
+          "bytes": 75511,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/11.jpg"
+        },
+        {
+          "name": "12.jpg",
+          "source_path": "a-house-for-mouse/en/images/12.jpg",
+          "git_blob_sha": "4dcf9443863fc6af4ff6ecf245b45b31b405fe10",
+          "bytes": 58247,
+          "local_path": "frontend/assets/books/bookdash/a-house-for-mouse/12.jpg"
+        }
+      ],
+      "spread_count": 12,
+      "media_status": "locally-imported-verified",
+      "text_status": "full-source-text",
+      "review": {
+        "source_license": "CC BY 4.0 from Book Dash",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      }
+    },
+    {
+      "id": "come-back-cat",
+      "title": "Come Back, Cat!",
+      "author": "Nicola Rijsdijk",
+      "illustrator": "Karen Lilje",
+      "designer": "Sam Scarborough",
+      "editor": null,
+      "year": 2014,
+      "isbn": "978-0-9922358-2-6",
+      "blurb": "A mischievous cat has adventures all around the house.",
+      "subject": "Animals and play",
+      "language": "en",
+      "local_route": "/read/come-back-cat",
+      "official_url": "https://bookdash.org/books/come-back-cat/",
+      "source_markdown": "come-back-cat/en/index.md",
+      "source_md_sha": "868ecd40e5208f8b46d4b1e94b02dcfa8bf4a770",
+      "media": [
+        {
+          "name": "cover.jpg",
+          "source_path": "come-back-cat/en/images/cover.jpg",
+          "git_blob_sha": "c053a01a2f714b1c920acb9f5e9c3b1b55b92e2c",
+          "bytes": 114432,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/cover.jpg"
+        },
+        {
+          "name": "01.jpg",
+          "source_path": "come-back-cat/en/images/01.jpg",
+          "git_blob_sha": "b82dc083b203b630b4ab08890bfb9ff8efe823e4",
+          "bytes": 67592,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/01.jpg"
+        },
+        {
+          "name": "02.jpg",
+          "source_path": "come-back-cat/en/images/02.jpg",
+          "git_blob_sha": "b8ba857fcc9301f257cb4bfa2c4a873ac9e5665d",
+          "bytes": 45845,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/02.jpg"
+        },
+        {
+          "name": "03.jpg",
+          "source_path": "come-back-cat/en/images/03.jpg",
+          "git_blob_sha": "f6cb8402d68bca9f2ea44a19656520d9cda5acc6",
+          "bytes": 59070,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/03.jpg"
+        },
+        {
+          "name": "04.jpg",
+          "source_path": "come-back-cat/en/images/04.jpg",
+          "git_blob_sha": "000ea5f88ffb44657169cd97c40f414f8e6b7068",
+          "bytes": 54996,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/04.jpg"
+        },
+        {
+          "name": "05.jpg",
+          "source_path": "come-back-cat/en/images/05.jpg",
+          "git_blob_sha": "f9d306723d364b66d358dccbea12090d913c6f85",
+          "bytes": 59057,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/05.jpg"
+        },
+        {
+          "name": "06.jpg",
+          "source_path": "come-back-cat/en/images/06.jpg",
+          "git_blob_sha": "fd7bdb52d191d4af5a9aa9fb4db07efa86aed75e",
+          "bytes": 55192,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/06.jpg"
+        },
+        {
+          "name": "07.jpg",
+          "source_path": "come-back-cat/en/images/07.jpg",
+          "git_blob_sha": "b235a53c6563f712fa7582dad54d931e5fa73602",
+          "bytes": 71121,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/07.jpg"
+        },
+        {
+          "name": "08.jpg",
+          "source_path": "come-back-cat/en/images/08.jpg",
+          "git_blob_sha": "c79fb4e46d976e5818b9199b1fc22eff091ceb3a",
+          "bytes": 64354,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/08.jpg"
+        },
+        {
+          "name": "09.jpg",
+          "source_path": "come-back-cat/en/images/09.jpg",
+          "git_blob_sha": "44c97959f17e982ab1f9ca07b690cf2581c0d909",
+          "bytes": 53897,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/09.jpg"
+        },
+        {
+          "name": "10.jpg",
+          "source_path": "come-back-cat/en/images/10.jpg",
+          "git_blob_sha": "89eeddc51563ef1debf0579c2bf7b88399d2ab67",
+          "bytes": 51227,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/10.jpg"
+        },
+        {
+          "name": "11.jpg",
+          "source_path": "come-back-cat/en/images/11.jpg",
+          "git_blob_sha": "3dca36cd9d0c86b1e49cd3a61467ebfcbe1070f9",
+          "bytes": 55013,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/11.jpg"
+        },
+        {
+          "name": "12.jpg",
+          "source_path": "come-back-cat/en/images/12.jpg",
+          "git_blob_sha": "09cdb2b4becca2a09f1b93b84909b817fe75fd24",
+          "bytes": 73333,
+          "local_path": "frontend/assets/books/bookdash/come-back-cat/12.jpg"
+        }
+      ],
+      "spread_count": 12,
+      "media_status": "locally-imported-verified",
+      "text_status": "full-source-text",
+      "review": {
+        "source_license": "CC BY 4.0 from Book Dash",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      }
+    },
+    {
+      "id": "walking-together",
+      "title": "Walking Together",
+      "author": "Jade Mathieson",
+      "illustrator": "Louwrisa Blaauw",
+      "designer": "Bianca de Jong",
+      "editor": "Elise Varga",
+      "year": 2015,
+      "isbn": "978-1-928318-28-6",
+      "blurb": "A mother and child discover wonders on a walk to the clinic.",
+      "subject": "Family and health",
+      "language": "en",
+      "local_route": "/read/walking-together",
+      "official_url": "https://bookdash.org/books/walking-together/",
+      "source_markdown": "walking-together/en/index.md",
+      "source_md_sha": "18c802bcb8f1b221aa5de9f95e435dd044eea8f8",
+      "media": [
+        {
+          "name": "cover.jpg",
+          "source_path": "walking-together/en/images/cover.jpg",
+          "git_blob_sha": "7f2c076c501a861c415115461e2baf272264f299",
+          "bytes": 51129,
+          "local_path": "frontend/assets/books/bookdash/walking-together/cover.jpg"
+        },
+        {
+          "name": "01.jpg",
+          "source_path": "walking-together/en/images/01.jpg",
+          "git_blob_sha": "a0290dd74fa11f54e00547d275d75c7896b0b774",
+          "bytes": 66128,
+          "local_path": "frontend/assets/books/bookdash/walking-together/01.jpg"
+        },
+        {
+          "name": "02.jpg",
+          "source_path": "walking-together/en/images/02.jpg",
+          "git_blob_sha": "73b492cb593341c001880a91fc9d4ef8c4b85814",
+          "bytes": 48984,
+          "local_path": "frontend/assets/books/bookdash/walking-together/02.jpg"
+        },
+        {
+          "name": "03.jpg",
+          "source_path": "walking-together/en/images/03.jpg",
+          "git_blob_sha": "df8bdc673d92ad82d055af03a27d81b64b16ad14",
+          "bytes": 53344,
+          "local_path": "frontend/assets/books/bookdash/walking-together/03.jpg"
+        },
+        {
+          "name": "04.jpg",
+          "source_path": "walking-together/en/images/04.jpg",
+          "git_blob_sha": "2c109563fd79e927f17c8d75a1543fb45908d30c",
+          "bytes": 54543,
+          "local_path": "frontend/assets/books/bookdash/walking-together/04.jpg"
+        },
+        {
+          "name": "05.jpg",
+          "source_path": "walking-together/en/images/05.jpg",
+          "git_blob_sha": "6587e7f96ae904e64a21909858501f494cc2fb1a",
+          "bytes": 45515,
+          "local_path": "frontend/assets/books/bookdash/walking-together/05.jpg"
+        },
+        {
+          "name": "06.jpg",
+          "source_path": "walking-together/en/images/06.jpg",
+          "git_blob_sha": "96590bb31aa5c04ba3e7f1e8041f6f363a97d8a1",
+          "bytes": 41353,
+          "local_path": "frontend/assets/books/bookdash/walking-together/06.jpg"
+        },
+        {
+          "name": "07.jpg",
+          "source_path": "walking-together/en/images/07.jpg",
+          "git_blob_sha": "068a0eae8b736a249a5ab763b833adb213394aaf",
+          "bytes": 72486,
+          "local_path": "frontend/assets/books/bookdash/walking-together/07.jpg"
+        },
+        {
+          "name": "08.jpg",
+          "source_path": "walking-together/en/images/08.jpg",
+          "git_blob_sha": "efe2fc4d90759d6c04c2611d8c16c2c66d682687",
+          "bytes": 49590,
+          "local_path": "frontend/assets/books/bookdash/walking-together/08.jpg"
+        },
+        {
+          "name": "09.jpg",
+          "source_path": "walking-together/en/images/09.jpg",
+          "git_blob_sha": "29d62428f782242c1703c95540fb8ea63fce2e2d",
+          "bytes": 105063,
+          "local_path": "frontend/assets/books/bookdash/walking-together/09.jpg"
+        },
+        {
+          "name": "10.jpg",
+          "source_path": "walking-together/en/images/10.jpg",
+          "git_blob_sha": "5f0007ca1797b917bb1b397c5cf2fd7a1a208794",
+          "bytes": 92814,
+          "local_path": "frontend/assets/books/bookdash/walking-together/10.jpg"
+        },
+        {
+          "name": "11.jpg",
+          "source_path": "walking-together/en/images/11.jpg",
+          "git_blob_sha": "dfee9d84e2c495e3b8c0f7cf126356a7a11170dd",
+          "bytes": 51706,
+          "local_path": "frontend/assets/books/bookdash/walking-together/11.jpg"
+        },
+        {
+          "name": "12.jpg",
+          "source_path": "walking-together/en/images/12.jpg",
+          "git_blob_sha": "b8afb4d0f32d982b7db3a05b4efecab1819e0eb7",
+          "bytes": 71246,
+          "local_path": "frontend/assets/books/bookdash/walking-together/12.jpg"
+        }
+      ],
+      "spread_count": 12,
+      "media_status": "locally-imported-verified",
+      "text_status": "full-source-text",
+      "review": {
+        "source_license": "CC BY 4.0 from Book Dash",
+        "editorial": "pending",
+        "accessibility": "pending",
+        "child_use": "not-approved"
+      }
+    }
+  ]
+}

@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_pages_preview import make_html, normalize_base_path, rewrite_url
 
 
-def test_export_builds_eighteen_live_html_routes(tmp_path):
+def test_export_builds_twenty_three_live_html_routes(tmp_path):
     result = subprocess.run(
         [
             sys.executable, str(ROOT / "scripts" / "build_pages_preview.py"),
@@ -18,7 +18,7 @@ def test_export_builds_eighteen_live_html_routes(tmp_path):
         ],
         check=True, capture_output=True, text=True, cwd=ROOT,
     )
-    assert "Built 18 public preview pages" in result.stdout
+    assert "Built 23 public preview pages" in result.stdout
     expected = [
         "index.html", "explore/early-learning/index.html",
         "explore/academy/index.html", "explore/special-interests/index.html",
@@ -27,6 +27,9 @@ def test_export_builds_eighteen_live_html_routes(tmp_path):
         "play/letter-match/index.html", "play/patterns/index.html",
         "play/circuit-garden/index.html", "play/word-workshop/index.html",
         "read/lantern/index.html", "read/mara-garden/index.html",
+        "read/a-beautiful-day/index.html", "read/a-tiny-seed/index.html",
+        "read/a-house-for-mouse/index.html", "read/come-back-cat/index.html",
+        "read/walking-together/index.html",
         "read/peter-rabbit/index.html", "read/benjamin-bunny/index.html",
         "read/tom-kitten/index.html", "read/jemima-puddle-duck/index.html",
         "read/jeremy-fisher/index.html",
@@ -85,12 +88,29 @@ def test_export_builds_eighteen_live_html_routes(tmp_path):
     assert 'id="reader-language"' in picture
     assert 'lang="es"' in picture
     assert picture.count('class="story-illustration"') == 8
+    bookdash = ("a-beautiful-day", "a-tiny-seed", "a-house-for-mouse",
+                "come-back-cat", "walking-together")
+    for slug in bookdash:
+        edition = (tmp_path / "read" / slug / "index.html").read_text(encoding="utf-8")
+        assert 'href="/wondernet/assets/bookdash-books.css"' in edition
+        assert 'src="/wondernet/assets/book-reader.js?v=bookdash1"' in edition
+        assert 'src="/wondernet/assets/books/bookdash/' + slug + '/cover.jpg"' in edition
+        assert edition.count('class="dash-spread"') == 12
+        assert 'src="/wondernet/assets/books/bookdash/' + slug + '/12.jpg"' in edition
+        assert 'href="https://' not in edition.replace('href="https://github.com/KadenBar/wondernet"', '')
+        for name in ["cover.jpg"] + [f"{n:02}.jpg" for n in range(1, 13)]:
+            assert (tmp_path / "assets" / "books" / "bookdash" / slug / name).is_file()
+    bookshelf = (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
+    assert bookshelf.count('data-bookdash="') == 5
+    for slug in bookdash:
+        assert 'href="/wondernet/read/' + slug + '/"' in bookshelf
+    assert (tmp_path / "assets/bookdash-books.css").is_file()
     assert (tmp_path / "assets/picture-books.css").is_file()
     for i in range(1, 9):
         assert (tmp_path / "assets/books/mara-garden" / f"page-{i}.svg").is_file()
     library = (tmp_path / "explore/library/index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/read/mara-garden/"' in library
-    assert 'src="/wondernet/assets/books/mara-garden/page-7.svg"' in library
+    assert 'href="/wondernet/read/mara-garden/"' in library  # Still accessible, no longer prominently featured.
     for name in ("peter-rabbit", "benjamin-bunny", "tom-kitten",
                  "jemima-puddle-duck", "jeremy-fisher"):
         book = (tmp_path / "read" / name / "index.html").read_text(encoding="utf-8")
@@ -129,6 +149,7 @@ def test_rewrites_only_allowlisted_local_paths():
     assert rewrite_url("/read/lantern", "/wondernet") == "/wondernet/read/lantern/"
     assert rewrite_url("/read/peter-rabbit", "/wondernet") == "/wondernet/read/peter-rabbit/"
     assert rewrite_url("/read/mara-garden", "/wondernet") == "/wondernet/read/mara-garden/"
+    assert rewrite_url("/read/a-beautiful-day", "/wondernet") == "/wondernet/read/a-beautiful-day/"
     assert rewrite_url("/assets/main.js", "/wondernet") == "/wondernet/assets/main.js"
     with pytest.raises(ValueError):
         rewrite_url("/play/../../admin", "/wondernet")

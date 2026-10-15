@@ -120,9 +120,9 @@ def test_eight_complete_bilingual_spreads_with_local_images_and_accessible_title
 def test_library_has_new_feature_but_keeps_unapproved_research_queue_separate():
     html = client.get("/explore/library").text
     assert 'href="/read/mara-garden"' in html
-    assert 'src="/assets/books/mara-garden/page-7.svg"' in html
+    assert 'href="/read/mara-garden"' in html  # Original experimental story remains accessible.
     assert "Mara's Moving Garden" in html
-    assert "El jardín viajero de Mara" in html
+    assert "Mara's Moving Garden" in html  # Prototype link retained, no longer featured.
     assert 'href="/read/lantern"' in html
     assert html.count('data-readable="') == 5
     assert html.count('data-book-id="') == 11

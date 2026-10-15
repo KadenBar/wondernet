@@ -21,6 +21,11 @@ SECTIONS = (
 ACTIVITIES = ("letter-match", "patterns", "circuit-garden", "word-workshop")
 READERS = {
     "lantern": "book-lantern.html",
+    "a-beautiful-day": "book-a-beautiful-day.html",
+    "a-tiny-seed": "book-a-tiny-seed.html",
+    "a-house-for-mouse": "book-a-house-for-mouse.html",
+    "come-back-cat": "book-come-back-cat.html",
+    "walking-together": "book-walking-together.html",
     "mara-garden": "book-mara-garden.html",
     "peter-rabbit": "book-peter-rabbit.html",
     "benjamin-bunny": "book-benjamin-bunny.html",

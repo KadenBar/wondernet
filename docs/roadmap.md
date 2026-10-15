@@ -32,7 +32,8 @@ This is a **living plan**, not a release promise. Each milestone has explicit ac
 - [x] First original five-chapter static reader demo with adjustable type, colors and chapters (manual a11y review pending)
 - [x] Five complete US public-domain story texts packaged as read-only developer previews, with simple new decoration (period illustrations omitted, content/a11y review pending)
 - [x] First original eight-spread illustrated English/Spanish picture book with local SVGs and language switch (Spanish and accessibility review pending)
-- [ ] Manually review Spanish text and illustrations; expand to modern third-party CC BY books with attribution preserved
+- [x] Locally bundle five original-artwork Book Dash CC BY 4.0 picture books with complete text, licensing credits and checksum verification (developer preview, content/a11y review pending)
+- [ ] Complete human age/content/accessibility review of Book Dash titles; manually review our original Spanish prototype
 - [ ] Generalized approved-content reader and offline indexed search
 - [x] First informal spelling/word-building game: Word Workshop (16 puzzles, not a phonics curriculum)
 - [ ] One evidence-informed early phonics activity and accessible alternatives
