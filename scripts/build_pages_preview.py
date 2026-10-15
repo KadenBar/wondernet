@@ -38,6 +38,7 @@ READERS = {
     "secret-garden": "book-secret-garden.html",
     "anne-green-gables": "book-anne-green-gables.html",
     "peter-and-wendy": "book-peter-and-wendy.html",
+    "wind-in-the-willows": "book-wind-in-the-willows.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
