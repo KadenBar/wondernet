@@ -14,6 +14,14 @@ WonderNet's early site now has six direct section routes. Navigation is delibera
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning activity |
 
+## Interior design refresh
+
+All six section pages now share a lightweight, locally hosted style sheet (`frontend/assets/interiors.css`) while giving each section its own colors and illustrative concept artwork. The two mini activities use the same visual language and show a semantic five-round progress indicator. That progress is maintained only in the current browser page's memory, never written to accounts, local storage or the server.
+
+The individual section illustrations depict **concepts**, not live applications. Features marked `PLANNED` remain unimplemented. Learner pages still link only to allowed local WonderNet routes; the public developer-preview banner is the exception for adult contributors.
+
+Mobile/keyboard/assistive-tech manual review remains necessary. A passing build does not establish child-ready safety or curriculum validity.
+
 ## Important limits
 
 The two activities are intentionally tiny prototype exercises, not evidence-based literacy curricula or validated child-ready games. We have not yet validated phonics outcomes, accessibility with assistive technologies, or suitability for independent child use. No new server-side state, accounts, analytics, cookies, uploads, multiplayer or code execution are introduced.
