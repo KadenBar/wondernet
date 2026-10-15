@@ -164,6 +164,10 @@ def parse_velveteen(source: bytes, book: dict) -> tuple[list[dict], set[str]]:
             break
         images = original_images(item)
         plain = as_text(item)
+        # The original opening has a pictorial drop cap T as a separate image:
+        # the HTML prose starts with HERE. Restore the initial for text readers.
+        if not chunks and not current and "detail.jpg" in images and plain.startswith("HERE "):
+            plain = "T" + plain
         words = len(plain.split())
         if count > 180 and (count + words > 250 or images):
             flush()
