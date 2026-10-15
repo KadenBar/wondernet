@@ -1,6 +1,6 @@
 # Website pages and first mini activities
 
-WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. Two original short stories, five US-public-domain complete texts and five professionally illustrated CC BY Book Dash books are readable through the Library.
+WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. Two original stories, seven US-public-domain complete classic texts (including original-artwork Pooh and Velveteen Rabbit) and five illustrated CC BY Book Dash books are readable through the Library.
 
 | URL | State |
 | --- | --- |
@@ -9,13 +9,14 @@ WonderNet's early site has six direct section routes and four playable browser a
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
 | `/explore/arcade` | Links to Circuit Garden plus a small pattern practice activity |
-| `/explore/library` | Twelve locally readable stories (five original-illustration Book Dash editions, five US-public-domain texts, two prototypes) and a separate 11-title unapproved research queue |
+| `/explore/library` | Fourteen locally readable stories (two original-artwork classic editions, five Book Dash books, five Potter texts, two prototypes) and 11 separate unapproved candidates |
 | `/explore/wonderparty` | Planned private local party games |
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning practice |
 | `/play/circuit-garden` | Ten-level circuit-rotation puzzle game; mouse, touch and keyboard support |
 | `/play/word-workshop` | Sixteen hands-on spelling/letter-building puzzles across four themed worlds |
 | `/read/lantern` | Original five-chapter story with local reading themes, text sizing and chapter navigation |
+| `/read/winnie-the-pooh`, `/read/velveteen-rabbit` | Complete U.S.-public-domain original-era editions with 115 historic Pooh images and 8 Velveteen Rabbit illustrations locally bundled, child/a11y review pending |
 | `/read/a-beautiful-day`, `/read/a-tiny-seed`, `/read/a-house-for-mouse`, `/read/come-back-cat`, `/read/walking-together` | Complete CC BY 4.0 Book Dash source-text editions with all 12 original illustrated spreads and covers, locally bundled and credited |
 | `/read/mara-garden` | Original eight-spread illustrated English/Spanish story with local SVGs, language selector and localized image descriptions (review pending) |
 | `/read/peter-rabbit`, `/read/benjamin-bunny`, `/read/tom-kitten`, `/read/jemima-puddle-duck`, `/read/jeremy-fisher` | Full US public-domain story texts by Beatrix Potter with page navigation; historical illustrations not included |
@@ -23,6 +24,10 @@ WonderNet's early site has six direct section routes and four playable browser a
 ## Original offline story reader
 
 **The Lantern That Kept the Stars** is original, embedded in `frontend/pages/book-lantern.html`, and exported to `/read/lantern/`. Its CSS and JavaScript are local, with no external resources, trackers, accounts or persistence. Chapter navigation, text scaling and paper/night/high-contrast reading themes operate in memory; a chapter URL fragment is shareable. `library/reader-demos.json` tracks sample rights and pending review. The sample is not an approved children's book or an arbitrary third-party ebook viewer.
+
+## Two famous original illustrated classics
+
+The complete 1926 *Winnie-the-Pooh* by A. A. Milne and 1922 *The Velveteen Rabbit* by Margery Williams are packaged with their historic illustrations by E. H. Shepard and William Nicholson. Pooh retains its introduction and ten chapters; Velveteen its whole story in fifteen readable sections. **123 original image files** are pinned to exact GITenberg source blob hashes and local SHA-256 checksums, and all pages/images are first-party and usable from a locally served WonderNet. Specific editions are treated as **U.S.-public-domain only**; modern Disney work, later adaptations and newer editions were not imported. `library/ILLUSTRATED-CLASSICS-CREDITS.md` explains provenance, missing image descriptions and pending human reviews. No importer is learner-facing; a temporary elevated source-import workflow was removed after the one-time packaging.
 
 ## Five genuine Book Dash illustrated editions
 
