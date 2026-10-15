@@ -111,7 +111,7 @@ def test_export_builds_twenty_five_live_html_routes(tmp_path):
         assert 'src="/wondernet/assets/book-reader.js?v=classic1"' in book
         assert book.count('class="reader-chapter classic-chapter"') == chapters
         assert book.count('data-open-chapter="') == chapters
-        assert "U.S. public domain" in book
+        assert "US public domain" in book
         assert 'src="https://' not in book
         assert 'href="https://' not in book.replace('href="https://github.com/KadenBar/wondernet"', '')
         assert (tmp_path / "assets/books/classics" / slug).is_dir()
