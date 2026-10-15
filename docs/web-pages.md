@@ -1,6 +1,6 @@
 # Website pages and first mini activities
 
-WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier.
+WonderNet's early site has six direct section routes and four playable browser activities, including two standalone games. Navigation is deliberately website-style; no explorable hub, account or progress barrier. One original five-chapter short story is readable through the Library.
 
 | URL | State |
 | --- | --- |
@@ -9,12 +9,17 @@ WonderNet's early site has six direct section routes and four playable browser a
 | `/explore/academy` | Planned subjects and pathways |
 | `/explore/special-interests` | Planned coding, defensive cyber and trades |
 | `/explore/arcade` | Links to Circuit Garden plus a small pattern practice activity |
-| `/explore/library` | Searchable 11-title research preview, with no downloadable book content |
+| `/explore/library` | Original readable story plus a separate 11-title research shelf with no third-party book files |
 | `/explore/wonderparty` | Planned private local party games |
 | `/play/letter-match` | Five-round uppercase/lowercase recognition activity |
 | `/play/patterns` | Five-round shape/pattern reasoning practice |
 | `/play/circuit-garden` | Ten-level circuit-rotation puzzle game; mouse, touch and keyboard support |
 | `/play/word-workshop` | Sixteen hands-on spelling/letter-building puzzles across four themed worlds |
+| `/read/lantern` | Original five-chapter story with local reading themes, text sizing and chapter navigation |
+
+## Original offline story reader
+
+**The Lantern That Kept the Stars** is original, embedded in `frontend/pages/book-lantern.html`, and exported to `/read/lantern/`. Its CSS and JavaScript are local, with no external resources, trackers, accounts or persistence. Chapter navigation, text scaling and paper/night/high-contrast reading themes operate in memory; a chapter URL fragment is shareable. `library/reader-demos.json` tracks sample rights and pending review. The sample is not an approved children's book or an arbitrary third-party ebook viewer.
 
 ## First Library research shelf
 
@@ -38,7 +43,7 @@ All CSS/JS remains local. No remote content or external hyperlinks are embedded 
 
 The GitHub Pages export adds an explicit **adult developer-preview banner** with a contributor link to GitHub. That link does not exist in the actual learner-facing homepage served by FastAPI, which displays the repository address as text only. This keeps its clickable navigation local while still letting adult reviewers find the source in the public preview.
 
-All `/explore/{section}` and `/play/{activity}` routes are hard-coded allowlists in `backend/app/main.py`. No arbitrary file paths, route names or dynamic user-provided assets are accepted.
+All `/explore/{section}`, `/play/{activity}` and `/read/{book}` routes are hard-coded allowlists in `backend/app/main.py`. No arbitrary file paths, route names or dynamic user-provided assets are accepted.
 
 Word Workshop is informal English spelling/word-building practice using visual and text clues. It is **not** a validated phonics or reading curriculum, and needs an educator review as well as manual accessibility testing before child use.
 
