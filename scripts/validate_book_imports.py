@@ -29,7 +29,7 @@ def valid_https(value: str) -> bool:
         url = urlsplit(value)
         return (url.scheme == "https" and bool(url.hostname) and
                 url.username is None and url.password is None and
-                not any(ch.isspace() for ch in value))
+                not any(ch.isspace() for ch in value) and "\\" not in value)
     except ValueError:
         return False
 
