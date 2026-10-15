@@ -43,6 +43,7 @@ SECURITY_META = (
     'object-src &#39;none&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">'
 )
 ROBOTS_META = '<meta name="robots" content="noindex,nofollow">'
+BODY_TAG = re.compile(r"<body(?:\\s[^>]*)?>", re.IGNORECASE)
 
 
 def normalize_base_path(value: str) -> str:
@@ -85,11 +86,11 @@ def make_html(html: str, base: str) -> str:
         )
 
     html = ATTRIBUTE.sub(rewrite, html)
-    if "<head>" not in html or "<body>" not in html:
-        raise ValueError("source HTML must contain <head> and <body>")
+    if "<head>" not in html or not BODY_TAG.search(html):
+        raise ValueError("source HTML must contain <head> and a body tag")
     stylesheet = f'<link rel="stylesheet" href="{base}/assets/preview.css">'
     html = html.replace("<head>", "<head>" + ROBOTS_META + SECURITY_META + stylesheet, 1)
-    return html.replace("<body>", "<body>" + WARNING, 1)
+    return BODY_TAG.sub(lambda match: match.group(0) + WARNING, html, count=1)
 
 
 def build(destination: Path, base_path: str) -> None:
