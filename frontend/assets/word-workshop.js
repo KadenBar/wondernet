@@ -94,36 +94,111 @@
       const buttonToFocus = tray.querySelector("button:not(:disabled)");
       if (buttonToFocus) buttonToFocus.focus();
     });
-    button.addEventListener("dragover", event => {
-      if (!won) {
-        event.preventDefault();
-        button.classList.add("ww-drop-target");
-        if (event.dataTransfer) event.dataTransfer.dropEffect = "move";
-      }
-    });
-    button.addEventListener("dragleave", () => button.classList.remove("ww-drop-target"));
-    button.addEventListener("drop", event => {
-      event.preventDefault();
-      if (won || !event.dataTransfer) return;
-      const idString = event.dataTransfer.getData("text/plain");
-      if (!/^\d+$/.test(idString)) return;
-      const next = engine.placeAt(puzzle, Number(idString), index);
-      if (next === puzzle) return;
-      puzzle = next;
-      lastWrongWord = "";
-      say("Tile placed! Keep building your word.");
-      renderBoard();
-    });
     return button;
   }
 
-  function makeTile(tile) {
-    const button = create("button", "ww-letter", tile.letter);
-    button.type = "button";
-    button.draggable = true;
-    button.dataset.tile = String(tile.id);
-    button.setAttribute("aria-label", "Letter " + tile.letter + ". Tap to place in the next empty space.");
-    button.addEventListener("click", () => {
+  // Pointer Events handle both touch and mouse. Native HTML drag/drop does not
+  // consistently fire from touchscreens, particularly mobile browsers.
+  function installPointerDrag(button, tile) {
+    let gesture = null;
+    let suppressNextClick = false;
+
+    function targetAt(x, y) {
+      const element = document.elementFromPoint(x, y);
+      const slot = element && element.closest(".ww-slot");
+      return slot && slotsEl.contains(slot) && !slot.disabled ? slot : null;
+    }
+
+    function highlight(slot) {
+      if (!gesture || gesture.highlighted === slot) return;
+      if (gesture.highlighted) gesture.highlighted.classList.remove("ww-drop-target");
+      gesture.highlighted = slot;
+      if (slot) slot.classList.add("ww-drop-target");
+    }
+
+    function finish(pointerId) {
+      if (!gesture || gesture.pointerId !== pointerId) return;
+      const { ghost, highlighted } = gesture;
+      gesture = null;
+      if (highlighted) highlighted.classList.remove("ww-drop-target");
+      if (ghost) ghost.remove();
+      button.classList.remove("ww-being-dragged");
+      if (button.hasPointerCapture(pointerId)) button.releasePointerCapture(pointerId);
+    }
+
+    button.addEventListener("pointerdown", event => {
+      if (won || gesture || !event.isPrimary || event.button !== 0) return;
+      gesture = {
+        pointerId: event.pointerId,
+        startX: event.clientX, startY: event.clientY,
+        dragging: false, ghost: null, highlighted: null
+      };
+      button.setPointerCapture(event.pointerId);
+    });
+
+    button.addEventListener("pointermove", event => {
+      if (!gesture || gesture.pointerId !== event.pointerId) return;
+      const distance = Math.hypot(
+        event.clientX - gesture.startX, event.clientY - gesture.startY
+      );
+      // A normal short tap still activates the ordinary accessible button.
+      if (!gesture.dragging && distance < 10) return;
+      if (!gesture.dragging) {
+        gesture.dragging = true;
+        gesture.ghost = create("span", "ww-drag-ghost", tile.letter);
+        gesture.ghost.setAttribute("aria-hidden", "true");
+        document.body.appendChild(gesture.ghost);
+        button.classList.add("ww-being-dragged");
+      }
+      if (event.cancelable) event.preventDefault();
+      gesture.ghost.style.left = event.clientX + "px";
+      gesture.ghost.style.top = event.clientY + "px";
+      highlight(targetAt(event.clientX, event.clientY));
+    });
+
+    button.addEventListener("pointerup", event => {
+      if (!gesture || gesture.pointerId !== event.pointerId) return;
+      const dragged = gesture.dragging;
+      const slot = dragged ? targetAt(event.clientX, event.clientY) : null;
+      finish(event.pointerId);
+      if (!dragged) return; // Let the standard click handler place this tile.
+      // A synthetic click can follow pointerup, even when drag ended off-tile.
+      suppressNextClick = true;
+      setTimeout(() => { suppressNextClick = false; }, 0);
+      if (event.cancelable) event.preventDefault();
+      if (!slot || won) {
+        say("Drop your letter on a word space, or tap it to place it.");
+        return;
+      }
+      const index = Number(slot.dataset.slot);
+      const next = engine.placeAt(puzzle, tile.id, index);
+      if (next === puzzle) return;
+      puzzle = next;
+      lastWrongWord = "";
+      say("Letter dropped into place! You can move it again.");
+      renderBoard();
+    });
+
+    button.addEventListener("pointercancel", event => {
+      if (!gesture || gesture.pointerId !== event.pointerId) return;
+      const dragged = gesture.dragging;
+      finish(event.pointerId);
+      if (dragged) {
+        suppressNextClick = true;
+        setTimeout(() => { suppressNextClick = false; }, 0);
+      }
+    });
+
+    button.addEventListener("lostpointercapture", () => {
+      if (gesture) finish(gesture.pointerId);
+    });
+
+    button.addEventListener("click", event => {
+      if (suppressNextClick) {
+        event.preventDefault();
+        suppressNextClick = false;
+        return;
+      }
       if (won) return;
       const next = engine.placeNext(puzzle, tile.id);
       if (next === puzzle) {
@@ -141,16 +216,15 @@
         if (nextTile) nextTile.focus();
       }
     });
-    button.addEventListener("dragstart", event => {
-      if (won || !event.dataTransfer) {
-        event.preventDefault();
-        return;
-      }
-      event.dataTransfer.setData("text/plain", String(tile.id));
-      event.dataTransfer.effectAllowed = "move";
-      button.classList.add("ww-being-dragged");
-    });
-    button.addEventListener("dragend", () => button.classList.remove("ww-being-dragged"));
+  }
+
+  function makeTile(tile) {
+    const button = create("button", "ww-letter", tile.letter);
+    button.type = "button";
+    button.dataset.tile = String(tile.id);
+    button.setAttribute("aria-label",
+      "Letter " + tile.letter + ". Tap to place in the next empty space, or drag to a word space.");
+    installPointerDrag(button, tile);
     return button;
   }
 
