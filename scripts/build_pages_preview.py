@@ -45,6 +45,8 @@ READERS = {
     "call-of-the-wild": "book-call-of-the-wild.html",
     "railway-children": "book-railway-children.html",
     "five-children-and-it": "book-five-children-and-it.html",
+    "princess-and-the-goblin": "book-princess-and-the-goblin.html",
+    "war-of-the-worlds": "book-war-of-the-worlds.html",
 }
 ROUTES = {
     **{f"/explore/{slug}": f"/explore/{slug}/" for slug in SECTIONS},
