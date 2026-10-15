@@ -35,10 +35,6 @@ def get_source(book: dict, path: str, sha: str, size: int) -> bytes:
     if (owner, repo) != ("GITenberg", {"winnie-the-pooh": "Winnie-the-Pooh_67098",
                                        "velveteen-rabbit": "The-Velveteen-Rabbit_11757"}[book["id"]]):
         raise ValueError("Unexpected upstream repository")
-    if not re.fullmatch(r"[0-9a-f]{40}", book["commit"] + sha, flags=0):
-        # Each SHA is checked individually below; this block does not match the
-        # expected 80 character string, so the explicit check is authoritative.
-        pass
     if any(not re.fullmatch(r"[0-9a-f]{40}", x) for x in (book["commit"], sha)):
         raise ValueError("Missing pinned Git commit/blob hashes")
     allow = {book["html"], *(m["source_path"] for m in book["images"])}
@@ -79,7 +75,7 @@ def parse_pooh(source: bytes, book: dict) -> tuple[list[dict], set[str]]:
     contents = list(soup.body.children)
     chapters: list[dict] = []
     active = None
-    used = {"cover.jpg", "illus1.jpg", "illus2.jpg", "map.jpg"}
+    used = {"illus1.jpg", "illus2.jpg", "map.jpg"}
     for item in contents:
         if not isinstance(item, Tag):
             continue
@@ -135,8 +131,8 @@ def parse_pooh(source: bytes, book: dict) -> tuple[list[dict], set[str]]:
     # All book illustrations should be referenced, with the extra frontispiece
     # and map added to their appropriate opening scenes.
     expected = {m["name"] for m in book["images"]}
-    if used != expected:
-        raise ValueError(f"Pooh source artwork mismatch: missing={expected-used}, extra={used-expected}")
+    if used != expected - {"cover.jpg"}:
+        raise ValueError(f"Pooh source artwork mismatch: missing={expected-used-{"cover.jpg"}}, extra={used-expected}")
     return chapters, used
 
 
@@ -164,7 +160,7 @@ def parse_velveteen(source: bytes, book: dict) -> tuple[list[dict], set[str]]:
                 inside = True
             else:
                 continue
-        if "***END OF THE PROJECT GUTENBERG EBOOK" in as_text(item).upper().replace(" ", ""):
+        if "***ENDOFTHEPROJECTGUTENBERGEBOOK" in as_text(item).upper().replace(" ", ""):
             break
         images = original_images(item)
         plain = as_text(item)
