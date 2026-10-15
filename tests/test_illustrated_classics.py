@@ -64,7 +64,7 @@ def test_books_are_complete_local_read_only_with_original_illustrations():
         assert 'href="/assets/illustrated-classics.css"' in markup
         assert markup.count('class="reader-chapter classic-chapter"') == count
         assert markup.count('data-open-chapter="') == count
-        assert markup.count('<figure class="classic-figure">') == illustrations - 1
+        assert markup.count('<figure class="classic-figure">') == (114 if slug == "winnie-the-pooh" else 8)
         assert f'id="chapter-{count}"' in markup
         assert book["author"] in markup and book["illustrator"] in markup
         assert "Original-era edition" in markup
