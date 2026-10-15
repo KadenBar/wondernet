@@ -43,7 +43,7 @@ SECURITY_META = (
     'object-src &#39;none&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">'
 )
 ROBOTS_META = '<meta name="robots" content="noindex,nofollow">'
-BODY_TAG = re.compile(r"<body(?:\\s[^>]*)?>", re.IGNORECASE)
+BODY_TAG = re.compile(r"<body(?:\s[^>]*)?>", re.IGNORECASE)
 
 
 def normalize_base_path(value: str) -> str:
