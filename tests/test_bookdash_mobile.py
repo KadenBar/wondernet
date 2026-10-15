@@ -17,7 +17,7 @@ def test_five_books_still_use_separate_cover_and_description_elements():
     assert html.count('class="lb-dash-meta"') == 5
     assert html.count('class="lb-dash-read"') == 5
     assert html.count('data-bookdash="') == 5
-    assert 'href="/assets/library-shelf.css"' in html
+    assert 'href="/assets/library-shelf.css?v=mobile1"' in html
 
 
 def test_mobile_book_cards_stack_cover_above_the_text_instead_of_overlapping():
