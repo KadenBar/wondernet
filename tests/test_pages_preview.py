@@ -39,7 +39,10 @@ def test_export_builds_nine_live_html_routes(tmp_path):
         assert "<main" in html
     homepage = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/explore/early-learning/"' in homepage
-    assert 'href="/wondernet/play/' not in homepage
+    assert 'href="/wondernet/play/letter-match/"' in homepage
+    assert 'href="/wondernet/play/patterns/"' in homepage
+    assert 'href="/wondernet/assets/home.css"' in homepage
+    assert "Pi Wi-Fi network is planned" in homepage
     first_page = (tmp_path / "explore/early-learning/index.html").read_text(encoding="utf-8")
     assert 'href="/wondernet/play/letter-match/"' in first_page
     assert (tmp_path / "assets/activities.js").is_file()
