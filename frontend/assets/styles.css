@@ -92,3 +92,8 @@ footer{text-align:center;border-top:1px solid var(--line);font-size:.82rem;color
 @media(max-width:690px){.hero{grid-template-columns:1fr;padding:3rem 0 2rem}.hero-panel{max-width:520px}.header-inner{flex-wrap:wrap;align-items:flex-start}.site-nav{width:100%;gap:1rem;flex-wrap:wrap}.intro-strip{margin-bottom:3.2rem}.values,.next-up{grid-template-columns:1fr;gap:1.5rem}.section{margin-bottom:3.2rem}}
 @media(max-width:480px){main{padding:0 1rem 2rem}.header-inner{padding:1rem}.brand{font-size:1.2rem}.alpha{font-size:.57rem}.cards{grid-template-columns:1fr}.intro-strip{grid-template-columns:1fr}.intro-strip>div{border:0!important;border-bottom:1px solid var(--line)!important}.intro-strip>div:last-child{border-bottom:0!important}.tile p:not(.tag){min-height:0}.values{padding:1.3rem}.status-card{padding:1.3rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Section links are always visible, keyboard accessible and separated from the status tag. */
+.tile-link{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;padding:.72rem .82rem;border:1px solid #bbcbdc;border-radius:10px;background:#f4f8fd;color:var(--blue);text-decoration:none;font-weight:800;font-size:.86rem}
+.tile-link:hover{background:#eaf3fc;border-color:#7199c0}
+.tile-link:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
