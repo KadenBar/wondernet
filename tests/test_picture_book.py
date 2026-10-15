@@ -68,7 +68,7 @@ def test_all_eight_local_original_svg_illustrations_are_safe_and_accessible():
         assert len(list(svg)) >= 5
         assert svg.find("{http://www.w3.org/2000/svg}title") is not None
         assert svg.find("{http://www.w3.org/2000/svg}desc") is not None
-        lowered = data.lower()
+        lowered = data.lower().replace("http://www.w3.org/2000/svg", "")  # Required SVG namespace.
         for forbidden in ("<script", "foreignobject", "<iframe", "http://", "https://",
                           "javascript:", "onload=", "onerror=", "<image", "<use ", "@import"):
             assert forbidden not in lowered, (file, forbidden)
