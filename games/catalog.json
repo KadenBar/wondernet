@@ -11,6 +11,15 @@
       "levels": 10
     },
     {
+      "id": "word-workshop",
+      "title": "Word Workshop",
+      "category": "early-learning",
+      "type": "single-player",
+      "state": "playable-alpha",
+      "route": "/play/word-workshop",
+      "levels": 16
+    },
+    {
       "id": "wonderparty",
       "title": "WonderParty",
       "type": "local-multiplayer",
