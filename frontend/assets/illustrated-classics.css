@@ -1,0 +1,16 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Two original illustrated U.S.-public-domain editions. */
+.illustrated-classic .reader-cover{background:#f5eddf}
+.illustrated-classic .reader-cover-art{background:#f9f3e7;min-height:230px;padding:1rem}
+.illustrated-classic .reader-cover-art:before{display:none}
+.illustrated-classic .classic-cover img{display:block;max-width:100%;width:auto;height:auto;max-height:350px;object-fit:contain;border:1px solid #b4aa9a;border-radius:5px;background:white}
+.illustrated-classic .reader-chapter h2{font:850 clamp(1.4rem,3vw,2rem)/1.28 Georgia,"Times New Roman",serif;letter-spacing:-.035em;margin:0 0 1.35rem}
+.illustrated-classic .reader-chapter p:not(.reader-chapter-number):not(.reader-the-end){font-family:Georgia,"Times New Roman",serif;line-height:1.8;text-align:left;max-width:67ch}
+.illustrated-classic .reader-paper{padding:clamp(1rem,3vw,2.4rem)}
+.illustrated-classic .classic-figure{display:block;text-align:center;margin:1.2rem auto 1.8rem;max-width:100%;break-inside:avoid}
+.illustrated-classic .classic-figure img{display:block;width:auto;max-width:100%;height:auto;max-height:470px;object-fit:contain;margin:0 auto;mix-blend-mode:multiply}
+.illustrated-classic[data-reader-theme="night"] .classic-figure img{mix-blend-mode:normal;background:#fffaf2;padding:.3rem;border-radius:6px}
+.illustrated-classic[data-reader-theme="contrast"] .classic-figure img{mix-blend-mode:normal;background:white;padding:.35rem;border:1px solid #333}
+.illustrated-classic .classic-verse{text-align:center!important;font-style:italic;line-height:1.7!important;margin:1.1rem auto!important}
+@media(max-width:740px){.illustrated-classic .reader-cover{display:flex;flex-direction:column}.illustrated-classic .reader-cover-art{width:100%;max-height:390px}.illustrated-classic .classic-cover img{max-height:310px}.illustrated-classic .reader-paper{padding:1rem}.illustrated-classic .classic-figure img{max-height:400px}}
+@media print{.illustrated-classic .classic-figure{break-inside:avoid}.illustrated-classic .classic-figure img{max-height:270px}}
