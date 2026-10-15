@@ -6,8 +6,8 @@
   "source_ref_date": "2019-11-04",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
-  "status": "pending-binary-import",
-  "import_notice": "Readers require original images locally imported and checksum validated. No outside image URLs allowed. Rights are CC BY 4.0, but educator and accessibility reviews remain pending.",
+  "status": "bundled-original-images-verified",
+  "import_notice": "Original English Book Dash image covers and all 12 story illustrations for each title are bundled locally and pinned by Git blob SHA and separate SHA-256 manifest. No runtime external requests. Editorial and manual accessibility reviews remain pending.",
   "books": [
     {
       "id": "a-beautiful-day",
@@ -119,7 +119,7 @@
         }
       ],
       "spread_count": 12,
-      "media_status": "pending-local-import",
+      "media_status": "locally-imported-verified",
       "text_status": "full-source-text",
       "review": {
         "source_license": "CC BY 4.0 from Book Dash",
@@ -238,7 +238,7 @@
         }
       ],
       "spread_count": 12,
-      "media_status": "pending-local-import",
+      "media_status": "locally-imported-verified",
       "text_status": "full-source-text",
       "review": {
         "source_license": "CC BY 4.0 from Book Dash",
@@ -357,7 +357,7 @@
         }
       ],
       "spread_count": 12,
-      "media_status": "pending-local-import",
+      "media_status": "locally-imported-verified",
       "text_status": "full-source-text",
       "review": {
         "source_license": "CC BY 4.0 from Book Dash",
@@ -476,7 +476,7 @@
         }
       ],
       "spread_count": 12,
-      "media_status": "pending-local-import",
+      "media_status": "locally-imported-verified",
       "text_status": "full-source-text",
       "review": {
         "source_license": "CC BY 4.0 from Book Dash",
@@ -595,7 +595,7 @@
         }
       ],
       "spread_count": 12,
-      "media_status": "pending-local-import",
+      "media_status": "locally-imported-verified",
       "text_status": "full-source-text",
       "review": {
         "source_license": "CC BY 4.0 from Book Dash",
